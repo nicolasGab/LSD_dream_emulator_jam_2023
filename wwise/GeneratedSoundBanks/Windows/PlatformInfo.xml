@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlatformInfo>
+	<Platform Name="Windows" BasePlatform="Windows" Generator="2023.1.0.8367"/>
+	<RootPaths>
+		<ProjectRoot>../../../../wwise/Jam LSD</ProjectRoot>
+		<SourceFilesRoot>../../../../wwise/Jam LSD/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../wwise/Jam LSD/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DefaultAlign>16</DefaultAlign>
+	<Settings>
+		<AutoSoundBankDefinition>false</AutoSoundBankDefinition>
+		<CopyLooseStreamedMediaFiles>true</CopyLooseStreamedMediaFiles>
+		<SubFoldersForGeneratedFiles>true</SubFoldersForGeneratedFiles>
+		<RemoveUnusedGeneratedFiles>true</RemoveUnusedGeneratedFiles>
+		<SourceControlGeneratedFiles>false</SourceControlGeneratedFiles>
+		<GenerateHeaderFile>true</GenerateHeaderFile>
+		<GenerateContentTxtFile>false</GenerateContentTxtFile>
+		<GenerateMetadataXML>true</GenerateMetadataXML>
+		<GenerateMetadataJSON>false</GenerateMetadataJSON>
+		<GenerateAllBanksMetadata>true</GenerateAllBanksMetadata>
+		<GeneratePerBankMetadata>false</GeneratePerBankMetadata>
+		<UseSoundBankNames>false</UseSoundBankNames>
+		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
+		<MaxAttenuationInfo>false</MaxAttenuationInfo>
+		<EstimatedDurationInfo>false</EstimatedDurationInfo>
+		<PrintObjectGuid>false</PrintObjectGuid>
+		<PrintObjectPath>false</PrintObjectPath>
+	</Settings>
+	<FileHash>{66431723-0F7F-52E7-55C9-A2CA88CEBEAF}</FileHash>
+</PlatformInfo>

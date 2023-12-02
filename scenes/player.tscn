@@ -1,21 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1l28lnfnvyk2"]
+[gd_scene load_steps=6 format=3 uid="uid://d1l28lnfnvyk2"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_j21v2"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rtc3v"]
+[ext_resource type="Script" path="res://scripts/audio/player_audio.gd" id="3_v1mlu"]
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_82jtr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u46om"]
 height = 1.5
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_node")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_node", "audio")]
 script = ExtResource("1_rtc3v")
 camera_node = NodePath("Camera3D")
+audio = NodePath("Camera3D/Audio")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
 attributes = SubResource("CameraAttributesPhysical_82jtr")
 script = ExtResource("1_j21v2")
+
+[node name="Audio" type="Node3D" parent="Camera3D" node_paths=PackedStringArray("listener")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08165e-12, -1, -2.08165e-12)
+script = ExtResource("3_v1mlu")
+listener = NodePath("AkListener3D")
+
+[node name="AkListener3D" type="AkListener3D" parent="Camera3D/Audio"]
+is_spatial = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.708182, 0)

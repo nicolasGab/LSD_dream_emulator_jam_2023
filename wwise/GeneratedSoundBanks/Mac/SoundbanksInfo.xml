@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../wwise/Jam LSD</ProjectRoot>
+		<SourceFilesRoot>../../../../wwise/Jam LSD/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../wwise/Jam LSD/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6793A831-EE04-1E30-1853-D22EB8663A2C}">
+			<ShortName>Init</ShortName>
+			<Path>1355168291.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3796564934" Name="Hard_Knee_Minus_3dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+							<PluginRef Id="3796564934"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="material">
+					<Switches>
+						<Switch Id="151879501" Name="swim"/>
+						<Switch Id="670602561" Name="soft"/>
+						<Switch Id="2654748154" Name="water"/>
+						<Switch Id="3599861390" Name="hard"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{21B2629B-5EF6-4303-98BA-B5AA199927E8}">
+			<ShortName>main</ShortName>
+			<Path>3161908922.bnk</Path>
+			<Media>
+				<File Id="155836543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_6A4FDE78.wem</CachePath>
+				</File>
+				<File Id="229634853" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_025130BB.wem</CachePath>
+				</File>
+				<File Id="235664832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_7873A466.wem</CachePath>
+				</File>
+				<File Id="254761042" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
+					<CachePath>SFX/HORSE_Step_Dirt_02_560A8352.wem</CachePath>
+				</File>
+				<File Id="283789452" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_757DA35D.wem</CachePath>
+				</File>
+				<File Id="411509299" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
+					<CachePath>SFX/HORSE_Step_Dirt_02_2D78B445.wem</CachePath>
+				</File>
+				<File Id="584549292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_2D7BF321.wem</CachePath>
+				</File>
+				<File Id="665940052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_2391B20B.wem</CachePath>
+				</File>
+				<File Id="746648048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_DC586BCA.wem</CachePath>
+				</File>
+				<File Id="828162588" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
+					<CachePath>SFX/HORSE_Step_Dirt_02_D2C02D74.wem</CachePath>
+				</File>
+				<File Id="830515885" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_D59075AA.wem</CachePath>
+				</File>
+				<File Id="936059568" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_925833BF.wem</CachePath>
+				</File>
+				<File Id="945764765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>pluie inondation faible_01.wav</ShortName>
+					<CachePath>SFX/pluie inondation faible_01_091E5D04.wem</CachePath>
+				</File>
+				<File Id="997187953" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
+					<CachePath>SFX/footsteps foliage 211016_0037_6845B8C3.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2775932802" Name="character_footsteps">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="3599861390"/>
+							<MediaRefs>
+								<MediaRef Id="254761042"/>
+								<MediaRef Id="411509299"/>
+								<MediaRef Id="828162588"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="670602561" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="155836543"/>
+								<MediaRef Id="229634853"/>
+								<MediaRef Id="235664832"/>
+								<MediaRef Id="283789452"/>
+								<MediaRef Id="584549292"/>
+								<MediaRef Id="665940052"/>
+								<MediaRef Id="746648048"/>
+								<MediaRef Id="830515885"/>
+								<MediaRef Id="936059568"/>
+								<MediaRef Id="997187953"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3528569874" Name="pluie_inondation_faible">
+					<MediaRefs>
+						<MediaRef Id="945764765"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="material">
+					<Switches>
+						<Switch Id="151879501" Name="swim"/>
+						<Switch Id="670602561" Name="soft"/>
+						<Switch Id="2654748154" Name="water"/>
+						<Switch Id="3599861390" Name="hard"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{D63BBBEF-0070-CECC-C471-923BD79AD86E}</FileHash>
+</SoundBanksInfo>

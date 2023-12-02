@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Jam LSD" GUID="{8EAF9D0A-42EA-4F90-804F-6A990AF14EA3}" Generator="2023.1.0.8367"/>
+	<CacheRoot>../../../wwise/Jam LSD/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Android" GUID="{E7362C8E-DFD1-4693-BD6E-D68C99BF08AE}" BasePlatform="Android" BasePlatformGUID="{A2D401DE-B8B6-4FEB-8142-137C34D507CA}" Path="../../../wwise/Jam LSD/GeneratedSoundBanks/Android"/>
+		<Platform Name="iOS" GUID="{06AD818E-3847-4EDC-8249-CDF34AB66B22}" BasePlatform="iOS" BasePlatformGUID="{ECE03DB4-F948-462D-B2BB-A9173012B1F8}" Path="../../../wwise/Jam LSD/GeneratedSoundBanks/iOS"/>
+		<Platform Name="Linux" GUID="{8CABAB7C-8D4B-4043-B052-759A80E42F81}" BasePlatform="Linux" BasePlatformGUID="{BD0BDF13-3125-454F-8BFD-319537169F81}" Path="../../../wwise/Jam LSD/GeneratedSoundBanks/Linux"/>
+		<Platform Name="Mac" GUID="{672BF588-4E2B-4BB6-930C-4C4AA3A5DAB5}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="Mac"/>
+		<Platform Name="Switch" GUID="{6CCD56D8-2099-4A7E-8FC8-E45CBA891D87}" BasePlatform="Switch" BasePlatformGUID="{874F26D2-416D-4698-BFB6-3427CAFCFF9C}" Path="../../../wwise/Jam LSD/GeneratedSoundBanks/Switch"/>
+		<Platform Name="Web" GUID="{ED9A3734-225A-4F35-9657-ECA1716A464D}" BasePlatform="Web" BasePlatformGUID="{639AD233-23F2-4C0F-9127-79F44C15E1DA}" Path="../../../wwise/Jam LSD/GeneratedSoundBanks/Web"/>
+		<Platform Name="Windows" GUID="{8F595242-2762-4D3C-B050-92E2481ECC12}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{17F4A97D-A22C-425F-9BBA-7ECEE156255B}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{07BD9735-F33C-4F76-A08E-2880903F5519}</FileHash>
+</ProjectInfo>
