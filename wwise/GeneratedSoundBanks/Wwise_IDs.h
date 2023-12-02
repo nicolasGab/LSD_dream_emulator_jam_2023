@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID CHARACTER_FOOTSTEPS = 2775932802U;
         static const AkUniqueID PLUIE_INONDATION_FAIBLE = 3528569874U;
+        static const AkUniqueID TRIGGER_AOREN = 1772107161U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -33,6 +34,11 @@ namespace AK
         } // namespace MATERIAL
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID AOREN_FREQUENCY = 2901834267U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

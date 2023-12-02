@@ -11,5 +11,6 @@ func _ready():
 	Wwise.post_event_id(AK.EVENTS.PLUIE_INONDATION_FAIBLE, self)
 
 
+
 func set_switches_to_default():
 	Wwise.set_switch_id(AK.SWITCHES.MATERIAL.GROUP, AK.SWITCHES.MATERIAL.SWITCH.SOFT, self)

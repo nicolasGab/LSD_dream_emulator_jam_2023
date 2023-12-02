@@ -2,11 +2,15 @@ class_name AK
 
 class EVENTS:
 
+	const ADD_ONE_HERTZ = 2394938017
 	const CHARACTER_FOOTSTEPS = 2775932802
+	const TRIGGER_AOREN = 1772107161
 	const PLUIE_INONDATION_FAIBLE = 3528569874
 
 	const _dict = {
+		"add_one_hertz": ADD_ONE_HERTZ,
 		"character_footsteps": CHARACTER_FOOTSTEPS,
+		"trigger_aoren": TRIGGER_AOREN,
 		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE
 	}
 
@@ -39,7 +43,11 @@ class SWITCHES:
 
 class GAME_PARAMETERS:
 
-	const _dict = {}
+	const AOREN_FREQUENCY = 2901834267
+
+	const _dict = {
+		"aoren_frequency": AOREN_FREQUENCY
+	}
 
 class TRIGGERS:
 

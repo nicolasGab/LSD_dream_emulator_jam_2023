@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65s3mv04kw5g"]
+
+[ext_resource type="Script" path="res://scripts/game_state.gd" id="1_8la5e"]
+[ext_resource type="Script" path="res://scripts/dream_information.gd" id="2_8vdvq"]
+
+[node name="GameState" type="Node" node_paths=PackedStringArray("dream_information")]
+script = ExtResource("1_8la5e")
+dream_information = NodePath("DreamInformation")
+
+[node name="DreamInformation" type="Node" parent="."]
+script = ExtResource("2_8vdvq")

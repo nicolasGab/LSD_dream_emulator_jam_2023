@@ -8,7 +8,3 @@ func _ready():
 
 func walk():
 	Wwise.post_event_id(AK.EVENTS.CHARACTER_FOOTSTEPS, listener)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6793A831-EE04-1E30-1853-D22EB8663A2C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CB43A5D1-B918-2F61-26D5-0518F229454C}">
 			<ShortName>Init</ShortName>
 			<Path>1355168291.bnk</Path>
 			<Plugins>
@@ -34,6 +34,9 @@
 				</Bus>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="2901834267" Name="aoren_frequency"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="material">
 					<Switches>
@@ -173,7 +176,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{21B2629B-5EF6-4303-98BA-B5AA199927E8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7C9A3463-DA66-093A-5DC4-8B804589DAF5}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
@@ -234,6 +237,16 @@
 					<CachePath>SFX/footsteps foliage 211016_0037_6845B8C3.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="221643767" Name="Low_Pass_20KHz (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="472204842" Name="Guitar Distortion (Custom)" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+					<Plugin Id="934572749" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="2775932802" Name="character_footsteps">
 					<SwitchContainers>
@@ -267,7 +280,22 @@
 						<MediaRef Id="945764765"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1772107161" Name="trigger_aoren">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="221643767"/>
+							<PluginRef Id="472204842"/>
+							<PluginRef Id="934572749"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="3164629247"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2901834267" Name="aoren_frequency"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="material">
 					<Switches>
@@ -280,5 +308,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D63BBBEF-0070-CECC-C471-923BD79AD86E}</FileHash>
+	<FileHash>{18943448-0B7F-EDA1-EC75-D55AB0F793DB}</FileHash>
 </SoundBanksInfo>
