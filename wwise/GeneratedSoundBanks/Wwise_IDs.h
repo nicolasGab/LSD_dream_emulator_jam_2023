@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID CHARACTER_FOOTSTEPS = 2775932802U;
         static const AkUniqueID PLUIE_INONDATION_FAIBLE = 3528569874U;
+        static const AkUniqueID RELEASE_AOREN = 2814252982U;
         static const AkUniqueID TRIGGER_AOREN = 1772107161U;
     } // namespace EVENTS
 
@@ -52,6 +53,11 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://uulbk4hm7307"]
+
+[ext_resource type="PackedScene" uid="uid://ccoc3xlhxp5vg" path="res://scenes/dream_container.tscn" id="1_xhqk3"]
+[ext_resource type="PackedScene" uid="uid://caj0gope3mcie" path="res://scenes/characters/aoren.tscn" id="2_b5038"]
+[ext_resource type="Environment" uid="uid://da3134fqh0d1y" path="res://configs/light_environment.tres" id="3_sikmv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41hmt"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wkpbg"]
+material = SubResource("StandardMaterial3D_41hmt")
+size = Vector2(20000, 20000)
+orientation = 1
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_alqil"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
+
+[node name="Le Monde d\'en Bas" instance=ExtResource("1_xhqk3")]
+
+[node name="Player" parent="." index="0"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, -9.40604, 0, 198.304)
+
+[node name="Aoren1" parent="Objects" index="0" instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2587, 0.817366, 0)
+
+[node name="Aoren2" parent="Objects" index="1" instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0881, 0.808782, -1.74084)
+
+[node name="Aoren3" parent="Objects" index="2" instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8734, 4.18149, -4.16797)
+
+[node name="Aoren4" parent="Objects" index="3" instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0881, 0.779009, 13.7633)
+
+[node name="Aoren5" parent="Objects" index="4" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.239, 3.51723, 3.30332)
+mesh = NodePath("../Aoren1/MeshInstance3D")
+
+[node name="Aoren6" parent="Objects" index="5" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1762, 4.17031, -0.355824)
+mesh = NodePath("../Aoren2/MeshInstance3D")
+
+[node name="Aoren7" parent="Objects" index="6" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2102, 2.41388, -3.37439)
+mesh = NodePath("../Aoren3/MeshInstance3D")
+
+[node name="Aoren8" parent="Objects" index="7" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1762, 0.95365, 35.1423)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren9" parent="Objects" index="8" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1762, 0.95365, 43.5607)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren10" parent="Objects" index="9" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33047, 0.95365, 57.2864)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren11" parent="Objects" index="10" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.94008, 0.95365, 68.7513)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren12" parent="Objects" index="11" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96205, 0.95365, 74.6816)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren13" parent="Objects" index="12" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38376, 0.95365, 83.9821)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren14" parent="Objects" index="13" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38376, 0.95365, 96.4212)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren15" parent="Objects" index="14" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.38376, 0.95365, 108)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren16" parent="Objects" index="15" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5751, 0.95365, 120.647)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren17" parent="Objects" index="16" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93252, 0.95365, 125.777)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren18" parent="Objects" index="17" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.37846, 0.95365, 138.479)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren19" parent="Objects" index="18" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08177, 0.95365, 150.571)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren20" parent="Objects" index="19" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.64989, 0.95365, 158.993)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren21" parent="Objects" index="20" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98159, 0.95365, 172.767)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren22" parent="Objects" index="21" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3406, 0.95365, 175.526)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren23" parent="Objects" index="22" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02311, 0.95365, 182.892)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="Aoren24" parent="Objects" index="23" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2963, 0.95365, 191.471)
+mesh = NodePath("../Aoren4/MeshInstance3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes" index="0"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes/StaticBody3D" index="0"]
+mesh = SubResource("QuadMesh_wkpbg")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/StaticBody3D" index="1"]
+shape = SubResource("WorldBoundaryShape3D_alqil")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115643, 0.342892, 2.08165e-12)
+light_color = Color(1, 1, 0.72549, 1)
+light_size = 1.0
+shadow_enabled = true
+shadow_bias = 1.865
+shadow_blur = 2.765
+distance_fade_enabled = true
+distance_fade_length = 165.54
+omni_range = 4096.0
+omni_attenuation = 0.307786
+omni_shadow_mode = 0
+
+[node name="WorldEnvironment" parent="." index="5"]
+environment = ExtResource("3_sikmv")

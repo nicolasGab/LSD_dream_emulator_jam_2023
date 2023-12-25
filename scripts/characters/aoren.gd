@@ -2,75 +2,41 @@ extends CharacterBody3D
 
 @export var light: OmniLight3D
 @export var mesh: MeshInstance3D
+@export var registry_delay : float = 0.5
+@export var vote_delay : float = 20.0
+@export var aoren_frequency : float = 0.0
 
 const MAX_LIGHT_ENERGY = 1
 const MIN_LIGHT_ENERGY = 0.2
 const MAX_AOREN_RANGE = 45
-const MIN_AOREN_RANGE = 3
+const MIN_AOREN_RANGE = 25
 const SYNC_STEPPER = 60
+const RELEASE_TIME = 5.0
 
 var frequencies = [
-	55.00,
-	58.27,
-	61.74,
 	65.41,
-	69.30,
 	73.42,
-	77.78,
 	82.41,
 	87.31,
-	92.50,
 	98.00,
-	103.83,
 	110.00,
-	116.54,
 	123.47,
-	130.81,
-	138.59,
-	146.83,
-	155.56,
-	164.81,
-	174.61,
-	185.00,
-	196.00,
-	207.65,
-	220.00,
-	233.08,
-	246.94,
-	261.63,
-	277.18,
-	293.66,
-	311.13,
-	329.63,
-	349.23,
-	369.99,
-	392.00,
-	415.30,
-	440.00,
-	466.16,
-	493.88,
-	523.25,
-	554.37,
-	587.33,
-	622.25,
-	659.25,
-	698.46,
-	739.99,
-	783.99,
-	830.61,
-	880.00,
-	932.33,
-	987.77,
-	1046.50,
-	1108.73,
-	1174.66,
-	1244.51,
-	1318.51,
-	1396.91,
-	1479.98,
-	1567.98,
-	1661.22
+	]
+var triade = [
+	1,
+	1.2599,
+	1.4983,
 ]
+var octaves = [
+	0,0625,
+	0.125,
+	0.25,
+	0.5,
+	1,
+	2,
+	4,
+]
+var decompte_votes = {}
 var rng = RandomNumberGenerator.new()
 var light_energy_target = MIN_LIGHT_ENERGY
 var stepper = -160
@@ -80,17 +46,45 @@ var AOREN_RANGE = 0
 func _ready():
 	Wwise.register_game_obj(self, name)
 	Wwise.set_3d_position(self, transform)
-	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.AOREN_FREQUENCY, frequencies[rng.randi_range(0, frequencies.size()-1)], self)
-	Wwise.post_event_id(AK.EVENTS.TRIGGER_AOREN, self)
 	
-	AOREN_RANGE = rng.randi_range(MIN_AOREN_RANGE, MAX_AOREN_RANGE)
+	vote_delay = rng.randi_range(5, 30)
+	
+	initialize_parameters()
+	choose_pitch()
+	vote()
 	
 	#modulate_light()
-	modulate_position("x")
-	modulate_position("y")
-	modulate_position("z")
+	#modulate_position("x")
+	#modulate_position("y")
+	#modulate_position("z")
 	
+func initialize_parameters():
+	# init pitch
+	aoren_frequency = frequencies[rng.randi_range(0, frequencies.size()-1)]
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.AOREN_FREQUENCY, aoren_frequency, self)
 	
+	# init range
+	AOREN_RANGE = rng.randi_range(MIN_AOREN_RANGE, MAX_AOREN_RANGE)
+
+func choose_pitch():
+	# release envelop
+	Wwise.post_event_id(AK.EVENTS.RELEASE_AOREN, self)
+	await get_tree().create_timer(RELEASE_TIME).timeout
+	
+	aoren_frequency = aoren_frequency * octaves[rng.randi_range(0, octaves.size()-1)] * triade[rng.randi_range(0, triade.size()-1)]
+	aoren_frequency = aoren_frequency if aoren_frequency > 16 else frequencies[0]
+	aoren_frequency = aoren_frequency if aoren_frequency < 2100 else frequencies[-1]
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.AOREN_FREQUENCY, aoren_frequency, self)
+	
+	# trigger envelop
+	Wwise.post_event_id(AK.EVENTS.TRIGGER_AOREN, self)
+
+func vote():
+	sync_to_aorens_in_range() # vote
+	choose_pitch()
+	await get_tree().create_timer(vote_delay).timeout
+	vote()
+
 func modulate_position(axis: String = "y"):
 	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE).set_parallel(false)
 	var delta = rng.randi_range(0.2, 1)
@@ -107,21 +101,14 @@ func modulate_light():
 	tween.tween_property(light, "light_energy", light_energy_target, 2)
 	tween.tween_callback(modulate_light)
 
-func _physics_process(delta):
-	stepper += 1
-	if stepper < 0 :
-		return
-	if stepper%10 == 0:
-		register_aoren()
-	if stepper%SYNC_STEPPER == 0:
-		stepper = 0
-		sync_to_aorens_in_range()
 
 func register_aoren():
 	GameState.dream_information.objects[name] = {
 		"position": position,
 		"frequency": Wwise.get_rtpc_value_id(AK.GAME_PARAMETERS.AOREN_FREQUENCY, self)
 	}
+	await get_tree().create_timer(registry_delay).timeout
+	register_aoren()
 
 func get_aorens_in_range():
 	return GameState.dream_information.objects.values().filter(func(aoren): 
@@ -129,18 +116,20 @@ func get_aorens_in_range():
 	)
 	
 func sync_to_aorens_in_range():
-	var mean_frequency = 0.0
+	#var mean_frequency = 0.0
 	var aorens_in_range = get_aorens_in_range()
 	for aoren in aorens_in_range:
-		mean_frequency += aoren.frequency
-	mean_frequency /= aorens_in_range.size()
-	if rng.randf_range(0, 100) < 0.4:
-		#mean_frequency += rng.randi_range(-200, 200)
-		#mean_frequency = clamp(mean_frequency, 20, 1500)
-		mean_frequency = frequencies[rng.randi_range(0, frequencies.size()-1)]
-
-	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.AOREN_FREQUENCY, int(mean_frequency/2)*2, self)
-	set_color(min(mean_frequency/100, 1))
+		decompte_votes[aoren.frequency] = 1 if not decompte_votes[aoren.frequency] else decompte_votes[aoren.frequency] + 1
+	aoren_frequency = _get_vote_result()
 	
 func set_color(R):
 	mesh.mesh.material.albedo_color = Color(R, 0.631, max(0.5, 1-R/10))
+
+func _get_vote_result() -> float:
+	var temp_max : int = 0
+	var max_key : float = frequencies[0]
+	for key in decompte_votes:
+		if decompte_votes[key] > temp_max:
+			temp_max = decompte_votes[key]
+			max_key = key
+	return max_key

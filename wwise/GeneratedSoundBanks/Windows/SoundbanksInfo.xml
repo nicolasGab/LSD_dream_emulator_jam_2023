@@ -9,12 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F5C3B4B3-6FFF-D922-209E-7CA4BD9CB4A8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B783D24F-8D9E-DB7C-BEE0-F5A72E9B8EFD}">
 			<ShortName>Init</ShortName>
 			<Path>1355168291.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3796564934" Name="Hard_Knee_Minus_3dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 				</ShareSets>
 				<AudioDevices>
@@ -34,6 +35,15 @@
 				</Bus>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="348963605" Name="Reverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3164629247"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="2901834267" Name="aoren_frequency"/>
 			</GameParameters>
@@ -176,7 +186,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7C9A3463-DA66-093A-5DC4-8B804589DAF5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E1AF8465-81D0-844B-60C1-F74B6576C9F1}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
@@ -243,9 +253,6 @@
 					<Plugin Id="472204842" Name="Guitar Distortion (Custom)" LibName="Wwise Guitar Distortion" LibId="8257539"/>
 					<Plugin Id="934572749" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
-				<ShareSets>
-					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="2775932802" Name="character_footsteps">
@@ -280,6 +287,7 @@
 						<MediaRef Id="945764765"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2814252982" Name="release_aoren"/>
 				<Event Id="1772107161" Name="trigger_aoren">
 					<PluginRefs>
 						<Custom>
@@ -287,10 +295,10 @@
 							<PluginRef Id="472204842"/>
 							<PluginRef Id="934572749"/>
 						</Custom>
-						<ShareSets>
-							<PluginRef Id="3164629247"/>
-						</ShareSets>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="348963605" Name="Reverb"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
 			<GameParameters>
@@ -308,5 +316,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{413D4942-C790-703F-97B3-1E7BC7EE6249}</FileHash>
+	<FileHash>{D04E5086-F65B-CCF6-1740-C4099B4C0A17}</FileHash>
 </SoundBanksInfo>

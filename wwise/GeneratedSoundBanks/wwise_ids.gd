@@ -2,16 +2,18 @@ class_name AK
 
 class EVENTS:
 
-	const ADD_ONE_HERTZ = 2394938017
 	const CHARACTER_FOOTSTEPS = 2775932802
-	const TRIGGER_AOREN = 1772107161
+	const ADD_ONE_HERTZ = 2394938017
 	const PLUIE_INONDATION_FAIBLE = 3528569874
+	const TRIGGER_AOREN = 1772107161
+	const RELEASE_AOREN = 2814252982
 
 	const _dict = {
-		"add_one_hertz": ADD_ONE_HERTZ,
 		"character_footsteps": CHARACTER_FOOTSTEPS,
+		"add_one_hertz": ADD_ONE_HERTZ,
+		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
 		"trigger_aoren": TRIGGER_AOREN,
-		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE
+		"release_aoren": RELEASE_AOREN
 	}
 
 class STATES:
@@ -25,18 +27,18 @@ class SWITCHES:
 
 		class SWITCH:
 			const HARD = 3599861390
-			const SOFT = 670602561
 			const WATER = 2654748154
 			const SWIM = 151879501
+			const SOFT = 670602561
 
 	const _dict = {
 		"material": {
 			"GROUP": 3865314626,
 			"SWITCH": {
 				"hard": 3599861390,
-				"soft": 670602561,
 				"water": 2654748154,
-				"swim": 151879501
+				"swim": 151879501,
+				"soft": 670602561
 			}
 		}
 	}
@@ -65,19 +67,23 @@ class BANKS:
 
 class BUSSES:
 
-	const MUSIC = 3991942870
-	const SFX = 393239870
 	const MASTER_AUDIO_BUS = 3803692087
+	const SFX = 393239870
+	const MUSIC = 3991942870
 
 	const _dict = {
-		"Music": MUSIC,
+		"Master Audio Bus": MASTER_AUDIO_BUS,
 		"SFX": SFX,
-		"Master Audio Bus": MASTER_AUDIO_BUS
+		"Music": MUSIC
 	}
 
 class AUX_BUSSES:
 
-	const _dict = {}
+	const REVERB = 348963605
+
+	const _dict = {
+		"Reverb": REVERB
+	}
 
 class AUDIO_DEVICES:
 
