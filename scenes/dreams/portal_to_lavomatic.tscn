@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt4h3cchembvt"]
+
+[ext_resource type="Script" path="res://scenes/dreams/portal_to_lavomatic.gd" id="1_rxbuj"]
+[ext_resource type="PackedScene" uid="uid://c1vdo1s1jasji" path="res://scenes/lavomatic.tscn" id="2_g3luy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5v3o4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ayppl"]
+
+[node name="Portal" type="Area3D"]
+collision_layer = 0
+script = ExtResource("1_rxbuj")
+lavomatic_scene = ExtResource("2_g3luy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.505727, 0)
+mesh = SubResource("BoxMesh_5v3o4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.506, 0)
+shape = SubResource("BoxShape3D_ayppl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

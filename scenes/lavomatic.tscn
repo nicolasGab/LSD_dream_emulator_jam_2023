@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1vdo1s1jasji"]
+
+[ext_resource type="PackedScene" uid="uid://ccoc3xlhxp5vg" path="res://scenes/dream_container.tscn" id="1_0xcir"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nx5pl"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 0.21
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_klmr7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7d8ot"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvjr0"]
+albedo_color = Color(0.254902, 0.368627, 0.517647, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8iv4g"]
+material = SubResource("StandardMaterial3D_mvjr0")
+size = Vector2(10000, 10000)
+orientation = 1
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_e5d2e"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
+
+[node name="DreamContainer" instance=ExtResource("1_0xcir")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Objects" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_nx5pl")
+mesh = SubResource("CylinderMesh_klmr7")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/RigidBody3D" index="1"]
+shape = SubResource("CylinderShape3D_7d8ot")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="Objects" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.62708, 0.778955, 0, -0.778955, 0.62708, -6.71994, 2.08165e-12, -1.37733)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/RigidBody3D2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_nx5pl")
+mesh = SubResource("CylinderMesh_klmr7")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/RigidBody3D2" index="1"]
+shape = SubResource("CylinderShape3D_7d8ot")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes" index="0"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Meshes/StaticBody3D" index="0"]
+mesh = SubResource("QuadMesh_8iv4g")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/StaticBody3D" index="1"]
+shape = SubResource("WorldBoundaryShape3D_e5d2e")

@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 const step_divider_walk = 20
