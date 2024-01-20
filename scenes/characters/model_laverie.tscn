@@ -1,0 +1,111 @@
+[gd_scene load_steps=12 format=3 uid="uid://c7bkckl085e0m"]
+
+[ext_resource type="ArrayMesh" uid="uid://cac0ht2rhuw2w" path="res://graphics/textures/devanture.obj" id="1_l4e0t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xp36t"]
+transparency = 1
+albedo_color = Color(0.188235, 0.411765, 1, 0.647059)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pq084"]
+material = SubResource("StandardMaterial3D_xp36t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_tkf6s"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdyaj"]
+transparency = 1
+albedo_color = Color(0.541176, 0.741176, 0.890196, 0.576471)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8sbrn"]
+material = SubResource("StandardMaterial3D_wdyaj")
+size = Vector3(1, 1, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l16we"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x1pa2"]
+size = Vector3(0.776161, 0.595703, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2oj3"]
+margin = 0.0
+size = Vector3(3.57214, 1.61658, 0.155518)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xqsy8"]
+margin = 0.0
+size = Vector3(4.68578, 1.72138, 0.155518)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n4vnv"]
+margin = 0.0
+size = Vector3(4.41089, 1.61658, 0.0435181)
+
+[node name="Laverie" type="Node3D"]
+
+[node name="fenetre" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, 0, 0, -2.48428)
+visible = false
+mesh = SubResource("PlaneMesh_pq084")
+skeleton = NodePath("")
+
+[node name="LaverieWall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.46407e-08, 0.0366157, 8.13333e-16, -1.93636, -1.60052e-09, -8.13333e-16, -6.75375e-16, -1.27711e-17, 2.33189, -1.28552, 0.976441, -0.0109642)
+mesh = SubResource("BoxMesh_tkf6s")
+skeleton = NodePath("../..")
+
+[node name="LaverieWall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.388e-08, 0.0366157, 8.13333e-16, -1.91896, -1.60052e-09, -8.13333e-16, -6.69305e-16, -1.27711e-17, 2.33189, 2.28292, 0.971998, -0.0109642)
+mesh = SubResource("BoxMesh_tkf6s")
+skeleton = NodePath("../..")
+
+[node name="LaverieWallBack" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.00722e-15, -1.61732e-09, 1.79231, -1.92536, -1.61732e-09, -6.25135e-16, 8.41601e-08, -0.037, -7.83444e-08, 0.496375, 0.979789, 2.32576)
+mesh = SubResource("BoxMesh_tkf6s")
+skeleton = NodePath("../..")
+
+[node name="LaverieDevantureFenetre" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.63805e-15, -1.61732e-09, 1.36596, -1.689, -1.61732e-09, -4.76431e-16, 7.38285e-08, -0.037, -5.97082e-08, 0.17839, 0.935321, -2.19915)
+transparency = 0.5
+mesh = SubResource("BoxMesh_8sbrn")
+skeleton = NodePath("../..")
+
+[node name="LaverieFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.55879, -1.27711e-17, 8.13333e-16, 1.24126e-15, 0.0366157, -8.13333e-16, -1.24126e-15, 1.27711e-17, 2.33189, 0.498178, 0.0225444, -0.0102715)
+mesh = SubResource("BoxMesh_l16we")
+skeleton = NodePath("../..")
+
+[node name="LaverieCeiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.55879, -1.27711e-17, 8.13333e-16, 1.24126e-15, 0.0366157, -8.13333e-16, -1.24126e-15, 1.27711e-17, 2.33189, 0.498178, 1.92617, -0.000559996)
+mesh = SubResource("BoxMesh_l16we")
+skeleton = NodePath("../..")
+
+[node name="Devanture" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.62268e-08, 2.09272e-16, 0.6, 2.09272e-16, 0.6, -2.09272e-16, -0.6, 2.09272e-16, -2.62268e-08, 2.30185, 0.00916165, -2.33848)
+mesh = ExtResource("1_l4e0t")
+skeleton = NodePath("../../..")
+
+[node name="collisions" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="collisions"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collisions/StaticBody3D"]
+transform = Transform3D(3.49327, 0, 0, 0, 2.90821, 0, 0, 0, 0.155827, 0.176325, 0.8561, -2.29727)
+shape = SubResource("BoxShape3D_x1pa2")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="collisions"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collisions/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.478821, 0.846144, 2.34075)
+shape = SubResource("BoxShape3D_d2oj3")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="collisions"]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 0.11892, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collisions/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.12238e-23, 0, -1.12238e-23, 1, 0.00412736, 0.898542, 1.36209)
+shape = SubResource("BoxShape3D_xqsy8")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="collisions"]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -0.0472893, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collisions/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, 0.0594482, 0.843886, 2.33175)
+shape = SubResource("BoxShape3D_n4vnv")

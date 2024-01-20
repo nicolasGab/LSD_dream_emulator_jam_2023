@@ -7,7 +7,8 @@
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_82jtr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u46om"]
-height = 1.5
+radius = 0.161871
+height = 1.17538
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_node", "audio")]
 script = ExtResource("1_rtc3v")
@@ -28,5 +29,5 @@ listener = NodePath("AkListener3D")
 is_spatial = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.708182, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.592486, 0)
 shape = SubResource("CapsuleShape3D_u46om")

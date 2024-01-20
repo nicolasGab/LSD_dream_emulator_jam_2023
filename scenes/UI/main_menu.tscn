@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ba7c1y3mt7n8"]
 
 [ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_6j6s6"]
-[ext_resource type="PackedScene" uid="uid://c1vdo1s1jasji" path="res://scenes/lavomatic.tscn" id="2_mtvw8"]
+[ext_resource type="PackedScene" uid="uid://bw2b1iiqr8wv1" path="res://scenes/intro_laverie.tscn" id="2_w1wdt"]
 
 [node name="MainMenu" type="Panel"]
 anchors_preset = 15
@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6j6s6")
-lavomatic_scene = ExtResource("2_mtvw8")
+lavomatic_scene = ExtResource("2_w1wdt")
 
 [node name="LaunchGame" type="Button" parent="."]
 layout_mode = 1
@@ -25,6 +25,6 @@ offset_right = 0.295975
 offset_bottom = 0.26799
 grow_horizontal = 2
 grow_vertical = 2
-text = "QUIT"
+text = "Zéparti"
 
 [connection signal="pressed" from="LaunchGame" to="." method="_on_launch_game_pressed"]
