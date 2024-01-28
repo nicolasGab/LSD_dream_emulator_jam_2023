@@ -1,0 +1,26 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://puo7c1pbqru4"]
+
+[ext_resource type="Texture2D" uid="uid://bs70tidauu4de" path="res://graphics/materials/laverie_base texture albedo_albedo.jpg" id="1_ox00f"]
+[ext_resource type="Texture2D" uid="uid://c7bqi7i4hvqvy" path="res://graphics/materials/laverie_base texture albedo_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://u8kxffao53qj" path="res://graphics/materials/laverie_base texture albedo_normal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dvyvjmd8g472b" path="res://graphics/materials/laverie_base texture albedo_heightmap.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b7663jmduy0r0" path="res://graphics/materials/laverie_base texture albedo_emission.png" id="5"]
+
+[resource]
+albedo_texture = ExtResource("1_ox00f")
+roughness_texture = ExtResource("2")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_energy_multiplier = 0.0
+emission_texture = ExtResource("5")
+normal_enabled = true
+normal_scale = 0.75
+normal_texture = ExtResource("3")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("4")
+uv1_offset = Vector3(0, 0.015, 0)
+uv2_offset = Vector3(0, 0.005, 0)
