@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://caj0gope3mcie"]
+[gd_scene load_steps=10 format=3 uid="uid://caj0gope3mcie"]
 
 [ext_resource type="Script" path="res://scripts/characters/aoren.gd" id="1_tnjxy"]
+[ext_resource type="Texture2D" uid="uid://djw6uedptenwu" path="res://graphics/textures/bonhomme_corps_1.png" id="2_ciqbp"]
+[ext_resource type="Texture2D" uid="uid://cemuaj77ot46v" path="res://graphics/textures/bonhomme_corps_2.png" id="3_lx6ov"]
+[ext_resource type="Texture2D" uid="uid://dndupyhc3poal" path="res://graphics/textures/bonhomme_corps_3.png" id="4_6oa57"]
+[ext_resource type="Texture2D" uid="uid://dphi82xe0glbn" path="res://graphics/textures/bonhomme_jambe.png" id="5_vnkt6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5051s"]
 metallic = 0.11
@@ -15,6 +19,23 @@ margin = 0.189
 height = 0.52
 radius = 1.05
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lgth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ciqbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lx6ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6oa57")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="Aoren" type="CharacterBody3D" node_paths=PackedStringArray("mesh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.620565, 0)
 script = ExtResource("1_tnjxy")
@@ -22,7 +43,25 @@ mesh = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.352598, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_pe3tt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_usgyp")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.0273688, 0)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_6lgth")
+autoplay = "default"
+frame_progress = 0.754979
+
+[node name="jambe1" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.0988471, -0.460177, 0)
+billboard = 2
+texture = ExtResource("5_vnkt6")
+
+[node name="jambe2" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.10829, -0.460177, 0)
+billboard = 2
+texture = ExtResource("5_vnkt6")

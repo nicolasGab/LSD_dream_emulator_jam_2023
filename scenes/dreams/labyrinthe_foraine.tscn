@@ -5,9 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe_1.tscn" id="3_4t1oa"]
 [ext_resource type="Environment" uid="uid://d0bqjflyjos6v" path="res://configs/pitch_black_environment.tres" id="4_kjip8"]
 
-[node name="DreamContainer" node_paths=PackedStringArray("pieces") instance=ExtResource("1_5lm43")]
+[node name="DreamContainer" instance=ExtResource("1_5lm43")]
 script = ExtResource("2_0bwpp")
-pieces = NodePath("Meshes/pieces")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13045, 0)
