@@ -9,6 +9,7 @@ var desired_rotation : Vector3
 func _ready():
 	parent = get_parent()
 	desired_rotation = parent.rotation
+	set_fov(80.0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
