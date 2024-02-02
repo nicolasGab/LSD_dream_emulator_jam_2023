@@ -8,7 +8,6 @@ func _ready():
 	Wwise.register_game_obj(self, "audio manager")
 	
 	set_switches_to_default()
-	Wwise.post_event_id(AK.EVENTS.PLUIE_INONDATION_FAIBLE, self)
 
 
 
