@@ -10,9 +10,10 @@ script = ExtResource("2_0bwpp")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 3.85164, 2.08165e-12)
+light_color = Color(0.803922, 0.709804, 0.403922, 1)
 light_energy = 3.469
-omni_range = 23.924
-omni_attenuation = 0.732043
+omni_range = 11.806
+omni_attenuation = 0.0915053
 
 [node name="pieces" type="Node3D" parent="Meshes" index="0"]
 

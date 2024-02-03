@@ -9,5 +9,9 @@ sky_energy_multiplier = 1.2
 sky_material = SubResource("ProceduralSkyMaterial_vuck1")
 
 [resource]
-background_energy_multiplier = 0.0
+background_mode = 1
+background_color = Color(0.0156863, 0.0352941, 0.121569, 1)
+background_energy_multiplier = 1.19
 sky = SubResource("Sky_8awsy")
+ambient_light_color = Color(0.603922, 0.509804, 0.266667, 1)
+ambient_light_energy = 0.0
