@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5rwr3kerjqo8"]
 
-[ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe_1.tscn" id="1_k6aqd"]
+[ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe.tscn" id="1_k6aqd"]
 [ext_resource type="PackedScene" uid="uid://dec163h7yebh1" path="res://scenes/characters/machine_foraine_placeholder.tscn" id="2_yo1ap"]
 
 [node name="PieceLabyrinthe1" instance=ExtResource("1_k6aqd")]

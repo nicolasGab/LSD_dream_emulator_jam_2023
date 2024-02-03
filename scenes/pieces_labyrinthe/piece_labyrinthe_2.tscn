@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdgillmydr4fg"]
 
-[ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe_1.tscn" id="1_8uu2c"]
+[ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe.tscn" id="1_8uu2c"]
 
 [node name="PieceLabyrinthe2" instance=ExtResource("1_8uu2c")]
 

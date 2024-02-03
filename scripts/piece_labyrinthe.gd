@@ -10,10 +10,11 @@ signal reach_west
 @export var area_east : Area3D
 @export var area_west : Area3D
 
-const NORTH_OFFSET : Vector3 = Vector3(10, 0, 0)
-const SOUTH_OFFSET : Vector3 = Vector3(-10, 0, 0)
-const EAST_OFFSET : Vector3 = Vector3(0, 0, 10)
-const WEST_OFFSET : Vector3 = Vector3(0, 0, -10)
+const length: float = 24.0
+const NORTH_OFFSET : Vector3 = Vector3(length, 0, 0)
+const SOUTH_OFFSET : Vector3 = Vector3(-length, 0, 0)
+const EAST_OFFSET : Vector3 = Vector3(0, 0, length)
+const WEST_OFFSET : Vector3 = Vector3(0, 0, -length)
 
 var piece_north : bool = false
 var piece_south : bool = false
@@ -21,9 +22,9 @@ var piece_east : bool = false
 var piece_west : bool = false
 
 var pieces_labyrinthe : Array = [
-	"res://scenes/pieces_labyrinthe/piece_labyrinthe_1.tscn",
-	"res://scenes/pieces_labyrinthe/piece_labyrinthe_2.tscn",
-	"res://scenes/pieces_labyrinthe/piece_labyrinthe_3.tscn",
+	"res://scenes/pieces_labyrinthe/piece_labyrinthe.tscn",
+	#"res://scenes/pieces_labyrinthe/piece_labyrinthe_2.tscn",
+	#"res://scenes/pieces_labyrinthe/piece_labyrinthe_3.tscn",
 ]
 var rand = RandomNumberGenerator.new()
 
@@ -36,8 +37,14 @@ func _ready():
 		area_east.body_entered.connect(_on_area_east_area_entered)
 	if area_west:
 		area_west.body_entered.connect(_on_area_west_area_entered)
+func check_body(body: Node3D) -> bool :
+	if body is Player:
+		return true
+	return false
 
 func _on_area_north_area_entered(body: Node3D):
+	if !check_body(body):
+		return
 	reach_north.emit()
 	if not piece_north:
 		pop_new_piece(NORTH_OFFSET)
@@ -46,6 +53,8 @@ func _on_area_north_area_entered(body: Node3D):
 		area_north.body_entered.disconnect(_on_area_north_area_entered)
 
 func _on_area_south_area_entered(body: Node3D):
+	if !check_body(body):
+		return
 	reach_south.emit()
 	if not piece_south:
 		pop_new_piece(SOUTH_OFFSET)
@@ -54,6 +63,8 @@ func _on_area_south_area_entered(body: Node3D):
 		area_south.body_entered.disconnect(_on_area_south_area_entered)
 
 func _on_area_east_area_entered(body: Node3D):
+	if !check_body(body):
+		return
 	reach_east.emit()
 	if not piece_east:
 		pop_new_piece(EAST_OFFSET)
@@ -62,6 +73,8 @@ func _on_area_east_area_entered(body: Node3D):
 		area_east.body_entered.disconnect(_on_area_east_area_entered)
 
 func _on_area_west_area_entered(body: Node3D):
+	if !check_body(body):
+		return
 	reach_west.emit()
 	if not piece_west:
 		pop_new_piece(WEST_OFFSET)

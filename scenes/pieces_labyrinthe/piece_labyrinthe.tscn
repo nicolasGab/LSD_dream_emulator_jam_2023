@@ -1,0 +1,152 @@
+[gd_scene load_steps=11 format=3 uid="uid://l4ansaowwam6"]
+
+[ext_resource type="PackedScene" uid="uid://dec163h7yebh1" path="res://scenes/characters/machine_foraine_placeholder.tscn" id="1_hftb6"]
+[ext_resource type="Script" path="res://scripts/piece_labyrinthe.gd" id="1_wv20l"]
+[ext_resource type="Texture2D" uid="uid://nsjh63r2m3he" path="res://graphics/materials/albedo_test_06.jpg" id="3_q8w2c"]
+[ext_resource type="Texture2D" uid="uid://c7bqi7i4hvqvy" path="res://graphics/materials/laverie_base texture albedo_orm.png" id="4_4pskb"]
+[ext_resource type="Texture2D" uid="uid://b7663jmduy0r0" path="res://graphics/materials/laverie_base texture albedo_emission.png" id="5_7wuil"]
+[ext_resource type="Texture2D" uid="uid://dvyvjmd8g472b" path="res://graphics/materials/laverie_base texture albedo_heightmap.png" id="6_5qtbr"]
+[ext_resource type="Texture2D" uid="uid://u8kxffao53qj" path="res://graphics/materials/laverie_base texture albedo_normal.png" id="7_qu60t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26sp3"]
+albedo_texture = ExtResource("3_q8w2c")
+roughness_texture = ExtResource("4_4pskb")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_energy_multiplier = 0.0
+emission_texture = ExtResource("5_7wuil")
+normal_enabled = true
+normal_texture = ExtResource("7_qu60t")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("4_4pskb")
+heightmap_enabled = true
+heightmap_texture = ExtResource("6_5qtbr")
+uv1_scale = Vector3(3, 3, 3)
+uv1_offset = Vector3(0, 0.015, 0)
+uv2_offset = Vector3(0, 0.005, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hbynm"]
+material = SubResource("StandardMaterial3D_26sp3")
+size = Vector2(24, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xsci5"]
+size = Vector3(0.1, 1, 23.9923)
+
+[node name="PieceLabyrinthe1" type="Node3D" node_paths=PackedStringArray("area_north", "area_south", "area_east", "area_west")]
+script = ExtResource("1_wv20l")
+area_north = NodePath("Sol/AreaNorth")
+area_south = NodePath("Sol/AreaSouth")
+area_east = NodePath("Sol/AreaEast")
+area_west = NodePath("Sol/AreaWest")
+
+[node name="MachineForainePlaceholder" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68971, 0, -3.83831)
+
+[node name="MachineForainePlaceholder3" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -10.9012, 0, -9.9455)
+
+[node name="MachineForainePlaceholder4" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.75135, 0, -9.92253)
+
+[node name="MachineForainePlaceholder5" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -4.70945, 0, -6.96792)
+
+[node name="MachineForainePlaceholder6" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -2.68086, 0, -6.96792)
+
+[node name="MachineForainePlaceholder7" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 3.99858, 0, -9.92402)
+
+[node name="MachineForainePlaceholder8" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 3.99858, 0, -5.83945)
+
+[node name="MachineForainePlaceholder9" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 3.99858, 0, -1.71038)
+
+[node name="MachineForainePlaceholder10" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 6.07084, 0, -1.71038)
+
+[node name="MachineForainePlaceholder11" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 6.07084, 0, 2.40353)
+
+[node name="MachineForainePlaceholder12" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 8.20151, 0, 5.79259)
+
+[node name="MachineForainePlaceholder13" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 8.20151, 0, 9.84528)
+
+[node name="MachineForainePlaceholder14" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 9.17243, 0, 2.67479)
+
+[node name="MachineForainePlaceholder15" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 5.04798, 0, 5.49787)
+
+[node name="MachineForainePlaceholder16" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 8.2266, 0, -4.56727)
+
+[node name="MachineForainePlaceholder17" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 10.3283, 0, -2.84027)
+
+[node name="MachineForainePlaceholder18" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 9.90241, 0, -10.9187)
+
+[node name="MachineForainePlaceholder19" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 9.90241, 0, -8.82095)
+
+[node name="MachineForainePlaceholder20" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 10.3787, 0, 9.87574)
+
+[node name="MachineForainePlaceholder21" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -10.8877, 0, 9.87574)
+
+[node name="MachineForainePlaceholder22" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.92081, 0, 9.87574)
+
+[node name="MachineForainePlaceholder23" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.92081, 0, 5.79079)
+
+[node name="MachineForainePlaceholder24" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -4.84694, 0, 5.79079)
+
+[node name="MachineForainePlaceholder25" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -1.01336, 0, 5.79079)
+
+[node name="MachineForainePlaceholder26" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 0.994821, 0, 9.88045)
+
+[node name="MachineForainePlaceholder27" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -7.96741, 0, 1.76726)
+
+[node name="MachineForainePlaceholder28" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -10.8665, 0, -2.12001)
+
+[node name="MachineForainePlaceholder29" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -8.69643, 0, -2.28645)
+
+[node name="Sol" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_hbynm")
+
+[node name="AreaNorth" type="Area3D" parent="Sol"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9971, 0.311, 0.00383759)
+shape = SubResource("BoxShape3D_xsci5")
+
+[node name="AreaSouth" type="Area3D" parent="Sol"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9609, 0.311, 2.08165e-12)
+shape = SubResource("BoxShape3D_xsci5")
+
+[node name="AreaEast" type="Area3D" parent="Sol"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaEast"]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 2.08165e-12, 0.311, 11.9289)
+shape = SubResource("BoxShape3D_xsci5")
+
+[node name="AreaWest" type="Area3D" parent="Sol"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaWest"]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 2.08165e-12, 0.311, -11.9774)
+shape = SubResource("BoxShape3D_xsci5")
