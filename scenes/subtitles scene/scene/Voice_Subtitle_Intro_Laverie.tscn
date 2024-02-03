@@ -1,9 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://dh40jiraqct0l"]
 
-[ext_resource type="FontFile" uid="uid://bd227jm25vdnp" path="res://scenes/subtitles scene/font/erthqake/ERTHQAKE.TTF" id="2_bfvub"]
-[ext_resource type="AudioStream" uid="uid://7dgbl5qocomh" path="res://scenes/subtitles scene/audios/Audio Laverie 1.wav" id="3_6b1r0"]
-[ext_resource type="AudioStream" uid="uid://bb2cvvy7e56lu" path="res://scenes/subtitles scene/audios/White_Noise.mp3" id="3_tcpvu"]
-[ext_resource type="Script" path="res://scenes/subtitles scene/Narrator.gd" id="3_xy2di"]
+[ext_resource type="AudioStream" uid="uid://bb2cvvy7e56lu" path="res://scenes/subtitles scene/audios/White_Noise.mp3" id="1_60gj7"]
+[ext_resource type="AudioStream" uid="uid://7dgbl5qocomh" path="res://scenes/subtitles scene/audios/Audio Laverie 1.wav" id="2_k5uxp"]
+[ext_resource type="FontFile" uid="uid://bd227jm25vdnp" path="res://scenes/subtitles scene/font/erthqake/ERTHQAKE.TTF" id="3_vubmr"]
 
 [sub_resource type="GDScript" id="GDScript_l2alw"]
 script/source = "extends Node2D
@@ -27,6 +26,58 @@ func _ready():
 	pass # Replace with function body.
 
 "
+
+[sub_resource type="Animation" id="Animation_kvfrp"]
+resource_name = "Animation d'animation"
+length = 300.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise/Noise")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_60gj7")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Noise/Noise:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, -55.116]
+}
+
+[sub_resource type="Animation" id="Animation_7u0vh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise/Noise:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n81cf"]
+_data = {
+"Animation d'animation": SubResource("Animation_kvfrp"),
+"RESET": SubResource("Animation_7u0vh")
+}
 
 [sub_resource type="Animation" id="Animation_di0s7"]
 resource_name = "Narration Laverie"
@@ -59,14 +110,14 @@ tracks/1/keys = {
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Narrator_Laverie")
+tracks/2/path = NodePath("../Narrator/Narrator_Laverie")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_6b1r0")
+"stream": ExtResource("2_k5uxp")
 }],
 "times": PackedFloat32Array(10.15)
 }
@@ -101,14 +152,14 @@ tracks/1/keys = {
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Narrator_Laverie")
+tracks/2/path = NodePath("../Narrator/Narrator_Laverie")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_6b1r0")
+"stream": ExtResource("2_k5uxp")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -120,91 +171,53 @@ _data = {
 "RESET": SubResource("Animation_hwl3y")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_h4ebl"]
+[sub_resource type="GDScript" id="GDScript_wca0g"]
+script/source = "extends AnimationPlayer
 
-[sub_resource type="Animation" id="Animation_kvfrp"]
-resource_name = "Animation d'animation"
-length = 300.0
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("White Noise")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("3_tcpvu")
-}],
-"times": PackedFloat32Array(0.1)
-}
-tracks/0/use_blend = true
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("White Noise:volume_db")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-80.0, -55.116]
-}
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
 
-[sub_resource type="Animation" id="Animation_7u0vh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("White Noise:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-80.0]
-}
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n81cf"]
-_data = {
-"Animation d'animation": SubResource("Animation_kvfrp"),
-"RESET": SubResource("Animation_7u0vh")
-}
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_4avpq"]
 
 [node name="NarratorLaverie" type="Node2D"]
 script = SubResource("GDScript_l2alw")
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0.890196, 1, 1, 0)
-offset_left = 1.0
-offset_top = 826.0
-offset_right = 1923.0
-offset_bottom = 1079.0
-theme_override_fonts/font = ExtResource("2_bfvub")
-theme_override_font_sizes/font_size = 71
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Narrator" type="AnimationPlayer" parent="Label"]
-libraries = {
-"": SubResource("AnimationLibrary_6uqxo")
-}
-autoplay = "Narration Laverie"
-script = ExtResource("3_xy2di")
-
-[node name="Narrator_Laverie" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_h4ebl")
-volume_db = -0.005
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Noise" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_n81cf")
 }
 autoplay = "Animation d'animation"
 
-[node name="White Noise" type="AudioStreamPlayer" parent="."]
+[node name="Noise" type="AudioStreamPlayer" parent="Noise"]
 volume_db = -80.0
 autoplay = true
+
+[node name="Narrator" type="AnimationPlayer" parent="."]
+root_node = NodePath("Label")
+libraries = {
+"": SubResource("AnimationLibrary_6uqxo")
+}
+autoplay = "Narration Laverie"
+script = SubResource("GDScript_wca0g")
+
+[node name="Label" type="Label" parent="Narrator"]
+modulate = Color(0.890196, 1, 1, 0)
+offset_left = 1.0
+offset_top = 826.0
+offset_right = 1923.0
+offset_bottom = 1079.0
+theme_override_fonts/font = ExtResource("3_vubmr")
+theme_override_font_sizes/font_size = 71
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Narrator_Laverie" type="AudioStreamPlayer" parent="Narrator"]
+stream = SubResource("AudioStreamPolyphonic_4avpq")
+volume_db = -0.005
