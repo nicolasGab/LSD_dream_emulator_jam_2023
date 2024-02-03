@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://caj0gope3mcie"]
+[gd_scene load_steps=15 format=3 uid="uid://caj0gope3mcie"]
 
 [ext_resource type="Script" path="res://scripts/characters/aoren.gd" id="1_tnjxy"]
 [ext_resource type="Texture2D" uid="uid://djw6uedptenwu" path="res://graphics/textures/bonhomme_corps_1.png" id="2_ciqbp"]
 [ext_resource type="Texture2D" uid="uid://cemuaj77ot46v" path="res://graphics/textures/bonhomme_corps_2.png" id="3_lx6ov"]
 [ext_resource type="Texture2D" uid="uid://dndupyhc3poal" path="res://graphics/textures/bonhomme_corps_3.png" id="4_6oa57"]
 [ext_resource type="Texture2D" uid="uid://dphi82xe0glbn" path="res://graphics/textures/bonhomme_jambe.png" id="5_vnkt6"]
-[ext_resource type="Material" path="res://graphics/materials/ondes_dynamic_mat.tres" id="6_mqi2b"]
+[ext_resource type="Material" uid="uid://5s8laj3y4ofi" path="res://graphics/materials/ondes_dynamic_mat.tres" id="6_mqi2b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5051s"]
 metallic = 0.11
@@ -39,6 +39,67 @@ animations = [{
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_u3xh0"]
 material = ExtResource("6_mqi2b")
+
+[sub_resource type="Animation" id="Animation_m64s0"]
+resource_name = "apparition"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:shader_parameter/circle_smoothness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [-0.03, 0.44]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:shader_parameter/circle_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [0.0, 0.03]
+}
+
+[sub_resource type="Animation" id="Animation_ju1pk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:shader_parameter/circle_smoothness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.44]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:shader_parameter/circle_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.03]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2354"]
+_data = {
+"RESET": SubResource("Animation_ju1pk"),
+"apparition": SubResource("Animation_m64s0")
+}
 
 [node name="Aoren" type="CharacterBody3D" node_paths=PackedStringArray("mesh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.620565, 0)
@@ -75,3 +136,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.618043, 0)
 gi_mode = 0
 gi_lightmap_scale = 2
 mesh = SubResource("PlaneMesh_u3xh0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ondes_sous_les_pieds"]
+libraries = {
+"": SubResource("AnimationLibrary_k2354")
+}

@@ -14,6 +14,7 @@ var step_divider = step_divider_walk
 @export_group("Internal Nodes")
 @export var camera_node: Camera3D
 @export var audio: Node3D
+@export var main : MeshInstance3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -56,3 +57,5 @@ func _input(event):
 	if event.is_action_released("run"):
 		move_amount = walk_amount
 		step_divider = step_divider_walk
+	if event is InputEventKey and event.keycode == KEY_A and event.is_pressed():
+		main.get_node("AnimationPlayer").play("activation_main")

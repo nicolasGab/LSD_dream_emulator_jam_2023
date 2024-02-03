@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1l28lnfnvyk2"]
+[gd_scene load_steps=7 format=3 uid="uid://bl5qse7pgp66p"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_j21v2"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rtc3v"]
 [ext_resource type="Script" path="res://scripts/audio/player_audio.gd" id="3_v1mlu"]
+[ext_resource type="PackedScene" uid="uid://crym1871otesy" path="res://scenes/main.tscn" id="4_dylos"]
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_82jtr"]
 
@@ -10,10 +11,11 @@
 radius = 0.161871
 height = 1.17538
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_node", "audio")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera_node", "audio", "main")]
 script = ExtResource("1_rtc3v")
 camera_node = NodePath("Camera3D")
 audio = NodePath("Camera3D/Audio")
+main = NodePath("Main")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
@@ -31,3 +33,6 @@ is_spatial = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.592486, 0)
 shape = SubResource("CapsuleShape3D_u46om")
+
+[node name="Main" parent="." instance=ExtResource("4_dylos")]
+transform = Transform3D(0.0803833, -0.0374066, -0.0883762, 0.0584202, -0.0362069, 0.114207, -0.0516549, -0.0991595, -0.00836256, 0.825939, -0.100945, -0.376794)
