@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bw2b1iiqr8wv1"]
+[gd_scene load_steps=19 format=3 uid="uid://bw2b1iiqr8wv1"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_fstbk"]
 [ext_resource type="PackedScene" uid="uid://d1l28lnfnvyk2" path="res://scenes/player.tscn" id="2_3eho8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="5_bktrw"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="6_ubnmt"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="7_ek08c"]
+[ext_resource type="PackedScene" uid="uid://da2uqtu1l4x3n" path="res://scenes/subtitles scene/scene/narrator_laverie.tscn" id="10_o884e"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
 size = Vector2(100, 100)
@@ -157,3 +158,5 @@ omni_attenuation = 0.870551
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("5_71sgd")
+
+[node name="NarratorLaverie" parent="." instance=ExtResource("10_o884e")]

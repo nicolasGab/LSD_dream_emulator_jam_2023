@@ -1,0 +1,210 @@
+[gd_scene load_steps=13 format=3 uid="uid://dh40jiraqct0l"]
+
+[ext_resource type="FontFile" uid="uid://bd227jm25vdnp" path="res://scenes/subtitles scene/font/erthqake/ERTHQAKE.TTF" id="2_bfvub"]
+[ext_resource type="AudioStream" uid="uid://7dgbl5qocomh" path="res://scenes/subtitles scene/audios/Audio Laverie 1.wav" id="3_6b1r0"]
+[ext_resource type="AudioStream" uid="uid://bb2cvvy7e56lu" path="res://scenes/subtitles scene/audios/White_Noise.mp3" id="3_tcpvu"]
+[ext_resource type="Script" path="res://scenes/subtitles scene/Narrator.gd" id="3_xy2di"]
+
+[sub_resource type="GDScript" id="GDScript_l2alw"]
+script/source = "extends Node2D
+
+@onready var Narrateur_Laverie = $Narrator
+
+signal timeout
+
+const TIME_PERIOD = 5 # 500ms
+
+var time = 0
+
+func _process(delta):
+	time += delta
+	if time > TIME_PERIOD:
+		$AnimationPlayer.play(\"Narrator\")
+		# Reset timer
+		time = 0
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+"
+
+[sub_resource type="Animation" id="Animation_di0s7"]
+resource_name = "Narration Laverie"
+length = 300.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(10.15, 11.45, 19.25, 29.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["", "Dad !", "Dad ?", "What is this place ?"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11.45, 11.75, 11.85, 11.95, 12.05, 12.25, 12.45, 12.75, 13.45, 15.35, 15.65, 15.75, 15.85, 15.95, 16.15, 16.35, 16.65, 17.35, 19.45, 19.75, 19.95, 20.35, 20.45, 20.55, 20.75, 21.05, 21.55, 29.6, 29.95, 30.25, 30.5, 30.7, 30.85, 31.15, 31.4, 32.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 0), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0.419608), Color(0.890196, 1, 1, 1), Color(0.890196, 1, 1, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Narrator_Laverie")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_6b1r0")
+}],
+"times": PackedFloat32Array(10.15)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_hwl3y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.890196, 1, 1, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Narrator_Laverie")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_6b1r0")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6uqxo"]
+_data = {
+"Narration Laverie": SubResource("Animation_di0s7"),
+"RESET": SubResource("Animation_hwl3y")
+}
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_gp5bh"]
+
+[sub_resource type="Animation" id="Animation_kvfrp"]
+resource_name = "Animation d'animation"
+length = 300.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("White Noise")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_tcpvu")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("White Noise:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, -55.116]
+}
+
+[sub_resource type="Animation" id="Animation_7u0vh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("White Noise:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n81cf"]
+_data = {
+"Animation d'animation": SubResource("Animation_kvfrp"),
+"RESET": SubResource("Animation_7u0vh")
+}
+
+[node name="NarratorLaverie" type="Node2D"]
+script = SubResource("GDScript_l2alw")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.890196, 1, 1, 0)
+offset_left = 1.0
+offset_top = 826.0
+offset_right = 1923.0
+offset_bottom = 1079.0
+theme_override_fonts/font = ExtResource("2_bfvub")
+theme_override_font_sizes/font_size = 71
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Narrator" type="AnimationPlayer" parent="Label"]
+libraries = {
+"": SubResource("AnimationLibrary_6uqxo")
+}
+autoplay = "Narration Laverie"
+script = ExtResource("3_xy2di")
+
+[node name="Narrator_Laverie" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPolyphonic_gp5bh")
+volume_db = -0.005
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n81cf")
+}
+autoplay = "Animation d'animation"
+
+[node name="White Noise" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+autoplay = true
