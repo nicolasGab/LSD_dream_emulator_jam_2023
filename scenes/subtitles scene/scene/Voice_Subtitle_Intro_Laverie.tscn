@@ -7,21 +7,6 @@
 [sub_resource type="GDScript" id="GDScript_l2alw"]
 script/source = "extends Node2D
 
-@onready var Narrateur_Laverie = $Narrator
-
-signal timeout
-
-const TIME_PERIOD = 5 # 500ms
-
-var time = 0
-
-func _process(delta):
-	time += delta
-	if time > TIME_PERIOD:
-		$AnimationPlayer.play(\"Narrator\")
-		# Reset timer
-		time = 0
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
@@ -110,7 +95,7 @@ tracks/1/keys = {
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Narrator/Narrator_Laverie")
+tracks/2/path = NodePath("Narrator_Laverie")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -152,7 +137,7 @@ tracks/1/keys = {
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Narrator/Narrator_Laverie")
+tracks/2/path = NodePath("Narrator_Laverie")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -184,7 +169,7 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_4avpq"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_r4j1l"]
 
 [node name="NarratorLaverie" type="Node2D"]
 script = SubResource("GDScript_l2alw")
@@ -199,15 +184,7 @@ autoplay = "Animation d'animation"
 volume_db = -80.0
 autoplay = true
 
-[node name="Narrator" type="AnimationPlayer" parent="."]
-root_node = NodePath("Label")
-libraries = {
-"": SubResource("AnimationLibrary_6uqxo")
-}
-autoplay = "Narration Laverie"
-script = SubResource("GDScript_wca0g")
-
-[node name="Label" type="Label" parent="Narrator"]
+[node name="Label" type="Label" parent="."]
 modulate = Color(0.890196, 1, 1, 0)
 offset_left = 1.0
 offset_top = 826.0
@@ -218,6 +195,13 @@ theme_override_font_sizes/font_size = 71
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Narrator_Laverie" type="AudioStreamPlayer" parent="Narrator"]
-stream = SubResource("AudioStreamPolyphonic_4avpq")
+[node name="Narrator" type="AnimationPlayer" parent="Label"]
+libraries = {
+"": SubResource("AnimationLibrary_6uqxo")
+}
+autoplay = "Narration Laverie"
+script = SubResource("GDScript_wca0g")
+
+[node name="Narrator_Laverie" type="AudioStreamPlayer" parent="Label"]
+stream = SubResource("AudioStreamPolyphonic_r4j1l")
 volume_db = -0.005

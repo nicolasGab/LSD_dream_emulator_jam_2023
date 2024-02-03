@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="5_bktrw"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="6_ubnmt"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="7_ek08c"]
-[ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/scene/Voice_Subtitle_Intro_Laverie.tscn" id="10_7bwox"]
+[ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/scene/Voice_Subtitle_Intro_Laverie.tscn" id="10_df3rm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
 size = Vector2(100, 100)
@@ -159,4 +159,4 @@ omni_attenuation = 0.870551
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("5_71sgd")
 
-[node name="Voice_Subtitle" parent="." instance=ExtResource("10_7bwox")]
+[node name="Voice_Subtitle" parent="." instance=ExtResource("10_df3rm")]
