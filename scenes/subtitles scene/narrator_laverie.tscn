@@ -120,7 +120,7 @@ _data = {
 "RESET": SubResource("Animation_hwl3y")
 }
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_gp5bh"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_h4ebl"]
 
 [sub_resource type="Animation" id="Animation_kvfrp"]
 resource_name = "Animation d'animation"
@@ -196,7 +196,7 @@ autoplay = "Narration Laverie"
 script = ExtResource("3_xy2di")
 
 [node name="Narrator_Laverie" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamPolyphonic_gp5bh")
+stream = SubResource("AudioStreamPolyphonic_h4ebl")
 volume_db = -0.005
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="5_bktrw"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="6_ubnmt"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="7_ek08c"]
-[ext_resource type="PackedScene" uid="uid://da2uqtu1l4x3n" path="res://scenes/subtitles scene/scene/narrator_laverie.tscn" id="10_o884e"]
+[ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/narrator_laverie.tscn" id="10_o884e"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
 size = Vector2(100, 100)
