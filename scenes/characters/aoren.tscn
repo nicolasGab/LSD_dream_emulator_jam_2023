@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://caj0gope3mcie"]
+[gd_scene load_steps=12 format=3 uid="uid://caj0gope3mcie"]
 
 [ext_resource type="Script" path="res://scripts/characters/aoren.gd" id="1_tnjxy"]
 [ext_resource type="Texture2D" uid="uid://djw6uedptenwu" path="res://graphics/textures/bonhomme_corps_1.png" id="2_ciqbp"]
 [ext_resource type="Texture2D" uid="uid://cemuaj77ot46v" path="res://graphics/textures/bonhomme_corps_2.png" id="3_lx6ov"]
 [ext_resource type="Texture2D" uid="uid://dndupyhc3poal" path="res://graphics/textures/bonhomme_corps_3.png" id="4_6oa57"]
 [ext_resource type="Texture2D" uid="uid://dphi82xe0glbn" path="res://graphics/textures/bonhomme_jambe.png" id="5_vnkt6"]
+[ext_resource type="Material" uid="uid://dv14l02wi34t7" path="res://graphics/materials/ondes.tres" id="6_uye2f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5051s"]
 metallic = 0.11
@@ -36,6 +37,9 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_u3xh0"]
+material = ExtResource("6_uye2f")
+
 [node name="Aoren" type="CharacterBody3D" node_paths=PackedStringArray("mesh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.620565, 0)
 script = ExtResource("1_tnjxy")
@@ -65,3 +69,9 @@ texture = ExtResource("5_vnkt6")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.10829, -0.460177, 0)
 billboard = 2
 texture = ExtResource("5_vnkt6")
+
+[node name="ondes_sous_les_pieds" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.618043, 0)
+gi_mode = 0
+gi_lightmap_scale = 2
+mesh = SubResource("PlaneMesh_u3xh0")

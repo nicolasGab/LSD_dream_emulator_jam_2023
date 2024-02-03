@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dec163h7yebh1" path="res://scenes/characters/machine_foraine_placeholder.tscn" id="1_hftb6"]
 [ext_resource type="Script" path="res://scripts/piece_labyrinthe.gd" id="1_wv20l"]
-[ext_resource type="Texture2D" uid="uid://bs70tidauu4de" path="res://graphics/materials/laverie_base texture albedo_albedo.jpg" id="3_5n8wg"]
+[ext_resource type="Texture2D" uid="uid://nsjh63r2m3he" path="res://graphics/materials/albedo_test_06.jpg" id="3_q8w2c"]
 [ext_resource type="Texture2D" uid="uid://c7bqi7i4hvqvy" path="res://graphics/materials/laverie_base texture albedo_orm.png" id="4_4pskb"]
 [ext_resource type="Texture2D" uid="uid://b7663jmduy0r0" path="res://graphics/materials/laverie_base texture albedo_emission.png" id="5_7wuil"]
 [ext_resource type="Texture2D" uid="uid://dvyvjmd8g472b" path="res://graphics/materials/laverie_base texture albedo_heightmap.png" id="6_5qtbr"]
 [ext_resource type="Texture2D" uid="uid://u8kxffao53qj" path="res://graphics/materials/laverie_base texture albedo_normal.png" id="7_qu60t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26sp3"]
-albedo_texture = ExtResource("3_5n8wg")
+albedo_texture = ExtResource("3_q8w2c")
 roughness_texture = ExtResource("4_4pskb")
 roughness_texture_channel = 1
 emission_enabled = true
