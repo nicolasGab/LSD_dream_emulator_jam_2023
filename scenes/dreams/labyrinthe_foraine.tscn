@@ -8,6 +8,9 @@
 [node name="DreamContainer" instance=ExtResource("1_5lm43")]
 script = ExtResource("2_0bwpp")
 
+[node name="Player" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.65673)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 3.85164, 2.08165e-12)
 light_color = Color(0.803922, 0.709804, 0.403922, 1)
