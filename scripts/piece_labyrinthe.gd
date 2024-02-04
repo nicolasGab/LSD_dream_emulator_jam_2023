@@ -38,7 +38,7 @@ func _ready():
 	if area_west:
 		area_west.body_entered.connect(_on_area_west_area_entered)
 func check_body(body: Node3D) -> bool :
-	if body is Player:
+	if body is CharacterBody3D:
 		return true
 	return false
 

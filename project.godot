@@ -84,6 +84,10 @@ run={
 ]
 }
 
+[physics]
+
+3d/run_on_separate_thread=true
+
 [wwise]
 
 common_user_settings/base_path="res://wwise/GeneratedSoundBanks"
