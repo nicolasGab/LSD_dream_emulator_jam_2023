@@ -9,5 +9,5 @@ sky_energy_multiplier = 1.2
 sky_material = SubResource("ProceduralSkyMaterial_as3m6")
 
 [resource]
-background_mode = 2
+background_mode = 1
 sky = SubResource("Sky_pr8pk")
