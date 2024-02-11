@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://l4ansaowwam6"]
+[gd_scene load_steps=14 format=3 uid="uid://l4ansaowwam6"]
 
 [ext_resource type="PackedScene" uid="uid://dec163h7yebh1" path="res://scenes/characters/machine_foraine_placeholder.tscn" id="1_hftb6"]
 [ext_resource type="Script" path="res://scripts/piece_labyrinthe.gd" id="1_wv20l"]
@@ -33,7 +33,179 @@ material = SubResource("StandardMaterial3D_26sp3")
 size = Vector2(24, 24)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xsci5"]
-size = Vector3(0.1, 1, 23.9923)
+size = Vector3(2.54782, 1, 23.9923)
+
+[sub_resource type="Animation" id="Animation_cvwvg"]
+resource_name = "Déplacement machine"
+length = 100.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MachineForainePlaceholder10")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MachineForainePlaceholder10:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 24.1, 25, 49, 50, 74),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(6.07084, 0, -1.71038), Vector3(6.07084, 0, -1.71038), Vector3(6.07084, 0, -3.77257), Vector3(6.07084, 0, -3.77257), Vector3(6.07084, 0, -1.71038), Vector3(6.07084, 0, -1.71038)]
+}
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MachineForainePlaceholder27")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array()
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MachineForainePlaceholder27:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 24.1, 25, 49, 50, 74),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.96741, 0, 1.76726), Vector3(-7.96741, 0, 1.76726), Vector3(-5.59434, 0, 1.76726), Vector3(-5.59434, 0, 1.76726), Vector3(-7.96741, 0, 1.76726), Vector3(-7.96741, 0, 1.76726)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MachineForainePlaceholder5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 24.1, 25, 49, 50, 74, 75, 76, 99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-4.77775, 1.10607e-15, -3.06632), Vector3(-4.77775, 1.10607e-15, -3.06632), Vector3(-4.77775, 1.10607e-15, -9.92609), Vector3(-4.77775, 1.10607e-15, -9.92609), Vector3(-4.77775, 1.10607e-15, -3.06632), Vector3(-4.77775, 1.10607e-15, -3.06632), Vector3(-6.70236, 1.10607e-15, -3.06632), Vector3(-6.70236, 1.10607e-15, -5.76674), Vector3(-6.70236, 1.10607e-15, -5.76674)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MachineForainePlaceholder:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 74, 75, 76, 99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.68971, 0, -3.83831), Vector3(-1.68971, 0, -3.83831), Vector3(-1.68971, 0, -7.3057), Vector3(-1.49099, 0, -7.3057), Vector3(-1.49099, 0, -7.3057)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MachineForainePlaceholder2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 74, 75, 99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2.62658, 0, 0.0170901), Vector3(-2.62658, 0, 0.0170901), Vector3(-2.71146, 0, 2.7332), Vector3(-2.71146, 0, 2.7332)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MachineForainePlaceholder9:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 74, 75, 99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.4422, 0, -0.0395545), Vector3(1.4422, 0, -0.0395545), Vector3(1.4422, 0, 2.69027), Vector3(1.4422, 0, 2.69027)]
+}
+
+[sub_resource type="Animation" id="Animation_fgtp1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MachineForainePlaceholder10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(6.07084, 0, -1.71038)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MachineForainePlaceholder27:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.96741, 0, 1.76726)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MachineForainePlaceholder5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.77775, 1.10607e-15, -3.06632)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MachineForainePlaceholder:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.68971, 0, -3.83831)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MachineForainePlaceholder2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.62658, 0, 0.0170901)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MachineForainePlaceholder9:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.4422, 0, -0.0395545)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d6egi"]
+_data = {
+"Déplacement machine": SubResource("Animation_cvwvg"),
+"RESET": SubResource("Animation_fgtp1")
+}
 
 [node name="PieceLabyrinthe1" type="Node3D" node_paths=PackedStringArray("area_north", "area_south", "area_east", "area_west")]
 script = ExtResource("1_wv20l")
@@ -45,8 +217,8 @@ area_west = NodePath("Sol/AreaWest")
 [node name="MachineForainePlaceholder" parent="." instance=ExtResource("1_hftb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68971, 0, -3.83831)
 
-[node name="MachineForainePlaceholder" parent="MachineForainePlaceholder" instance=ExtResource("1_hftb6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.936872, 0, 3.8554)
+[node name="MachineForainePlaceholder2" parent="." instance=ExtResource("1_hftb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62658, 0, 0.0170901)
 
 [node name="MachineForainePlaceholder3" parent="." instance=ExtResource("1_hftb6")]
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -10.9012, 0, -9.9455)
@@ -55,10 +227,10 @@ transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.75135, 0, -9.92253)
 
 [node name="MachineForainePlaceholder5" parent="." instance=ExtResource("1_hftb6")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -4.70945, 0, -6.96792)
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -4.77775, 1.10607e-15, -3.06632)
 
 [node name="MachineForainePlaceholder6" parent="." instance=ExtResource("1_hftb6")]
-transform = Transform3D(-0.999765, 3.56259e-16, 0.0216578, 3.48787e-16, 1, -3.48787e-16, -0.0216578, -3.41151e-16, -0.999765, -1.49534, 0, -9.2429)
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, -1.49534, 0, -9.29489)
 
 [node name="MachineForainePlaceholder7" parent="." instance=ExtResource("1_hftb6")]
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 3.99858, 0, -9.92402)
@@ -138,23 +310,30 @@ mesh = SubResource("PlaneMesh_hbynm")
 [node name="AreaNorth" type="Area3D" parent="Sol"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaNorth"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9971, 0.311, 0.00383759)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.707, 0.311, 0.00383759)
 shape = SubResource("BoxShape3D_xsci5")
 
 [node name="AreaSouth" type="Area3D" parent="Sol"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaSouth"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9609, 0.311, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4353, 0.311, 2.08165e-12)
 shape = SubResource("BoxShape3D_xsci5")
 
 [node name="AreaEast" type="Area3D" parent="Sol"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaEast"]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 2.08165e-12, 0.311, 11.9289)
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 8.57772e-08, 0.311, 10.5122)
 shape = SubResource("BoxShape3D_xsci5")
 
 [node name="AreaWest" type="Area3D" parent="Sol"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sol/AreaWest"]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 2.08165e-12, 0.311, -11.9774)
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.19022e-08, 0.311, -10.6852)
 shape = SubResource("BoxShape3D_xsci5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d6egi")
+}
+autoplay = "Déplacement machine"
+speed_scale = 2.569
