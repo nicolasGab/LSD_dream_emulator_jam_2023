@@ -8,7 +8,7 @@
 
 [sub_resource type="QuadMesh" id="QuadMesh_wkpbg"]
 material = SubResource("StandardMaterial3D_41hmt")
-size = Vector2(20000, 20000)
+size = Vector2(200000, 200000)
 orientation = 1
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_alqil"]
@@ -96,19 +96,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.64989, 0.95365, 158.993)
 mesh = NodePath("../Aoren4/MeshInstance3D")
 
 [node name="Aoren21" parent="Objects" index="20" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98159, 0.95365, 172.767)
+transform = Transform3D(-0.150278, 0, -0.988644, 0, 1, 0, 0.988644, 0, -0.150277, -7.98159, 0.95365, 193.885)
 mesh = NodePath("../Aoren4/MeshInstance3D")
 
 [node name="Aoren22" parent="Objects" index="21" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3406, 0.95365, 175.526)
+transform = Transform3D(-0.378148, 0, 0.925745, 0, 1, 0, -0.925745, 0, -0.378148, -10.3406, 0.95365, 193.534)
 mesh = NodePath("../Aoren4/MeshInstance3D")
 
 [node name="Aoren23" parent="Objects" index="22" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02311, 0.95365, 182.892)
+transform = Transform3D(0.942128, 0, -0.335254, 0, 1, 0, 0.335254, 0, 0.942128, -9.02311, 0.95365, 191.076)
 mesh = NodePath("../Aoren4/MeshInstance3D")
 
 [node name="Aoren24" parent="Objects" index="23" node_paths=PackedStringArray("mesh") instance=ExtResource("2_b5038")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2963, 0.95365, 191.471)
+transform = Transform3D(0.586104, 0, 0.810236, 0, 1, 0, -0.810236, 0, 0.586104, -10.2963, 0.95365, 191.471)
 mesh = NodePath("../Aoren4/MeshInstance3D")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Meshes" index="0"]

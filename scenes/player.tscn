@@ -8,6 +8,7 @@
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_82jtr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u46om"]
+margin = 0.175
 radius = 0.161871
 height = 1.17538
 
@@ -31,7 +32,7 @@ listener = NodePath("AkListener3D")
 is_spatial = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.592486, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.587, 2.08165e-12)
 shape = SubResource("CapsuleShape3D_u46om")
 
 [node name="Main" parent="." instance=ExtResource("4_dylos")]

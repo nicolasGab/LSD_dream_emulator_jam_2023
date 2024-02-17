@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 const step_divider_walk = 20
 const step_divider_run = 10
+const JUMP_AMOUNT = 5
 
 var move_amount
 var walk_amount: float = 0.15
@@ -25,14 +26,19 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity = move_amount*movement.rotated(Vector3(0,1,0),rotation.y)/delta
-	if velocity != Vector3.ZERO:
+	if velocity.x != 0 or velocity.z != 0:
 		step_counter += 1
 		if step_counter%step_divider == 0:
 			step_counter = 0
 			audio.walk()
 	move_and_slide()
+	if not is_on_floor():
+		# Gravity
+		movement.y -= GameState.gravity
 
 func _input(event):
+	if event.is_action_pressed("jump"):
+		movement.y = JUMP_AMOUNT
 	if event.is_action_pressed("move_right"):
 		movement.x = 1
 	if event.is_action_released("move_right"):

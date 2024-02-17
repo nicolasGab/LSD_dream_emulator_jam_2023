@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var registry_delay : float = 0.5
 @export var vote_delay : float = 20.0
 @export var aoren_frequency : float = 0.0
+@export var logic : Node
 
 const MAX_LIGHT_ENERGY = 1
 const MIN_LIGHT_ENERGY = 0.2
@@ -42,6 +43,7 @@ var light_energy_target = MIN_LIGHT_ENERGY
 var stepper = -160
 var speed_modifier = 1
 var AOREN_RANGE = 0
+var move_amount = 0
 
 func _ready():
 	Wwise.register_game_obj(self, name)
@@ -57,6 +59,14 @@ func _ready():
 	#modulate_position("x")
 	#modulate_position("y")
 	#modulate_position("z")
+
+func _physics_process(delta):
+	if not is_on_floor():
+		# Gravity
+		position.y -= GameState.gravity
+	velocity = move_amount*Vector3(0,0,1).rotated(Vector3(0,1,0),rotation.y)/delta
+	if move_and_slide() and not is_on_floor_only():
+		logic._on_collision()
 	
 func initialize_parameters():
 	# init pitch
