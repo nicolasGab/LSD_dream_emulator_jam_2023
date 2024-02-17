@@ -3,7 +3,6 @@ class_name AK
 class EVENTS:
 
 	const CHARACTER_FOOTSTEPS = 2775932802
-	const PLUIE_INONDATION_FAIBLE = 3528569874
 	const RELEASE_AOREN = 2814252982
 	const VIDEO_EMPTY_2 = 2119352003
 	const VIDEO_EMPTY_3 = 2119352002
@@ -11,6 +10,7 @@ class EVENTS:
 	const VIDEO_EMPTY_1 = 2119352000
 	const ADD_ONE_HERTZ = 2394938017
 	const TRIGGER_AOREN = 1772107161
+	const PLUIE_INONDATION_FAIBLE = 3528569874
 	const VIDEO_INFINITE_FROGS = 3083001
 	const VIDEO_VU_DE_LOIN = 851036845
 	const VIDEO_BRETZ = 1634010588
@@ -31,10 +31,11 @@ class EVENTS:
 	const VIDEO_DRAP_FLEUR = 1462938299
 	const VIDEO_DRAP_BEAU = 2905835486
 	const NONE = 748895195
+	const PITCH_DOWN_DRUGS = 2886619884
+	const MUSIC_FX_EMPTY_1 = 2143432977
 
 	const _dict = {
 		"character_footsteps": CHARACTER_FOOTSTEPS,
-		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
 		"release_aoren": RELEASE_AOREN,
 		"video_empty_2": VIDEO_EMPTY_2,
 		"video_empty_3": VIDEO_EMPTY_3,
@@ -42,6 +43,7 @@ class EVENTS:
 		"video_empty_1": VIDEO_EMPTY_1,
 		"add_one_hertz": ADD_ONE_HERTZ,
 		"trigger_aoren": TRIGGER_AOREN,
+		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
 		"video_infinite_frogs": VIDEO_INFINITE_FROGS,
 		"video_vu_de_loin": VIDEO_VU_DE_LOIN,
 		"video_bretz": VIDEO_BRETZ,
@@ -61,7 +63,9 @@ class EVENTS:
 		"video_drap_contexte": VIDEO_DRAP_CONTEXTE,
 		"video_drap_fleur": VIDEO_DRAP_FLEUR,
 		"video_drap_beau": VIDEO_DRAP_BEAU,
-		"none": NONE
+		"none": NONE,
+		"pitch_down_drugs": PITCH_DOWN_DRUGS,
+		"music_fx_empty_1": MUSIC_FX_EMPTY_1
 	}
 
 class STATES:
@@ -94,9 +98,11 @@ class SWITCHES:
 class GAME_PARAMETERS:
 
 	const AOREN_FREQUENCY = 2901834267
+	const PITCH = 1908158473
 
 	const _dict = {
-		"aoren_frequency": AOREN_FREQUENCY
+		"aoren_frequency": AOREN_FREQUENCY,
+		"pitch": PITCH
 	}
 
 class TRIGGERS:
@@ -135,12 +141,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const SYSTEM = 3859886410
 	const NO_OUTPUT = 2317455096
+	const SYSTEM = 3859886410
 
 	const _dict = {
-		"System": SYSTEM,
-		"No_Output": NO_OUTPUT
+		"No_Output": NO_OUTPUT,
+		"System": SYSTEM
 	}
 
 class EXTERNAL_SOURCES:

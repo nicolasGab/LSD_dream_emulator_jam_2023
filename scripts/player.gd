@@ -20,6 +20,7 @@ var step_divider = step_divider_walk
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Wwise.register_game_obj(self, name)
 	move_amount = walk_amount
 
 
@@ -27,6 +28,7 @@ func _ready():
 func _physics_process(delta):
 	velocity = move_amount*movement.rotated(Vector3(0,1,0),rotation.y)/delta
 	if velocity.x != 0 or velocity.z != 0:
+		GameState.eventbus.player_velocity_x.emit(-(velocity.x+velocity.z)/2)
 		step_counter += 1
 		if step_counter%step_divider == 0:
 			step_counter = 0
@@ -65,3 +67,5 @@ func _input(event):
 		step_divider = step_divider_walk
 	if event is InputEventKey and event.keycode == KEY_A and event.is_pressed():
 		main.get_node("AnimationPlayer").play("activation_main")
+		await get_tree().create_timer(0.6).timeout
+		Wwise.post_event_id(AK.EVENTS.PITCH_DOWN_DRUGS, self)

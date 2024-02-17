@@ -14,6 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CHARACTER_FOOTSTEPS = 2775932802U;
+        static const AkUniqueID MUSIC_FX_EMPTY_1 = 2143432977U;
+        static const AkUniqueID NONE = 748895195U;
+        static const AkUniqueID PITCH_DOWN_DRUGS = 2886619884U;
         static const AkUniqueID PLUIE_INONDATION_FAIBLE = 3528569874U;
         static const AkUniqueID RELEASE_AOREN = 2814252982U;
         static const AkUniqueID TRIGGER_AOREN = 1772107161U;
@@ -62,6 +65,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID AOREN_FREQUENCY = 2901834267U;
+        static const AkUniqueID PITCH = 1908158473U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

@@ -4,4 +4,4 @@
 
 [node name="SoundEmitter" type="Node3D"]
 script = ExtResource("1_rskha")
-sound = null
+sound = "none"

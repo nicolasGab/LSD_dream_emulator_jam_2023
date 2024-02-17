@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E68D0A05-AE38-4F2C-A5F9-97BA94EE661C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3C989195-24A0-F76E-E32F-1F36CFCB195A}">
 			<ShortName>Init</ShortName>
 			<Path>1355168291.bnk</Path>
 			<Plugins>
@@ -45,6 +45,7 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="1908158473" Name="pitch"/>
 				<GameParameter Id="2901834267" Name="aoren_frequency"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -186,7 +187,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9FFD8573-EBA6-9F75-248C-74519A881A3F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A644A409-8F32-DC26-9482-5E9968686B61}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
@@ -240,7 +241,7 @@
 				</File>
 				<File Id="430330994" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>5_empty_1.wav</ShortName>
-					<CachePath>SFX/5_empty_1_3D796F78.wem</CachePath>
+					<CachePath>SFX/5_empty_1_CD84D82E.wem</CachePath>
 				</File>
 				<File Id="503132218" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>6_empty_2.wav</ShortName>
@@ -374,6 +375,13 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2143432977" Name="music_fx_empty_1">
+					<MediaRefs>
+						<MediaRef Id="430330994"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="748895195" Name="none"/>
+				<Event Id="2886619884" Name="pitch_down_drugs"/>
 				<Event Id="3528569874" Name="pluie_inondation_faible">
 					<MediaRefs>
 						<MediaRef Id="945764765"/>
@@ -509,6 +517,7 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1908158473" Name="pitch"/>
 				<GameParameter Id="2901834267" Name="aoren_frequency"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -523,5 +532,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{059304C7-B4EF-C993-A30D-0A495F731D7E}</FileHash>
+	<FileHash>{EB9DF756-3327-4325-F747-7D38A2359F1F}</FileHash>
 </SoundBanksInfo>

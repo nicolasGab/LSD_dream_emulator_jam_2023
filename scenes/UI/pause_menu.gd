@@ -14,7 +14,7 @@ func update_menu_visibility():
 	visible = not visible
 	if visible:
 		Input.warp_mouse(DisplayServer.window_get_size()/2.0)
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN if not visible else Input.MOUSE_MODE_VISIBLE
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN if not visible else Input.MOUSE_MODE_VISIBLE
 
 func _on_quit_pressed():
 	get_tree().quit()

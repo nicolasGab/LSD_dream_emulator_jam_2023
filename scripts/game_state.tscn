@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://b65s3mv04kw5g"]
+[gd_scene load_steps=4 format=3 uid="uid://b65s3mv04kw5g"]
 
 [ext_resource type="Script" path="res://scripts/game_state.gd" id="1_8la5e"]
 [ext_resource type="Script" path="res://scripts/dream_information.gd" id="2_8vdvq"]
+[ext_resource type="Script" path="res://scripts/eventbus.gd" id="3_85q4w"]
 
-[node name="GameState" type="Node" node_paths=PackedStringArray("dream_information")]
+[node name="GameState" type="Node" node_paths=PackedStringArray("dream_information", "eventbus")]
 script = ExtResource("1_8la5e")
 dream_information = NodePath("DreamInformation")
+eventbus = NodePath("Eventbus")
 
 [node name="DreamInformation" type="Node" parent="."]
 script = ExtResource("2_8vdvq")
+
+[node name="Eventbus" type="Node" parent="."]
+script = ExtResource("3_85q4w")
