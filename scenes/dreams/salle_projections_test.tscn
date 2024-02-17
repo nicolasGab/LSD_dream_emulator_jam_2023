@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://dl4i60pf335ug"]
+
+[ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_kqdph"]
+[ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="2_ygnyp"]
+[ext_resource type="PackedScene" uid="uid://b18unrsrjotqr" path="res://scenes/UI/pause_menu.tscn" id="3_nwg0w"]
+[ext_resource type="VideoStream" path="res://graphics/videos/jai_vu_tes_amidales.ogv" id="3_xmv0y"]
+[ext_resource type="Environment" uid="uid://bnhwjovxkte0r" path="res://configs/base_environment.tres" id="4_ciqjm"]
+[ext_resource type="Texture2D" uid="uid://dmh10sijf1cm3" path="res://graphics/textures/projector_calque.jpg" id="4_t8yut"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2w7eo"]
+size = Vector2(10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cmsgc"]
+size = Vector2(10, 4)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rnwv0"]
+viewport_path = NodePath("Meshes/Piece_principale/Screen_1/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0xhr"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_rnwv0")
+albedo_texture_force_srgb = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.55
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0n1oi"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_k0xhr")
+size = Vector2(5, 2.38)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_oh87e"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
+
+[node name="DreamContainer" type="Node3D"]
+script = ExtResource("1_kqdph")
+
+[node name="Player" parent="." instance=ExtResource("2_ygnyp")]
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="Piece_principale" type="Node" parent="Meshes"]
+
+[node name="Floor_1" type="MeshInstance3D" parent="Meshes/Piece_principale"]
+mesh = SubResource("PlaneMesh_2w7eo")
+skeleton = NodePath("../..")
+
+[node name="Wall_1" type="MeshInstance3D" parent="Meshes/Piece_principale"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.97691, -4.98411)
+mesh = SubResource("PlaneMesh_cmsgc")
+skeleton = NodePath("../..")
+
+[node name="Screen_1" type="MeshInstance3D" parent="Meshes/Piece_principale"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.66519, -4.55985)
+mesh = SubResource("PlaneMesh_0n1oi")
+skeleton = NodePath("../..")
+
+[node name="SubViewport" type="SubViewport" parent="Meshes/Piece_principale/Screen_1"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Meshes/Piece_principale/Screen_1/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_xmv0y")
+volume_db = -10.0
+autoplay = true
+loop = true
+
+[node name="Wall_2" type="MeshInstance3D" parent="Meshes/Piece_principale"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -4.98572, 1.97691, -0.0495696)
+mesh = SubResource("PlaneMesh_cmsgc")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_oh87e")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight_piece_principale" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.831811, 3.30939, 0)
+light_energy = 0.547
+omni_range = 10.32
+omni_attenuation = 2.14355
+
+[node name="SpotLight_video_amidale" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 0.635512, 0.772091, 0, -0.772091, 0.635512, 0, 3.47182, -3.26758)
+light_color = Color(0.705882, 0.105882, 0.745098, 1)
+light_energy = 16.0
+light_indirect_energy = 9.987
+spot_range = 6.327
+spot_attenuation = 3.24901
+spot_angle = 53.49
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights/SpotLight_video_amidale"]
+transform = Transform3D(1, 0, 0, 0, 0.657783, -0.753207, 0, 0.753207, 0.657783, 0, -0.506063, -1.77385)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_projector = ExtResource("4_t8yut")
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 1.445
+spot_range = 2.135
+spot_attenuation = 2.14354
+spot_angle = 33.1
+spot_angle_attenuation = 0.0717938
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_nwg0w")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("4_ciqjm")
