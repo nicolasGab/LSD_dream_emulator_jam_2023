@@ -186,65 +186,157 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E1AF8465-81D0-844B-60C1-F74B6576C9F1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9FFD8573-EBA6-9F75-248C-74519A881A3F}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
 				<File Id="155836543" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_6A4FDE78.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_427116E8.wem</CachePath>
+				</File>
+				<File Id="215753481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>23_pierres_jeu.wav</ShortName>
+					<CachePath>SFX/23_pierres_jeu_3D796F78.wem</CachePath>
 				</File>
 				<File Id="229634853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_025130BB.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_61A8A62B.wem</CachePath>
 				</File>
 				<File Id="235664832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_7873A466.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_78BAF896.wem</CachePath>
 				</File>
 				<File Id="254761042" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_560A8352.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_7F29A3A2.wem</CachePath>
 				</File>
 				<File Id="283789452" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_757DA35D.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_FD7BE78D.wem</CachePath>
+				</File>
+				<File Id="305851668" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>1_jai_vu_tes_amidales.wav</ShortName>
+					<CachePath>SFX/1_jai_vu_tes_amidales_3D796F78.wem</CachePath>
+				</File>
+				<File Id="328998303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>15_drap_1.wav</ShortName>
+					<CachePath>SFX/15_drap_1_3D796F78.wem</CachePath>
+				</File>
+				<File Id="330762938" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>16_drap_contexte.wav</ShortName>
+					<CachePath>SFX/16_drap_contexte_3D796F78.wem</CachePath>
+				</File>
+				<File Id="332055670" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>13_bretz.wav</ShortName>
+					<CachePath>SFX/13_bretz_3D796F78.wem</CachePath>
+				</File>
+				<File Id="402988620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>20_kaleidoscope_2.wav</ShortName>
+					<CachePath>SFX/20_kaleidoscope_2_3D796F78.wem</CachePath>
 				</File>
 				<File Id="411509299" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_2D78B445.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_B648ED75.wem</CachePath>
+				</File>
+				<File Id="430330994" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>5_empty_1.wav</ShortName>
+					<CachePath>SFX/5_empty_1_3D796F78.wem</CachePath>
+				</File>
+				<File Id="503132218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>6_empty_2.wav</ShortName>
+					<CachePath>SFX/6_empty_2_3D796F78.wem</CachePath>
+				</File>
+				<File Id="521323979" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>19_kaleidoscope_1.wav</ShortName>
+					<CachePath>SFX/19_kaleidoscope_1_3D796F78.wem</CachePath>
 				</File>
 				<File Id="584549292" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_2D7BF321.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_B8D6CA71.wem</CachePath>
+				</File>
+				<File Id="628589567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>11_perdu.wav</ShortName>
+					<CachePath>SFX/11_perdu_3D796F78.wem</CachePath>
+				</File>
+				<File Id="648748000" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>2_infinite_frogs.wav</ShortName>
+					<CachePath>SFX/2_infinite_frogs_3D796F78.wem</CachePath>
+				</File>
+				<File Id="651639266" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>9_ca_sent_le_kebab.wav</ShortName>
+					<CachePath>SFX/9_ca_sent_le_kebab_3D796F78.wem</CachePath>
 				</File>
 				<File Id="665940052" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_2391B20B.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_ABCE08BB.wem</CachePath>
+				</File>
+				<File Id="713163759" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3_infinite_ducks.wav</ShortName>
+					<CachePath>SFX/3_infinite_ducks_3D796F78.wem</CachePath>
+				</File>
+				<File Id="719554218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>4_infinite_ducks_zoom.wav</ShortName>
+					<CachePath>SFX/4_infinite_ducks_zoom_3D796F78.wem</CachePath>
+				</File>
+				<File Id="721490756" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>22_pierres_beau.wav</ShortName>
+					<CachePath>SFX/22_pierres_beau_3D796F78.wem</CachePath>
 				</File>
 				<File Id="746648048" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_DC586BCA.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_1802739A.wem</CachePath>
+				</File>
+				<File Id="827243137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>18_drap_beau.wav</ShortName>
+					<CachePath>SFX/18_drap_beau_3D796F78.wem</CachePath>
 				</File>
 				<File Id="828162588" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_D2C02D74.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_7E0CB644.wem</CachePath>
 				</File>
 				<File Id="830515885" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_D59075AA.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_EFCE0E9A.wem</CachePath>
+				</File>
+				<File Id="836297351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>17_drap_fleur.wav</ShortName>
+					<CachePath>SFX/17_drap_fleur_3D796F78.wem</CachePath>
+				</File>
+				<File Id="862428709" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>14_dots.wav</ShortName>
+					<CachePath>SFX/14_dots_3D796F78.wem</CachePath>
+				</File>
+				<File Id="884503281" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>12_vu_de_loin.wav</ShortName>
+					<CachePath>SFX/12_vu_de_loin_3D796F78.wem</CachePath>
 				</File>
 				<File Id="936059568" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_925833BF.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_900DD9AF.wem</CachePath>
 				</File>
 				<File Id="945764765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>pluie inondation faible_01.wav</ShortName>
-					<CachePath>SFX/pluie inondation faible_01_091E5D04.wem</CachePath>
+					<CachePath>SFX/pluie inondation faible_01_C0A5D5F4.wem</CachePath>
+				</File>
+				<File Id="965764623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>21_pierres_intro.wav</ShortName>
+					<CachePath>SFX/21_pierres_intro_3D796F78.wem</CachePath>
 				</File>
 				<File Id="997187953" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
-					<CachePath>SFX/footsteps foliage 211016_0037_6845B8C3.wem</CachePath>
+					<CachePath>SFX/footsteps foliage 211016_0037_62806513.wem</CachePath>
+				</File>
+				<File Id="1003118590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>7_empty_3.wav</ShortName>
+					<CachePath>SFX/7_empty_3_3D796F78.wem</CachePath>
+				</File>
+				<File Id="1029078720" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10_retourne.wav</ShortName>
+					<CachePath>SFX/10_retourne_3D796F78.wem</CachePath>
+				</File>
+				<File Id="1039477647" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>8_infinite_candies.wav</ShortName>
+					<CachePath>SFX/8_infinite_candies_3D796F78.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -300,6 +392,121 @@
 						<AuxBusRef Id="348963605" Name="Reverb"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="1634010588" Name="video_bretz">
+					<MediaRefs>
+						<MediaRef Id="332055670"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3053499918" Name="video_ca_sent_le_kebab">
+					<MediaRefs>
+						<MediaRef Id="651639266"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2957917457" Name="video_dots">
+					<MediaRefs>
+						<MediaRef Id="862428709"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2338486748" Name="video_drap_1">
+					<MediaRefs>
+						<MediaRef Id="328998303"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2905835486" Name="video_drap_beau">
+					<MediaRefs>
+						<MediaRef Id="827243137"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3583738369" Name="video_drap_contexte">
+					<MediaRefs>
+						<MediaRef Id="330762938"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1462938299" Name="video_drap_fleur">
+					<MediaRefs>
+						<MediaRef Id="836297351"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2119352000" Name="video_empty_1">
+					<MediaRefs>
+						<MediaRef Id="430330994"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2119352003" Name="video_empty_2">
+					<MediaRefs>
+						<MediaRef Id="503132218"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2119352002" Name="video_empty_3">
+					<MediaRefs>
+						<MediaRef Id="1003118590"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="72615771" Name="video_infinite_candies">
+					<MediaRefs>
+						<MediaRef Id="1039477647"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3152096878" Name="video_infinite_ducks">
+					<MediaRefs>
+						<MediaRef Id="713163759"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1978203760" Name="video_infinite_ducks_zoom">
+					<MediaRefs>
+						<MediaRef Id="719554218"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3083001" Name="video_infinite_frogs">
+					<MediaRefs>
+						<MediaRef Id="648748000"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="813182901" Name="video_jai_vu_tes_amidales">
+					<MediaRefs>
+						<MediaRef Id="305851668"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2997137002" Name="video_kaleidoscope_1">
+					<MediaRefs>
+						<MediaRef Id="521323979"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2997137001" Name="video_kaleidoscope_2">
+					<MediaRefs>
+						<MediaRef Id="402988620"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1115506899" Name="video_perdu">
+					<MediaRefs>
+						<MediaRef Id="628589567"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3259430089" Name="video_pierres_beau">
+					<MediaRefs>
+						<MediaRef Id="721490756"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1970952690" Name="video_pierres_intro">
+					<MediaRefs>
+						<MediaRef Id="965764623"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2023563080" Name="video_pierres_jeu">
+					<MediaRefs>
+						<MediaRef Id="215753481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4278859807" Name="video_retourne">
+					<MediaRefs>
+						<MediaRef Id="1029078720"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="851036845" Name="video_vu_de_loin">
+					<MediaRefs>
+						<MediaRef Id="884503281"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2901834267" Name="aoren_frequency"/>
@@ -316,5 +523,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D04E5086-F65B-CCF6-1740-C4099B4C0A17}</FileHash>
+	<FileHash>{3B473BB6-744E-33E4-496C-B7B40254EC38}</FileHash>
 </SoundBanksInfo>

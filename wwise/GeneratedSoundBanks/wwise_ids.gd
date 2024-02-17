@@ -3,17 +3,65 @@ class_name AK
 class EVENTS:
 
 	const CHARACTER_FOOTSTEPS = 2775932802
-	const ADD_ONE_HERTZ = 2394938017
 	const PLUIE_INONDATION_FAIBLE = 3528569874
-	const TRIGGER_AOREN = 1772107161
 	const RELEASE_AOREN = 2814252982
+	const VIDEO_EMPTY_2 = 2119352003
+	const VIDEO_EMPTY_3 = 2119352002
+	const VIDEO_INFINITE_DUCKS_ZOOM = 1978203760
+	const VIDEO_EMPTY_1 = 2119352000
+	const ADD_ONE_HERTZ = 2394938017
+	const TRIGGER_AOREN = 1772107161
+	const VIDEO_INFINITE_FROGS = 3083001
+	const VIDEO_VU_DE_LOIN = 851036845
+	const VIDEO_BRETZ = 1634010588
+	const VIDEO_DOTS = 2957917457
+	const VIDEO_DRAP_1 = 2338486748
+	const VIDEO_KALEIDOSCOPE_1 = 2997137002
+	const VIDEO_KALEIDOSCOPE_2 = 2997137001
+	const VIDEO_PIERRES_INTRO = 1970952690
+	const VIDEO_PIERRES_BEAU = 3259430089
+	const VIDEO_PIERRES_JEU = 2023563080
+	const VIDEO_INFINITE_DUCKS = 3152096878
+	const VIDEO_INFINITE_CANDIES = 72615771
+	const VIDEO_CA_SENT_LE_KEBAB = 3053499918
+	const VIDEO_RETOURNE = 4278859807
+	const VIDEO_PERDU = 1115506899
+	const VIDEO_JAI_VU_TES_AMIDALES = 813182901
+	const VIDEO_DRAP_CONTEXTE = 3583738369
+	const VIDEO_DRAP_FLEUR = 1462938299
+	const VIDEO_DRAP_BEAU = 2905835486
+	const NONE = 748895195
 
 	const _dict = {
 		"character_footsteps": CHARACTER_FOOTSTEPS,
-		"add_one_hertz": ADD_ONE_HERTZ,
 		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
+		"release_aoren": RELEASE_AOREN,
+		"video_empty_2": VIDEO_EMPTY_2,
+		"video_empty_3": VIDEO_EMPTY_3,
+		"video_infinite_ducks_zoom": VIDEO_INFINITE_DUCKS_ZOOM,
+		"video_empty_1": VIDEO_EMPTY_1,
+		"add_one_hertz": ADD_ONE_HERTZ,
 		"trigger_aoren": TRIGGER_AOREN,
-		"release_aoren": RELEASE_AOREN
+		"video_infinite_frogs": VIDEO_INFINITE_FROGS,
+		"video_vu_de_loin": VIDEO_VU_DE_LOIN,
+		"video_bretz": VIDEO_BRETZ,
+		"video_dots": VIDEO_DOTS,
+		"video_drap_1": VIDEO_DRAP_1,
+		"video_kaleidoscope_1": VIDEO_KALEIDOSCOPE_1,
+		"video_kaleidoscope_2": VIDEO_KALEIDOSCOPE_2,
+		"video_pierres_intro": VIDEO_PIERRES_INTRO,
+		"video_pierres_beau": VIDEO_PIERRES_BEAU,
+		"video_pierres_jeu": VIDEO_PIERRES_JEU,
+		"video_infinite_ducks": VIDEO_INFINITE_DUCKS,
+		"video_infinite_candies": VIDEO_INFINITE_CANDIES,
+		"video_ca_sent_le_kebab": VIDEO_CA_SENT_LE_KEBAB,
+		"video_retourne": VIDEO_RETOURNE,
+		"video_perdu": VIDEO_PERDU,
+		"video_jai_vu_tes_amidales": VIDEO_JAI_VU_TES_AMIDALES,
+		"video_drap_contexte": VIDEO_DRAP_CONTEXTE,
+		"video_drap_fleur": VIDEO_DRAP_FLEUR,
+		"video_drap_beau": VIDEO_DRAP_BEAU,
+		"none": NONE
 	}
 
 class STATES:
@@ -27,18 +75,18 @@ class SWITCHES:
 
 		class SWITCH:
 			const HARD = 3599861390
+			const SOFT = 670602561
 			const WATER = 2654748154
 			const SWIM = 151879501
-			const SOFT = 670602561
 
 	const _dict = {
 		"material": {
 			"GROUP": 3865314626,
 			"SWITCH": {
 				"hard": 3599861390,
+				"soft": 670602561,
 				"water": 2654748154,
-				"swim": 151879501,
-				"soft": 670602561
+				"swim": 151879501
 			}
 		}
 	}

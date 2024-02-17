@@ -17,6 +17,29 @@ namespace AK
         static const AkUniqueID PLUIE_INONDATION_FAIBLE = 3528569874U;
         static const AkUniqueID RELEASE_AOREN = 2814252982U;
         static const AkUniqueID TRIGGER_AOREN = 1772107161U;
+        static const AkUniqueID VIDEO_BRETZ = 1634010588U;
+        static const AkUniqueID VIDEO_CA_SENT_LE_KEBAB = 3053499918U;
+        static const AkUniqueID VIDEO_DOTS = 2957917457U;
+        static const AkUniqueID VIDEO_DRAP_1 = 2338486748U;
+        static const AkUniqueID VIDEO_DRAP_BEAU = 2905835486U;
+        static const AkUniqueID VIDEO_DRAP_CONTEXTE = 3583738369U;
+        static const AkUniqueID VIDEO_DRAP_FLEUR = 1462938299U;
+        static const AkUniqueID VIDEO_EMPTY_1 = 2119352000U;
+        static const AkUniqueID VIDEO_EMPTY_2 = 2119352003U;
+        static const AkUniqueID VIDEO_EMPTY_3 = 2119352002U;
+        static const AkUniqueID VIDEO_INFINITE_CANDIES = 72615771U;
+        static const AkUniqueID VIDEO_INFINITE_DUCKS = 3152096878U;
+        static const AkUniqueID VIDEO_INFINITE_DUCKS_ZOOM = 1978203760U;
+        static const AkUniqueID VIDEO_INFINITE_FROGS = 3083001U;
+        static const AkUniqueID VIDEO_JAI_VU_TES_AMIDALES = 813182901U;
+        static const AkUniqueID VIDEO_KALEIDOSCOPE_1 = 2997137002U;
+        static const AkUniqueID VIDEO_KALEIDOSCOPE_2 = 2997137001U;
+        static const AkUniqueID VIDEO_PERDU = 1115506899U;
+        static const AkUniqueID VIDEO_PIERRES_BEAU = 3259430089U;
+        static const AkUniqueID VIDEO_PIERRES_INTRO = 1970952690U;
+        static const AkUniqueID VIDEO_PIERRES_JEU = 2023563080U;
+        static const AkUniqueID VIDEO_RETOURNE = 4278859807U;
+        static const AkUniqueID VIDEO_VU_DE_LOIN = 851036845U;
     } // namespace EVENTS
 
     namespace SWITCHES
