@@ -16,7 +16,7 @@ size = Vector2(10, 4)
 [sub_resource type="ViewportTexture" id="ViewportTexture_rnwv0"]
 viewport_path = NodePath("Meshes/Piece_principale/Screen_1/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0xhr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cntlc"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_rnwv0")
 albedo_texture_force_srgb = true
@@ -25,7 +25,7 @@ emission_energy_multiplier = 3.55
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0n1oi"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_k0xhr")
+material = SubResource("StandardMaterial3D_cntlc")
 size = Vector2(5, 2.38)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_oh87e"]
@@ -52,7 +52,7 @@ mesh = SubResource("PlaneMesh_cmsgc")
 skeleton = NodePath("../..")
 
 [node name="Screen_1" type="MeshInstance3D" parent="Meshes/Piece_principale"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.66519, -4.55985)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.725, -4.56)
 mesh = SubResource("PlaneMesh_0n1oi")
 skeleton = NodePath("../..")
 
