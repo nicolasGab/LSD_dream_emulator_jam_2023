@@ -1,10 +1,15 @@
-[gd_resource type="Environment" load_steps=3 format=3 uid="uid://da3134fqh0d1y"]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://da3134fqh0d1y"]
+
+[ext_resource type="Texture2D" uid="uid://ciqnkkvuvxtic" path="res://graphics/textures/Gaia_s_sky_in_colour_reverse.png" id="1_hy6f8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_as3m6"]
 sky_top_color = Color(0.333333, 0.458824, 0.611765, 1)
 sky_horizon_color = Color(0.862745, 0.517647, 0.788235, 1)
-sky_curve = 0.135188
-sky_energy_multiplier = 1.2
+sky_curve = 0.0549035
+sky_cover = ExtResource("1_hy6f8")
+sky_cover_modulate = Color(0.341176, 0.341176, 0.341176, 1)
+ground_horizon_color = Color(0.878431, 0.564706, 0.807843, 1)
+ground_curve = 0.100856
 
 [sub_resource type="Sky" id="Sky_pr8pk"]
 sky_material = SubResource("ProceduralSkyMaterial_as3m6")
@@ -13,3 +18,4 @@ sky_material = SubResource("ProceduralSkyMaterial_as3m6")
 background_mode = 2
 background_energy_multiplier = 2.75
 sky = SubResource("Sky_pr8pk")
+sky_rotation = Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16)

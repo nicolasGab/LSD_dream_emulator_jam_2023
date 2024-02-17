@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccoc3xlhxp5vg"]
 
-[ext_resource type="PackedScene" uid="uid://d1l28lnfnvyk2" path="res://scenes/player.tscn" id="1_ckbj1"]
+[ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="1_ckbj1"]
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_wuqc0"]
 [ext_resource type="PackedScene" uid="uid://b18unrsrjotqr" path="res://scenes/UI/pause_menu.tscn" id="3_mtd2f"]
 [ext_resource type="Environment" uid="uid://bnhwjovxkte0r" path="res://configs/base_environment.tres" id="4_0sgf1"]
 
-[node name="DreamContainer" type="Node3D"]
+[node name="DreamContainer" type="Node3D" node_paths=PackedStringArray("world_env")]
 script = ExtResource("1_wuqc0")
+world_env = NodePath("WorldEnvironment")
 
 [node name="Player" parent="." instance=ExtResource("1_ckbj1")]
 
