@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://caj0gope3mcie" path="res://scenes/characters/aoren.tscn" id="2_b5038"]
 [ext_resource type="Environment" uid="uid://da3134fqh0d1y" path="res://configs/light_environment.tres" id="3_sikmv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41hmt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33ooc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_wkpbg"]
-material = SubResource("StandardMaterial3D_41hmt")
+material = SubResource("StandardMaterial3D_33ooc")
 size = Vector2(200000, 200000)
 orientation = 1
 

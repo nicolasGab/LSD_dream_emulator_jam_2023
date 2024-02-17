@@ -6,6 +6,8 @@ var tween: Tween
 var background_energy_multiplier
 
 func _ready():
+	if not world_env:
+		return
 	background_energy_multiplier = world_env.environment.background_energy_multiplier
 	animate_sky()
 

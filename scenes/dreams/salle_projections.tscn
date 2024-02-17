@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl4i60pf335ug"]
+[gd_scene load_steps=13 format=3 uid="uid://dl4i60pf335ug"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_kqdph"]
 [ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="2_ygnyp"]
@@ -27,6 +27,9 @@ emission_energy_multiplier = 3.55
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_k0xhr")
 size = Vector2(5, 2.38)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_oh87e"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
 
 [node name="DreamContainer" type="Node3D"]
 script = ExtResource("1_kqdph")
@@ -68,6 +71,11 @@ loop = true
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -4.98572, 1.97691, -0.0495696)
 mesh = SubResource("PlaneMesh_cmsgc")
 skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_oh87e")
 
 [node name="Lights" type="Node3D" parent="."]
 
