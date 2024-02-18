@@ -105,6 +105,7 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_5" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(1, -1.70165e-15, -6.48159e-23, 6.15739e-16, 1, -1.70165e-15, 8.56155e-22, 6.15739e-16, 1, 0, 9.53674e-07, 1.44547)
 sound = "video_empty_1"
 
 [node name="Screen_6" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="1"]
@@ -168,6 +169,7 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_tresor/Screen_13" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(1, 1.07758e-14, -1.59688e-22, -4.23373e-14, 1, 8.33389e-16, 1.52426e-21, 9.42797e-16, 1, -9.53674e-07, 7.75251, -2.38419e-07)
 sound = "video_bretz"
 
 [node name="Salle_machine_a_laver" type="Node3D" parent="Objects" index="4"]

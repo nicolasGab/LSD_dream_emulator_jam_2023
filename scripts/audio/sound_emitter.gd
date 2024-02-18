@@ -27,6 +27,6 @@ func _get_property_list():
 	return properties
 
 func _ready():
-	Wwise.register_game_obj(self, name)
-	Wwise.set_3d_position(self, transform)
+	Wwise.register_game_obj(self, name + str(get_instance_id()))
+	Wwise.set_3d_position(self, get_parent().transform.translated_local(position))
 	Wwise.post_event_id(sound_id, self)
