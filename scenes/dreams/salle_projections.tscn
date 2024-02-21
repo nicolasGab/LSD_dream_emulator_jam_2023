@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ca30k5shbw4qt"]
+[gd_scene load_steps=51 format=3 uid="uid://ca30k5shbw4qt"]
 
 [ext_resource type="PackedScene" uid="uid://ccoc3xlhxp5vg" path="res://scenes/dream_container.tscn" id="1_7mgsi"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="2_1khl2"]
@@ -8,6 +8,12 @@
 [ext_resource type="ArrayMesh" uid="uid://duk7445rsblv5" path="res://graphics/meshes/WhiteCube-col.obj" id="4_fagwk"]
 [ext_resource type="VideoStream" path="res://graphics/videos/6_empty_2.ogv" id="4_pld00"]
 [ext_resource type="VideoStream" path="res://graphics/videos/7_empty_3.ogv" id="5_ywogv"]
+[ext_resource type="VideoStream" path="res://graphics/videos/15_drap_1.ogv" id="6_x32vl"]
+[ext_resource type="VideoStream" path="res://graphics/videos/17_drap_fleur.ogv" id="7_76two"]
+[ext_resource type="VideoStream" path="res://graphics/videos/16_drap_contexte.ogv" id="7_jaumn"]
+[ext_resource type="VideoStream" path="res://graphics/videos/18_drap_beau.ogv" id="8_omwqr"]
+[ext_resource type="VideoStream" path="res://graphics/videos/19_kaleidoscope_1.ogv" id="9_jvnak"]
+[ext_resource type="VideoStream" path="res://graphics/videos/20_kaleidoscope_2.ogv" id="11_6sfhl"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ly11k"]
 viewport_path = NodePath("Objects/Salle_foraire_2/Screen_5/SubViewport")
@@ -36,7 +42,7 @@ material = SubResource("StandardMaterial3D_sknoh")
 size = Vector2(4.605, 2.42)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_n6y2i"]
-viewport_path = NodePath("Objects/Salle_foraire_2/Screen_7/SubViewport")
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_15/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd7ru"]
 resource_local_to_scene = true
@@ -46,6 +52,86 @@ albedo_texture = SubResource("ViewportTexture_n6y2i")
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_kd7ru")
 size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_an08u"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_15/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgo24"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_an08u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fa0xb"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_cgo24")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d25a3"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_16/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c17op"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_d25a3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wvala"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_c17op")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ju5n8"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_17/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_keqwl"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_ju5n8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_82tdt"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_keqwl")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wbv6a"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_18/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7exf"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_wbv6a")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m46xq"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_p7exf")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pumy7"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_19/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7k7eu"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_pumy7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i1lhe"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_7k7eu")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d8kcs"]
+viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_20/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go014"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_d8kcs")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n75nk"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_go014")
+size = Vector2(4.605, 2.42)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i5su3"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dyp2f"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7i5hv"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_y7bko"]
 viewport_path = NodePath("Objects/Salle_tresor/Screen_13/SubViewport")
@@ -150,6 +236,146 @@ sound = "video_empty_3"
 
 [node name="Salle_Champs_Libres" type="Node3D" parent="Objects" index="2"]
 
+[node name="Screen_15" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="0"]
+transform = Transform3D(-2.75819e-08, 0.303, -4.35365e-08, 0, -1.32446e-08, -0.996, -0.631, -1.32446e-08, 1.90304e-15, 4.3937, 2.16426, -17.5006)
+layers = 8
+mesh = SubResource("PlaneMesh_fa0xb")
+skeleton = NodePath("../../../..")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_15" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_15/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("6_x32vl")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_15" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_drap_1"
+
+[node name="Screen_16" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="1"]
+transform = Transform3D(0.631, 0, 0, 0, -1.32446e-08, -0.996, 0, 0.303, -4.35365e-08, 5.51085, 2.7025, -29.0027)
+layers = 8
+mesh = SubResource("PlaneMesh_wvala")
+skeleton = NodePath("../../..")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_16" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_16/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("7_jaumn")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_16" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_drap_contexte"
+
+[node name="Screen_17" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="2"]
+transform = Transform3D(-2.75819e-08, -0.303, 4.35365e-08, 0, -1.32446e-08, -0.996, 0.631, -1.32446e-08, 1.90304e-15, 3.78977, 2.14345, -17.5385)
+layers = 8
+mesh = SubResource("PlaneMesh_82tdt")
+skeleton = NodePath("../../..")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_17" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_17/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("7_76two")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_17" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_drap_fleur"
+
+[node name="Screen_18" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="3"]
+transform = Transform3D(-6.81461e-08, 0.27, -8.57617e-08, 0, -1.18021e-08, -1.962, -1.559, -1.18021e-08, 3.74876e-15, -3.12216, 3.02883, -18.8473)
+layers = 8
+mesh = SubResource("PlaneMesh_m46xq")
+skeleton = NodePath("../..")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_18" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_18/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("8_omwqr")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_18" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_drap_beau"
+
+[node name="Screen_19" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="4"]
+transform = Transform3D(-1.15835e-08, 0.22, -1.9233e-08, 0, -9.61651e-09, -0.44, -0.265, -9.61651e-09, 8.40702e-16, -3.0773, 2.19469, -27.0297)
+layers = 8
+mesh = SubResource("PlaneMesh_i1lhe")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_19" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_19/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("9_jvnak")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_19" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_kaleidoscope_1"
+
+[node name="Screen_20" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="5"]
+transform = Transform3D(-1.15835e-08, 0.22, -1.9233e-08, 0, -9.61651e-09, -0.44, -0.265, -9.61651e-09, 8.40702e-16, -3.00437, 3.18866, -25.4008)
+layers = 8
+mesh = SubResource("PlaneMesh_n75nk")
+skeleton = NodePath("../Screen_19")
+
+[node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_20" index="0"]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_20/SubViewport" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("11_6sfhl")
+volume_db = -55.0
+autoplay = true
+loop = true
+
+[node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_20" index="1" instance=ExtResource("3_d4x2a")]
+sound = "video_kaleidoscope_2"
+
+[node name="Cimèse_01" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="6"]
+transform = Transform3D(0.545, 0, 0, 0, 4.085, 0, 0, 0, 5.4, 4.08886, 1.96196, -16.8115)
+mesh = SubResource("BoxMesh_i5su3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/Salle_Champs_Libres/Cimèse_01" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Cimèse_01/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_dyp2f")
+
+[node name="Cimèse_02" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="7"]
+transform = Transform3D(0.545, 0, 0, 0, 4.085, 0, 0, 0, 5.4, 0.637301, 1.96196, -26.4351)
+visible = false
+mesh = SubResource("BoxMesh_i5su3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/Salle_Champs_Libres/Cimèse_02" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Cimèse_02/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_7i5hv")
+
 [node name="Salle_tresor" type="Node3D" parent="Objects" index="3"]
 
 [node name="Screen_13" type="MeshInstance3D" parent="Objects/Salle_tresor" index="0"]
@@ -186,34 +412,53 @@ mesh = ExtResource("4_fagwk")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Meshes/WhiteCube-col" index="0"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/WhiteCube-col/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_ms7dx")
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91386, 13.8363, -21.9448)
+[node name="OmniLight_salle_Champs_Libres" type="OmniLight3D" parent="Lights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91386, 13.825, -21.9448)
 light_color = Color(0.376471, 0.658824, 0.737255, 1)
-omni_range = 12.536
+light_energy = 1.453
+omni_range = 15.863
+omni_attenuation = 0.933032
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Lights" index="1"]
+[node name="OmniLight_salle_Champs_Libres_screens" type="OmniLight3D" parent="Lights" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4749, 5.99578, -22.8369)
+layers = 8
+light_energy = 16.0
+light_cull_mask = 4294966280
+omni_range = 43.999
+omni_attenuation = 1.10957
+
+[node name="OmniLight_salle_Champs_Libres_screens2" type="OmniLight3D" parent="Lights" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.765489, 6.06073, -21.6041)
+layers = 8
+light_energy = 16.0
+light_cull_mask = 4294966280
+omni_range = 43.999
+omni_attenuation = 1.10957
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0627, 3.46207, 0)
 light_color = Color(0.92549, 0.458824, 0.321569, 1)
 omni_range = 28.07
 
-[node name="OmniLight_salle_foraine_2_screens" type="OmniLight3D" parent="Lights" index="2"]
+[node name="OmniLight_salle_foraine_2_screens" type="OmniLight3D" parent="Lights" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7668, 3.64817, 0)
 layers = 8
 light_energy = 16.0
 light_cull_mask = 4294966280
 omni_range = 43.999
 
-[node name="OmniLight_salle_foraine_2" type="OmniLight3D" parent="Lights" index="3"]
+[node name="OmniLight_salle_foraine_2" type="OmniLight3D" parent="Lights" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3784, 6.94299, 0)
 light_color = Color(0.65098, 0.180392, 0.196078, 1)
 light_energy = 0.547
 omni_range = 29.72
 
-[node name="OmniLight_machine_a_laver_main" type="OmniLight3D" parent="Lights" index="4"]
+[node name="OmniLight_machine_a_laver_main" type="OmniLight3D" parent="Lights" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5666, 54.1324, -20.8411)
 light_energy = 8.698
 light_indirect_energy = 0.0
@@ -221,7 +466,7 @@ shadow_enabled = true
 omni_range = 177.504
 omni_attenuation = 0.48297
 
-[node name="OmniLight_machine_a_laver_spot01" type="OmniLight3D" parent="Lights" index="5"]
+[node name="OmniLight_machine_a_laver_spot01" type="OmniLight3D" parent="Lights" index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4137, 1.0141, -19.1659)
 layers = 2
 light_color = Color(0.772549, 0.866667, 0.929412, 1)
@@ -232,7 +477,7 @@ shadow_enabled = true
 omni_range = 3.393
 omni_attenuation = 0.112657
 
-[node name="OmniLight_machine_a_laver_spot02" type="OmniLight3D" parent="Lights" index="6"]
+[node name="OmniLight_machine_a_laver_spot02" type="OmniLight3D" parent="Lights" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4805, 1.00189, -19.9517)
 light_color = Color(0.772549, 0.866667, 0.929412, 1)
 light_energy = 3.069
@@ -242,7 +487,7 @@ shadow_enabled = true
 omni_range = 3.393
 omni_attenuation = 0.112657
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="Lights" index="7"]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.573895, 1.90375, 9.97223)
 light_color = Color(0.776471, 0.572549, 0.215686, 1)
 omni_range = 3.573
