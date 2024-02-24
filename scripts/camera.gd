@@ -21,10 +21,10 @@ func _input(event):
 	if event.is_action("look_right"):
 		rotate_camera(Vector2(-1,0))
 	if event is InputEventMouseMotion:
-		rotate_camera(event.relative, event.velocity)
+		rotate_camera(event.relative)
 
 func rotate_camera(relative_mouvement: Vector2, velocity: Vector2 = Vector2.ONE):
-	velocity*=.001
+	velocity*=.75
 	velocity = abs(velocity)
 	var normalized_mouvement = relative_mouvement.normalized()
 	desired_rotation.y -= normalized_mouvement.x*ROTATION_VALUE * velocity.x
