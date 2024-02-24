@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var world_env: WorldEnvironment
+@export var next_scene : PackedScene
 
 var tween: Tween
 var background_energy_multiplier

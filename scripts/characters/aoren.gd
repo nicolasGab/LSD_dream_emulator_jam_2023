@@ -54,11 +54,9 @@ func _ready():
 	initialize_parameters()
 	choose_pitch()
 	vote()
-	
-	#modulate_light()
-	#modulate_position("x")
-	#modulate_position("y")
-	#modulate_position("z")
+
+func _exit_tree():
+	Wwise.post_event_id(AK.EVENTS.RELEASE_AOREN, self)
 
 func _physics_process(delta):
 	if not is_on_floor():

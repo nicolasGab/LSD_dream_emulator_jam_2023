@@ -1,5 +1,5 @@
 @tool
-extends RichTextLabel
+extends Label
 var action: String = "lala"
 
 func _get_property_list():
@@ -8,7 +8,7 @@ func _get_property_list():
 			"name" = "action",
 			"type" = TYPE_STRING,
 			"hint" = PROPERTY_HINT_ENUM,
-			"hint_string" = "use_object,interact,jump",
+			"hint_string" = "use_object,interact,jump,run",
 			"usage" = PROPERTY_USAGE_DEFAULT 
 		}])
 	return properties

@@ -6,8 +6,8 @@ const step_divider_run = 10
 const JUMP_AMOUNT = 5
 
 var move_amount
-var walk_amount: float = 0.15
-var run_amount: float = 0.4
+var walk_amount: float = 0.08
+var run_amount: float = 0.3
 var movement = Vector3.ZERO
 var step_counter = 0
 var step_divider = step_divider_walk
@@ -42,11 +42,11 @@ func _input(event):
 	if event.is_action_pressed("jump"):
 		movement.y = JUMP_AMOUNT
 	if event.is_action_pressed("move_right"):
-		movement.x = 1
+		movement.x = 0.5
 	if event.is_action_released("move_right"):
 		movement.x = 0
 	if event.is_action_pressed("move_left"):
-		movement.x = -1
+		movement.x = -0.5
 	if event.is_action_released("move_left"):
 		movement.x = 0
 		
@@ -65,7 +65,15 @@ func _input(event):
 	if event.is_action_released("run"):
 		move_amount = walk_amount
 		step_divider = step_divider_walk
-	if event.is_action_released("use_object"):
+	if event.is_action_released("use_object") and GameState.object_enabled:
 		main.get_node("AnimationPlayer").play("activation_main")
 		await get_tree().create_timer(0.6).timeout
 		Wwise.post_event_id(AK.EVENTS.PITCH_DOWN_DRUGS, self)
+		await get_tree().create_timer(1.0).timeout
+		next_scene()
+	if event.is_action_pressed("interact"):
+		GameState.eventbus.interact_requested.emit()
+
+func next_scene():
+	if get_parent().next_scene:
+		get_tree().change_scene_to_packed(get_parent().next_scene)

@@ -29,6 +29,6 @@ func rotate_camera(relative_mouvement: Vector2, velocity: Vector2 = Vector2.ONE)
 	var normalized_mouvement = relative_mouvement.normalized()
 	desired_rotation.y -= normalized_mouvement.x*ROTATION_VALUE * velocity.x
 	desired_rotation.x -= normalized_mouvement.y*ROTATION_VALUE * velocity.y
-	desired_rotation.x = min(max(-.5, desired_rotation.x), 1.25)
+	desired_rotation.x = min(max(-1.0, desired_rotation.x), 1.25)
 	
 	

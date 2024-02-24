@@ -1,6 +1,7 @@
 @tool
 extends Node3D
 
+@export var next_scene : PackedScene
 @export_group("Sound")
 #@export_enum("all", "video",) var sfx_type: String = "video" :
 	#set (value):
@@ -22,7 +23,12 @@ func _get_property_list():
 			"usage" = PROPERTY_USAGE_DEFAULT 
 		}])
 	return properties
+	
+var wwise_id: int = 0
 
 func _ready():
 	Wwise.register_game_obj(self, name)
-	Wwise.post_event_id(sound_id, self)
+	wwise_id = Wwise.post_event_id(sound_id, self)
+
+func _exit_tree():
+	Wwise.stop_event(wwise_id, 500, AkUtils.AK_CURVE_CONSTANT)

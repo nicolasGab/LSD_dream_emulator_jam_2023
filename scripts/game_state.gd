@@ -4,7 +4,7 @@ extends Node
 @export var gravity : float = 0.6
 @export var eventbus: Node
 
-# Called when the node enters the scene tree for the first time.
+var object_enabled : bool = false
+
 func _ready():
 	pass
-	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

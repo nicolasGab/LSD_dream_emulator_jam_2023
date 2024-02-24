@@ -218,6 +218,7 @@ mesh = SubResource("QuadMesh_kee81")
 libraries = {
 "": SubResource("AnimationLibrary_757iw")
 }
+autoplay = "RESET"
 
 [node name="DistortShader" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_n6h71")

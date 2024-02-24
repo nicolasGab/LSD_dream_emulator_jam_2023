@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://44cbhndh6wjt"]
+[gd_scene load_steps=4 format=3 uid="uid://44cbhndh6wjt"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_1ow7o"]
 [ext_resource type="Script" path="res://scripts/hud_text_label.gd" id="1_wjs8v"]
+[ext_resource type="LabelSettings" uid="uid://dm0ule5rxfmqe" path="res://resources/hud_label_settings.tres" id="2_xii1u"]
 
-[node name="HUD" type="Control"]
+[node name="HUD" type="Control" node_paths=PackedStringArray("object_label", "interact_label", "run_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ow7o")
+object_label = NodePath("HBoxContainer/VBoxContainer/ObjectLabel")
+interact_label = NodePath("HBoxContainer/VBoxContainer/InteractLabel")
+run_label = NodePath("HBoxContainer/VBoxContainer/RunLabel")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -33,29 +37,37 @@ size_flags_horizontal = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="LowerLeftLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(2.08165e-12, 50)
+[node name="ObjectLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
-size_flags_horizontal = 3
-text = "Press A to use object"
-scroll_active = false
-autowrap_mode = 0
+text = "Press {0} to use object"
+label_settings = ExtResource("2_xii1u")
+horizontal_alignment = 1
 script = ExtResource("1_wjs8v")
 action = "use_object"
 
-[node name="LowerRightLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(2.08165e-12, 50)
+[node name="InteractLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
-text = "Press E to interact"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
+text = "Press A to use object"
+label_settings = ExtResource("2_xii1u")
+horizontal_alignment = 1
 script = ExtResource("1_wjs8v")
 hud_text = "Press {0} to interact"
 action = "interact"
 
+[node name="RunLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Press E to interact"
+label_settings = ExtResource("2_xii1u")
+horizontal_alignment = 1
+script = ExtResource("1_wjs8v")
+hud_text = "Press {0} to run"
+action = "run"
+
 [node name="ReferenceRect" type="ReferenceRect" parent="HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(10, 50)
+custom_minimum_size = Vector2(10, 100)
 layout_mode = 2
 size_flags_vertical = 8
 
