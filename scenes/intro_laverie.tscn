@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c111fr1gmtnoi"]
+[gd_scene load_steps=38 format=3 uid="uid://c111fr1gmtnoi"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_fstbk"]
 [ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="2_3eho8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="5_bktrw"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="6_ubnmt"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="7_ek08c"]
+[ext_resource type="Script" path="res://scripts/ventilo.gd" id="10_8o034"]
 [ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/scene/Voice_Subtitle_Intro_Laverie.tscn" id="10_df3rm"]
 [ext_resource type="Texture2D" uid="uid://dfxejxbsa1b7k" path="res://graphics/textures/sponge_texture.png" id="11_0tkxv"]
 [ext_resource type="Texture2D" uid="uid://denrlbilg13rx" path="res://graphics/textures/banc_texture.png" id="11_stbhy"]
@@ -261,6 +262,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
 mesh = SubResource("ArrayMesh_7u237")
 skeleton = NodePath("../..")
+script = ExtResource("10_8o034")
 
 [node name="Neon" type="MeshInstance3D" parent="Props_container"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)

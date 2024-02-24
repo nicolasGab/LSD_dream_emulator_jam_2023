@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://44cbhndh6wjt"]
+[gd_scene load_steps=3 format=3 uid="uid://44cbhndh6wjt"]
 
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_1ow7o"]
 [ext_resource type="Script" path="res://scripts/hud_text_label.gd" id="1_wjs8v"]
 
 [node name="HUD" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1ow7o")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

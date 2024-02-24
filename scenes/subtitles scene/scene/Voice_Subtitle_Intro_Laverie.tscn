@@ -169,7 +169,7 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_r4j1l"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_1d1fo"]
 
 [node name="NarratorLaverie" type="Node2D"]
 script = SubResource("GDScript_l2alw")
@@ -203,5 +203,5 @@ autoplay = "Narration Laverie"
 script = SubResource("GDScript_wca0g")
 
 [node name="Narrator_Laverie" type="AudioStreamPlayer" parent="Label"]
-stream = SubResource("AudioStreamPolyphonic_r4j1l")
-volume_db = -0.005
+stream = SubResource("AudioStreamPolyphonic_1d1fo")
+volume_db = -10.0

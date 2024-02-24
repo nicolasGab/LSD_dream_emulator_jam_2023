@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwyadx245b7wn"]
+
+[ext_resource type="PackedScene" uid="uid://ba7c1y3mt7n8" path="res://scenes/UI/main_menu.tscn" id="1_ph2eu"]
+[ext_resource type="PackedScene" uid="uid://rcco8k2kem6r" path="res://scenes/home_laverie.tscn" id="2_ntpvf"]
+
+[node name="Home" type="Node3D"]
+
+[node name="MainMenu" parent="." instance=ExtResource("1_ph2eu")]
+
+[node name="IntroLaverie" parent="." instance=ExtResource("2_ntpvf")]

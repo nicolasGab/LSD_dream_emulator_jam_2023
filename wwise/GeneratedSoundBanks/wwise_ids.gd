@@ -2,16 +2,16 @@ class_name AK
 
 class EVENTS:
 
+	const PLUIE_INONDATION_FAIBLE = 3528569874
 	const CHARACTER_FOOTSTEPS = 2775932802
 	const RELEASE_AOREN = 2814252982
 	const VIDEO_EMPTY_2 = 2119352003
 	const VIDEO_EMPTY_3 = 2119352002
 	const VIDEO_INFINITE_DUCKS_ZOOM = 1978203760
 	const VIDEO_EMPTY_1 = 2119352000
-	const ADD_ONE_HERTZ = 2394938017
-	const TRIGGER_AOREN = 1772107161
-	const PLUIE_INONDATION_FAIBLE = 3528569874
 	const VIDEO_INFINITE_FROGS = 3083001
+	const TRIGGER_AOREN = 1772107161
+	const ADD_ONE_HERTZ = 2394938017
 	const VIDEO_VU_DE_LOIN = 851036845
 	const VIDEO_BRETZ = 1634010588
 	const VIDEO_DOTS = 2957917457
@@ -30,21 +30,23 @@ class EVENTS:
 	const VIDEO_DRAP_CONTEXTE = 3583738369
 	const VIDEO_DRAP_FLEUR = 1462938299
 	const VIDEO_DRAP_BEAU = 2905835486
+	const MUSIC_FX_EMPTY_1 = 2143432977
 	const NONE = 748895195
 	const PITCH_DOWN_DRUGS = 2886619884
-	const MUSIC_FX_EMPTY_1 = 2143432977
+	const HOME_SCENE_STOP = 2449302600
+	const HOME_SCENE = 2156135365
 
 	const _dict = {
+		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
 		"character_footsteps": CHARACTER_FOOTSTEPS,
 		"release_aoren": RELEASE_AOREN,
 		"video_empty_2": VIDEO_EMPTY_2,
 		"video_empty_3": VIDEO_EMPTY_3,
 		"video_infinite_ducks_zoom": VIDEO_INFINITE_DUCKS_ZOOM,
 		"video_empty_1": VIDEO_EMPTY_1,
-		"add_one_hertz": ADD_ONE_HERTZ,
-		"trigger_aoren": TRIGGER_AOREN,
-		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
 		"video_infinite_frogs": VIDEO_INFINITE_FROGS,
+		"trigger_aoren": TRIGGER_AOREN,
+		"add_one_hertz": ADD_ONE_HERTZ,
 		"video_vu_de_loin": VIDEO_VU_DE_LOIN,
 		"video_bretz": VIDEO_BRETZ,
 		"video_dots": VIDEO_DOTS,
@@ -63,9 +65,11 @@ class EVENTS:
 		"video_drap_contexte": VIDEO_DRAP_CONTEXTE,
 		"video_drap_fleur": VIDEO_DRAP_FLEUR,
 		"video_drap_beau": VIDEO_DRAP_BEAU,
+		"music_fx_empty_1": MUSIC_FX_EMPTY_1,
 		"none": NONE,
 		"pitch_down_drugs": PITCH_DOWN_DRUGS,
-		"music_fx_empty_1": MUSIC_FX_EMPTY_1
+		"home_scene_stop": HOME_SCENE_STOP,
+		"home_scene": HOME_SCENE
 	}
 
 class STATES:
@@ -78,19 +82,19 @@ class SWITCHES:
 		const GROUP = 3865314626
 
 		class SWITCH:
-			const HARD = 3599861390
 			const SOFT = 670602561
-			const WATER = 2654748154
 			const SWIM = 151879501
+			const WATER = 2654748154
+			const HARD = 3599861390
 
 	const _dict = {
 		"material": {
 			"GROUP": 3865314626,
 			"SWITCH": {
-				"hard": 3599861390,
 				"soft": 670602561,
+				"swim": 151879501,
 				"water": 2654748154,
-				"swim": 151879501
+				"hard": 3599861390
 			}
 		}
 	}
@@ -141,12 +145,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const NO_OUTPUT = 2317455096
 	const SYSTEM = 3859886410
+	const NO_OUTPUT = 2317455096
 
 	const _dict = {
-		"No_Output": NO_OUTPUT,
-		"System": SYSTEM
+		"System": SYSTEM,
+		"No_Output": NO_OUTPUT
 	}
 
 class EXTERNAL_SOURCES:

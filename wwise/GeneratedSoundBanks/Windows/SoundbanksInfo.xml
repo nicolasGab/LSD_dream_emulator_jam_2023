@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CDF21D1C-5EBA-FA0A-5445-9F6C2DCDB36F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EF417B04-305F-650B-71DC-422E1BDBB292}">
 			<ShortName>Init</ShortName>
 			<Path>1355168291.bnk</Path>
 			<Plugins>
@@ -187,7 +187,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A644A409-8F32-DC26-9482-5E9968686B61}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{930E53EE-71B9-8845-B8CB-8594B0778DA9}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
@@ -230,6 +230,10 @@
 				<File Id="332055670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>13_bretz.wav</ShortName>
 					<CachePath>SFX/13_bretz_3D796F78.wem</CachePath>
+				</File>
+				<File Id="386650914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MAFCK WHOOSH Constant Rotation Rubber Hose.wav</ShortName>
+					<CachePath>SFX/MAFCK WHOOSH Constant Rotation Rubber Hose_D2E32AF2.wem</CachePath>
 				</File>
 				<File Id="402988620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>20_kaleidoscope_2.wav</ShortName>
@@ -343,9 +347,14 @@
 			<Plugins>
 				<Custom>
 					<Plugin Id="221643767" Name="Low_Pass_20KHz (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="466998299" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
 					<Plugin Id="472204842" Name="Guitar Distortion (Custom)" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+					<Plugin Id="756803583" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="934572749" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="992902880" Name="Small_Tiled_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="2775932802" Name="character_footsteps">
@@ -375,6 +384,21 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2156135365" Name="home_scene">
+					<MediaRefs>
+						<MediaRef Id="386650914"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="466998299"/>
+							<PluginRef Id="756803583"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="992902880"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="2449302600" Name="home_scene_stop"/>
 				<Event Id="2143432977" Name="music_fx_empty_1">
 					<MediaRefs>
 						<MediaRef Id="430330994"/>
@@ -532,5 +556,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4916E262-B0D0-D849-B21D-A3126656C8AE}</FileHash>
+	<FileHash>{C89D8058-DB6F-F41A-99F9-2C8365E63B40}</FileHash>
 </SoundBanksInfo>

@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CHARACTER_FOOTSTEPS = 2775932802U;
+        static const AkUniqueID HOME_SCENE = 2156135365U;
+        static const AkUniqueID HOME_SCENE_STOP = 2449302600U;
         static const AkUniqueID MUSIC_FX_EMPTY_1 = 2143432977U;
         static const AkUniqueID NONE = 748895195U;
         static const AkUniqueID PITCH_DOWN_DRUGS = 2886619884U;
