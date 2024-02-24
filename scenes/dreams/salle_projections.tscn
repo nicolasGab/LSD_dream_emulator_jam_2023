@@ -1,9 +1,10 @@
-[gd_scene load_steps=51 format=3 uid="uid://ca30k5shbw4qt"]
+[gd_scene load_steps=55 format=3 uid="uid://ca30k5shbw4qt"]
 
 [ext_resource type="PackedScene" uid="uid://ccoc3xlhxp5vg" path="res://scenes/dream_container.tscn" id="1_7mgsi"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="2_1khl2"]
 [ext_resource type="VideoStream" path="res://graphics/videos/13_bretz.ogv" id="2_bimht"]
 [ext_resource type="VideoStream" path="res://graphics/videos/5_empty_1.ogv" id="2_me7ya"]
+[ext_resource type="Script" path="res://scripts/projection_screen.gd" id="2_slub2"]
 [ext_resource type="PackedScene" uid="uid://c06o00is48nb7" path="res://scenes/characters/sound_emitter.tscn" id="3_d4x2a"]
 [ext_resource type="ArrayMesh" uid="uid://duk7445rsblv5" path="res://graphics/meshes/WhiteCube-col.obj" id="4_fagwk"]
 [ext_resource type="VideoStream" path="res://graphics/videos/6_empty_2.ogv" id="4_pld00"]
@@ -41,17 +42,20 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_sknoh")
 size = Vector2(4.605, 2.42)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_n6y2i"]
-viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_15/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_ebmjh"]
+viewport_path = NodePath("Objects/Salle_foraire_2/Screen_7/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd7ru"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_n6y2i")
+albedo_texture = SubResource("ViewportTexture_ebmjh")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uq5vr"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_kd7ru")
 size = Vector2(4.605, 2.42)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odmh0"]
+size = Vector3(11.6217, 8.233, 15.8503)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_an08u"]
 viewport_path = NodePath("Objects/Salle_Champs_Libres/Screen_15/SubViewport")
@@ -133,6 +137,9 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7i5hv"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ynes"]
+size = Vector3(25.8966, 8.233, 22.1739)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_y7bko"]
 viewport_path = NodePath("Objects/Salle_tresor/Screen_13/SubViewport")
 
@@ -145,6 +152,9 @@ albedo_texture_force_srgb = true
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_iguc7")
 size = Vector2(4.605, 2.42)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1int3"]
+size = Vector3(33.0549, 8.233, 17.8858)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hlu6"]
 albedo_texture = ExtResource("2_1khl2")
@@ -173,32 +183,39 @@ data = PackedVector3Array(-20.0003, 0, 13.9994, -20.0003, 8.9997, 13.9994, -20.0
 
 [node name="Salle_foraire_2" type="Node3D" parent="Objects" index="1"]
 
-[node name="Screen_5" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="0"]
+[node name="Screen_5" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="0" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-1.21736e-07, -2.785, 1.21736e-07, 0, -1.21736e-07, -2.785, 2.785, -1.21736e-07, 5.32126e-15, 19.499, 4.053, 0.142)
 layers = 8
 mesh = SubResource("PlaneMesh_bwk76")
 skeleton = NodePath("../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_5" index="0"]
 size = Vector2i(1920, 1080)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_2/Screen_5/SubViewport" index="0"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1088.0
 stream = ExtResource("2_me7ya")
 volume_db = -80.0
-autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_5" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(1, -1.70165e-15, -6.48159e-23, 6.15739e-16, 1, -1.70165e-15, 8.56155e-22, 6.15739e-16, 1, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.0166226, -1.02352e-17, -1.42315e-23, 1.02352e-17, 0.0166226, -1.02352e-17, 1.42315e-23, 1.02352e-17, 0.0166226, 0, 9.53674e-07, 1.44547)
 sound = "video_empty_1"
 
-[node name="Screen_6" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="1"]
+[node name="Screen_6" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="1" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-7.25609e-08, 1.66, -7.25609e-08, 0, -7.25609e-08, -1.66, -1.66, -7.25609e-08, 3.17174e-15, 11.4115, 2.52396, 3.69692)
 layers = 8
 mesh = SubResource("PlaneMesh_aceej")
 skeleton = NodePath("../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_6" index="0"]
 size = Vector2i(1920, 1080)
@@ -207,18 +224,22 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("4_pld00")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_6" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(0.131695, 0, 0, 0, 0.131695, 0, 0, 0, 0.131695, 0, 0, 0)
 sound = "video_empty_2"
 
-[node name="Screen_7" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="2"]
+[node name="Screen_7" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(1.34, 0, 0, 0, -5.85733e-08, -1.34, 0, 1.34, -5.85733e-08, 15.4086, 2.37648, -7.70712)
 layers = 8
 mesh = SubResource("PlaneMesh_uq5vr")
 skeleton = NodePath("../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_7" index="0"]
 size = Vector2i(1920, 1080)
@@ -227,40 +248,55 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("5_ywogv")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_7" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(0.310157, 0, 0, 0, 0.310157, 0, 0, 0, 0.310157, 0, 0, 0)
 sound = "video_empty_3"
+
+[node name="Area3D" type="Area3D" parent="Objects/Salle_foraire_2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0136, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_foraire_2/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35221, 4.07054, 0.226456)
+shape = SubResource("BoxShape3D_odmh0")
 
 [node name="Salle_Champs_Libres" type="Node3D" parent="Objects" index="2"]
 
-[node name="Screen_15" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="0"]
+[node name="Screen_15" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="0" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-2.75819e-08, 0.303, -4.35365e-08, 0, -1.32446e-08, -0.996, -0.631, -1.32446e-08, 1.90304e-15, 4.3937, 2.16426, -17.5006)
 layers = 8
 mesh = SubResource("PlaneMesh_fa0xb")
 skeleton = NodePath("../../../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_15" index="0"]
 size = Vector2i(1920, 1080)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_15/SubViewport" index="0"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1088.0
 stream = ExtResource("6_x32vl")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_15" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(6.30786, 0, 0, 0, 118.64, 0, 0, 0, 1.01616, 0, 0, 0)
 sound = "video_drap_1"
 
-[node name="Screen_16" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="1"]
+[node name="Screen_16" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="1" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(0.631, 0, 0, 0, -1.32446e-08, -0.996, 0, 0.303, -4.35365e-08, 5.51085, 2.7025, -29.0027)
 layers = 8
 mesh = SubResource("PlaneMesh_wvala")
 skeleton = NodePath("../../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_16" index="0"]
 size = Vector2i(1920, 1080)
@@ -269,18 +305,22 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("7_jaumn")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_16" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(6.30786, 0, 0, 0, 118.64, 0, 0, 0, 1.01616, 0, 0, 0)
 sound = "video_drap_contexte"
 
-[node name="Screen_17" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="2"]
+[node name="Screen_17" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-2.75819e-08, -0.303, 4.35365e-08, 0, -1.32446e-08, -0.996, 0.631, -1.32446e-08, 1.90304e-15, 3.78977, 2.14345, -17.5385)
 layers = 8
 mesh = SubResource("PlaneMesh_82tdt")
 skeleton = NodePath("../../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_17" index="0"]
 size = Vector2i(1920, 1080)
@@ -289,18 +329,22 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("7_76two")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_17" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(6.30786, 0, 0, 0, 118.64, 0, 0, 0, 1.01616, 0, 0, 0)
 sound = "video_drap_fleur"
 
-[node name="Screen_18" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="3"]
+[node name="Screen_18" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="3" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-6.81461e-08, 0.27, -8.57617e-08, 0, -1.18021e-08, -1.962, -1.559, -1.18021e-08, 3.74876e-15, -3.12216, 3.02883, -18.8473)
 layers = 8
 mesh = SubResource("PlaneMesh_m46xq")
 skeleton = NodePath("../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_18" index="0"]
 size = Vector2i(1920, 1080)
@@ -309,17 +353,21 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("8_omwqr")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_18" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(0.169284, 0, 0, 0, 188.168, 0, 0, 0, 0.0674847, 0, 0, 0)
 sound = "video_drap_beau"
 
-[node name="Screen_19" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="4"]
+[node name="Screen_19" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="4" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-1.15835e-08, 0.22, -1.9233e-08, 0, -9.61651e-09, -0.44, -0.265, -9.61651e-09, 8.40702e-16, -3.0773, 2.19469, -27.0297)
 layers = 8
 mesh = SubResource("PlaneMesh_i1lhe")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_19" index="0"]
 size = Vector2i(1920, 1080)
@@ -328,18 +376,22 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("9_jvnak")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_19" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(202.776, 0, 0, 0, 426.884, 0, 0, 0, 26.6802, 0, 0, 0)
 sound = "video_kaleidoscope_1"
 
-[node name="Screen_20" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="5"]
+[node name="Screen_20" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="5" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-1.15835e-08, 0.22, -1.9233e-08, 0, -9.61651e-09, -0.44, -0.265, -9.61651e-09, 8.40702e-16, -3.00437, 3.18866, -25.4008)
 layers = 8
 mesh = SubResource("PlaneMesh_n75nk")
 skeleton = NodePath("../Screen_19")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_20" index="0"]
 size = Vector2i(1920, 1080)
@@ -348,11 +400,11 @@ size = Vector2i(1920, 1080)
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("11_6sfhl")
-volume_db = -55.0
-autoplay = true
+volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_20" index="1" instance=ExtResource("3_d4x2a")]
+transform = Transform3D(202.776, 0, 0, 0, 426.884, 0, 0, 0, 26.6802, 0, 0, 0)
 sound = "video_kaleidoscope_2"
 
 [node name="Cimèse_01" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="6"]
@@ -362,7 +414,6 @@ mesh = SubResource("BoxMesh_i5su3")
 [node name="StaticBody3D" type="StaticBody3D" parent="Objects/Salle_Champs_Libres/Cimèse_01" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Cimèse_01/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_dyp2f")
 
 [node name="Cimèse_02" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="7"]
@@ -371,17 +422,27 @@ visible = false
 mesh = SubResource("BoxMesh_i5su3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Objects/Salle_Champs_Libres/Cimèse_02" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Cimèse_02/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_7i5hv")
 
+[node name="Area3D" type="Area3D" parent="Objects/Salle_Champs_Libres" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.42778, 0, -20.9777)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25796, 4.07054, -0.879185)
+shape = SubResource("BoxShape3D_5ynes")
+
 [node name="Salle_tresor" type="Node3D" parent="Objects" index="3"]
 
-[node name="Screen_13" type="MeshInstance3D" parent="Objects/Salle_tresor" index="0"]
+[node name="Screen_13" type="MeshInstance3D" parent="Objects/Salle_tresor" index="0" node_paths=PackedStringArray("area", "video_player", "audio_player")]
 transform = Transform3D(-0.31, -4.68087e-08, 2.04607e-15, 0, -1.35505e-08, -0.31, 4.68087e-08, -0.31, 1.35505e-08, 0.562361, 1.10614, 10.6261)
 mesh = SubResource("PlaneMesh_2bsan")
 skeleton = NodePath("../..")
+script = ExtResource("2_slub2")
+area = NodePath("../Area3D")
+video_player = NodePath("SubViewport/VideoStreamPlayer")
+audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_tresor/Screen_13" index="0"]
 size = Vector2i(1920, 1080)
@@ -391,12 +452,18 @@ offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("2_bimht")
 volume_db = -80.0
-autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_tresor/Screen_13" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(1, 1.07758e-14, -1.59688e-22, -4.23373e-14, 1, 8.33389e-16, 1.52426e-21, 9.42797e-16, 1, -9.53674e-07, 7.75251, -2.38419e-07)
+transform = Transform3D(108.281, 4.58432e-12, -1.65049e-19, -4.58432e-12, 108.281, -1.02087e-13, 1.65049e-19, 1.02087e-13, 108.281, -9.53674e-07, 7.75251, -2.38419e-07)
 sound = "video_bretz"
+
+[node name="Area3D" type="Area3D" parent="Objects/Salle_tresor" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22827, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_tresor/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8268, 4.07054, -0.183193)
+shape = SubResource("BoxShape3D_1int3")
 
 [node name="Salle_machine_a_laver" type="Node3D" parent="Objects" index="4"]
 

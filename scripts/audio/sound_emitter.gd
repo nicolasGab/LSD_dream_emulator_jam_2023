@@ -26,7 +26,18 @@ func _get_property_list():
 		}])
 	return properties
 
+var id: int = 0
 func _ready():
+	scale /= get_parent().scale
 	Wwise.register_game_obj(self, name + str(get_instance_id()))
 	Wwise.set_3d_position(self, get_parent().transform.translated_local(position))
-	Wwise.post_event_id(sound_id, self)
+
+func play():
+	if id != 0:
+		return
+	id = Wwise.post_event_id(sound_id, self)
+	
+func stop():
+	if id != 0:
+		Wwise.stop_event(id, 1, AkUtils.AK_CURVE_CONSTANT)
+		id = 0
