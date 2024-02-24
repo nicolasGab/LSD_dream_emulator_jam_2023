@@ -65,7 +65,7 @@ func _input(event):
 	if event.is_action_released("run"):
 		move_amount = walk_amount
 		step_divider = step_divider_walk
-	if event is InputEventKey and event.keycode == KEY_A and event.is_pressed():
+	if event.is_action_released("use_object"):
 		main.get_node("AnimationPlayer").play("activation_main")
 		await get_tree().create_timer(0.6).timeout
 		Wwise.post_event_id(AK.EVENTS.PITCH_DOWN_DRUGS, self)
