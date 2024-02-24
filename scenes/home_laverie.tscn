@@ -317,9 +317,9 @@ mesh = SubResource("PlaneMesh_ur2c8")
 skeleton = NodePath("../Sponge")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999848, -0.016379, -0.00602628, 1.20435e-16, 0.345298, -0.938493, 0.0174524, 0.93835, 0.345246, 0.206, 1.105, -0.037)
+transform = Transform3D(0.999848, 0.0174525, -7.62872e-10, 0, -4.37114e-08, -1, -0.0174525, 0.999848, -4.37047e-08, 0.706, 1.3, 0.08)
 current = true
-fov = 120.0
+fov = 89.8
 
 [node name="Audio" type="Node3D" parent="Camera3D" node_paths=PackedStringArray("listener")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08165e-12, -1, -2.08165e-12)
