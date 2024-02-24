@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbq0h7gphhu7t"]
+[gd_scene load_steps=7 format=3 uid="uid://dbq0h7gphhu7t"]
 
 [ext_resource type="PackedScene" uid="uid://ccoc3xlhxp5vg" path="res://scenes/dream_container.tscn" id="1_5lm43"]
 [ext_resource type="Script" path="res://scripts/labyrinthe_foraine.gd" id="2_0bwpp"]
 [ext_resource type="PackedScene" uid="uid://l4ansaowwam6" path="res://scenes/pieces_labyrinthe/piece_labyrinthe.tscn" id="3_4t1oa"]
-[ext_resource type="PackedScene" uid="uid://caj0gope3mcie" path="res://scenes/characters/aoren.tscn" id="3_a7tm8"]
 [ext_resource type="Environment" uid="uid://d0bqjflyjos6v" path="res://configs/pitch_black_environment.tres" id="4_kjip8"]
 [ext_resource type="PackedScene" uid="uid://dutoyses6x6c4" path="res://scenes/subtitles scene/scene/Voice_Fete_Forraine.tscn" id="5_xkjv3"]
 
@@ -23,13 +22,6 @@ light_color = Color(0.803922, 0.709804, 0.403922, 1)
 light_energy = 3.469
 omni_range = 11.806
 omni_attenuation = 0.0915053
-
-[node name="Aoren" parent="Objects" index="0" instance=ExtResource("3_a7tm8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54001, 0.620565, 2.7101)
-
-[node name="Aoren2" parent="Objects" index="1" node_paths=PackedStringArray("mesh") instance=ExtResource("3_a7tm8")]
-transform = Transform3D(-0.649899, 0, -0.76002, 0, 1, 0, 0.76002, 0, -0.649899, 0.412791, 0.620565, 4.178)
-mesh = NodePath("../Aoren/MeshInstance3D")
 
 [node name="pieces" type="Node3D" parent="Meshes" index="0"]
 
