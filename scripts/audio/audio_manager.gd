@@ -12,4 +12,5 @@ func _ready():
 
 
 func set_switches_to_default():
-	Wwise.set_switch_id(AK.SWITCHES.MATERIAL.GROUP, AK.SWITCHES.MATERIAL.SWITCH.SOFT, self)
+	Wwise.set_switch_id(AK.SWITCHES.MATERIAL.GROUP, AK.SWITCHES.MATERIAL.SWITCH.HARD, self)
+	Wwise.set_state_id(AK.STATES.ROOM.GROUP, AK.STATES.ROOM.STATE.NO)

@@ -75,5 +75,6 @@ func _input(event):
 		GameState.eventbus.interact_requested.emit()
 
 func next_scene():
-	if get_parent().next_scene:
-		get_tree().change_scene_to_packed(get_parent().next_scene)
+	GameState.next_scene()
+	#if get_parent().next_scene:
+		#get_tree().change_scene_to_packed(get_parent().next_scene)

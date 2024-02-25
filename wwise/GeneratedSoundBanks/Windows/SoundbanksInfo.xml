@@ -9,12 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EF417B04-305F-650B-71DC-422E1BDBB292}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1529D473-1740-F7E9-2F15-7B7FB8E84375}">
 			<ShortName>Init</ShortName>
 			<Path>1355168291.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3796564934" Name="Hard_Knee_Minus_3dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 				</ShareSets>
@@ -43,11 +44,27 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="2077253480" Name="Room">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1908158473" Name="pitch"/>
 				<GameParameter Id="2901834267" Name="aoren_frequency"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2077253480" Name="room">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="979470758" Name="yes"/>
+						<State Id="1668749452" Name="no"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="material">
 					<Switches>
@@ -187,7 +204,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{930E53EE-71B9-8845-B8CB-8594B0778DA9}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6371F874-EED4-5095-FC79-57787A07CE11}">
 			<ShortName>main</ShortName>
 			<Path>3161908922.bnk</Path>
 			<Media>
@@ -199,6 +216,10 @@
 					<ShortName>23_pierres_jeu.wav</ShortName>
 					<CachePath>SFX/23_pierres_jeu_3D796F78.wem</CachePath>
 				</File>
+				<File Id="217979512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3DS02 Bathroom A Small Quiet Hum 20.wav</ShortName>
+					<CachePath>SFX/3DS02 Bathroom A Small Quiet Hum 20_087FD63B.wem</CachePath>
+				</File>
 				<File Id="229634853" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
 					<CachePath>SFX/footsteps foliage 211016_0037_61A8A62B.wem</CachePath>
@@ -209,7 +230,11 @@
 				</File>
 				<File Id="254761042" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_7F29A3A2.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_D3894E8D.wem</CachePath>
+				</File>
+				<File Id="260681453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LSD ambiances - ambiance.wav</ShortName>
+					<CachePath>SFX/LSD ambiances - ambiance_3D796F78.wem</CachePath>
 				</File>
 				<File Id="283789452" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
@@ -239,9 +264,13 @@
 					<ShortName>20_kaleidoscope_2.wav</ShortName>
 					<CachePath>SFX/20_kaleidoscope_2_3D796F78.wem</CachePath>
 				</File>
+				<File Id="406742614" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>QP14 1753 Quietudes Coniferous Forests night breeze V5.wav</ShortName>
+					<CachePath>SFX/QP14 1753 Quietudes Coniferous Forests night breeze V5_C3E6E895.wem</CachePath>
+				</File>
 				<File Id="411509299" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_B648ED75.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_34E6FA0B.wem</CachePath>
 				</File>
 				<File Id="430330994" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>5_empty_1.wav</ShortName>
@@ -291,13 +320,17 @@
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
 					<CachePath>SFX/footsteps foliage 211016_0037_1802739A.wem</CachePath>
 				</File>
+				<File Id="812939322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LSD ambiances - musique laverie.wav</ShortName>
+					<CachePath>SFX/LSD ambiances - musique laverie_3D796F78.wem</CachePath>
+				</File>
 				<File Id="827243137" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>18_drap_beau.wav</ShortName>
 					<CachePath>SFX/18_drap_beau_3D796F78.wem</CachePath>
 				</File>
 				<File Id="828162588" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HORSE_Step_Dirt_02.wav</ShortName>
-					<CachePath>SFX/HORSE_Step_Dirt_02_7E0CB644.wem</CachePath>
+					<CachePath>SFX/HORSE_Step_Dirt_02_9E01B946.wem</CachePath>
 				</File>
 				<File Id="830515885" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>footsteps foliage 211016_0037.wav</ShortName>
@@ -349,6 +382,8 @@
 					<Plugin Id="221643767" Name="Low_Pass_20KHz (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="466998299" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
 					<Plugin Id="472204842" Name="Guitar Distortion (Custom)" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+					<Plugin Id="534390326" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="673909917" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
 					<Plugin Id="756803583" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="934572749" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
@@ -358,6 +393,9 @@
 			</Plugins>
 			<Events>
 				<Event Id="2775932802" Name="character_footsteps">
+					<AuxBusRefs>
+						<AuxBusRef Id="2077253480" Name="Room"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="3599861390"/>
@@ -399,9 +437,38 @@
 					</PluginRefs>
 				</Event>
 				<Event Id="2449302600" Name="home_scene_stop"/>
+				<Event Id="2642169228" Name="hum_ambiance">
+					<MediaRefs>
+						<MediaRef Id="217979512"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="534390326"/>
+							<PluginRef Id="673909917"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="992902880"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1995930400" Name="light_wind">
+					<MediaRefs>
+						<MediaRef Id="406742614"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2143432977" Name="music_fx_empty_1">
 					<MediaRefs>
 						<MediaRef Id="430330994"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1986776188" Name="musique_dark_ambiance">
+					<MediaRefs>
+						<MediaRef Id="260681453"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2023466137" Name="musique_laverie">
+					<MediaRefs>
+						<MediaRef Id="812939322"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="748895195" Name="none"/>
@@ -556,5 +623,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C89D8058-DB6F-F41A-99F9-2C8365E63B40}</FileHash>
+	<FileHash>{F5F20613-0CBF-1D57-BF4D-B4E744F4C40A}</FileHash>
 </SoundBanksInfo>

@@ -34,7 +34,11 @@ class EVENTS:
 	const NONE = 748895195
 	const PITCH_DOWN_DRUGS = 2886619884
 	const HOME_SCENE_STOP = 2449302600
+	const LIGHT_WIND = 1995930400
 	const HOME_SCENE = 2156135365
+	const HUM_AMBIANCE = 2642169228
+	const MUSIQUE_LAVERIE = 2023466137
+	const MUSIQUE_DARK_AMBIANCE = 1986776188
 
 	const _dict = {
 		"pluie_inondation_faible": PLUIE_INONDATION_FAIBLE,
@@ -69,12 +73,33 @@ class EVENTS:
 		"none": NONE,
 		"pitch_down_drugs": PITCH_DOWN_DRUGS,
 		"home_scene_stop": HOME_SCENE_STOP,
-		"home_scene": HOME_SCENE
+		"light_wind": LIGHT_WIND,
+		"home_scene": HOME_SCENE,
+		"hum_ambiance": HUM_AMBIANCE,
+		"musique_laverie": MUSIQUE_LAVERIE,
+		"musique_dark_ambiance": MUSIQUE_DARK_AMBIANCE
 	}
 
 class STATES:
 
-	const _dict = {}
+	class ROOM:
+		const GROUP = 2077253480
+
+		class STATE:
+			const YES = 979470758
+			const NO = 1668749452
+			const NONE = 748895195
+
+	const _dict = {
+		"room": {
+			"GROUP": 2077253480,
+			"STATE": {
+				"yes": 979470758,
+				"no": 1668749452,
+				"None": 748895195
+			}
+		}
+	}
 
 class SWITCHES:
 
@@ -138,9 +163,11 @@ class BUSSES:
 class AUX_BUSSES:
 
 	const REVERB = 348963605
+	const ROOM = 2077253480
 
 	const _dict = {
-		"Reverb": REVERB
+		"Reverb": REVERB,
+		"Room": ROOM
 	}
 
 class AUDIO_DEVICES:

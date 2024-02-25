@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c111fr1gmtnoi"]
+[gd_scene load_steps=57 format=3 uid="uid://c111fr1gmtnoi"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_fstbk"]
 [ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="2_3eho8"]
@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b18unrsrjotqr" path="res://scenes/UI/pause_menu.tscn" id="4_ibvk8"]
 [ext_resource type="Environment" uid="uid://d0bqjflyjos6v" path="res://configs/pitch_black_environment.tres" id="5_71sgd"]
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="5_bktrw"]
+[ext_resource type="Script" path="res://scripts/audio_area_laverie.gd" id="5_w425f"]
+[ext_resource type="PackedScene" uid="uid://c06o00is48nb7" path="res://scenes/characters/sound_emitter.tscn" id="6_qy1ve"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="6_ubnmt"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="7_ek08c"]
+[ext_resource type="Script" path="res://scripts/flickering_light.gd" id="7_iybpw"]
 [ext_resource type="Texture2D" uid="uid://b56idtjtsc6fh" path="res://graphics/textures/TidePodePNG.png" id="10_0smq1"]
 [ext_resource type="Script" path="res://scripts/ventilo.gd" id="10_8o034"]
 [ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/scene/Voice_Subtitle_Intro_Laverie.tscn" id="10_df3rm"]
@@ -22,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://btq1h674accix" path="res://graphics/textures/neon_texture.png" id="13_fyvas"]
 [ext_resource type="Texture2D" uid="uid://b56iusasl7qap" path="res://graphics/textures/mongolfiere_base_texture_albedo.png" id="21_06cdn"]
 [ext_resource type="Texture2D" uid="uid://bj3dmi41o78p8" path="res://graphics/textures/mongolfiere_base_texture_normalMM.png" id="22_lc1eb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ycssx"]
+size = Vector3(3.4765, 1.33264, 4.55566)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
 size = Vector2(100, 100)
@@ -254,6 +260,19 @@ transform = Transform3D(-0.279846, 0, 0.960045, 0, 1, 0, -0.960045, 0, -0.279846
 
 [node name="Objects" type="Node3D" parent="."]
 
+[node name="Area3D" type="Area3D" parent="Objects"]
+script = ExtResource("5_w425f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.540924, 0.689553, 0.0424805)
+shape = SubResource("BoxShape3D_ycssx")
+
+[node name="SoundEmitter" parent="Objects" instance=ExtResource("6_qy1ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.554542, 0, 0.0128522)
+autoplay = true
+sfx_type = "all"
+sound = "hum_ambiance"
+
 [node name="Meshes" type="Node3D" parent="."]
 
 [node name="WorldFloor" type="MeshInstance3D" parent="Meshes"]
@@ -284,6 +303,7 @@ light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 omni_range = 4.496
 omni_attenuation = 0.420448
+script = ExtResource("7_iybpw")
 
 [node name="neon2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.608558, 1.7116, 1.63364)
@@ -394,5 +414,7 @@ transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.2
 material_override = SubResource("StandardMaterial3D_ju4vw")
 mesh = SubResource("PlaneMesh_dgssl")
 
+[connection signal="body_entered" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_exited"]
 [connection signal="body_entered" from="Props_container/Banc/tidepod/Area3D" to="Props_container/Banc/tidepod" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Props_container/Banc/tidepod/Area3D" to="Props_container/Banc/tidepod" method="_on_area_3d_body_exited"]

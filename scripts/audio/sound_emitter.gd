@@ -1,6 +1,7 @@
 @tool
 extends Node3D
 
+@export var autoplay: bool = false
 @export_group("Sound")
 @export_enum("all", "video",) var sfx_type: String = "video" :
 	set (value):
@@ -20,6 +21,7 @@ func _get_property_list():
 			"hint" = PROPERTY_HINT_ENUM,
 			"hint_string" = ','.join(AK.EVENTS._dict.keys().filter(func(key: String):
 				if key == "none": return true
+				if sfx_type == "all": return true
 				return key.contains(sfx_type)
 				)),
 			"usage" = PROPERTY_USAGE_DEFAULT 
@@ -31,6 +33,11 @@ func _ready():
 	scale /= get_parent().scale
 	Wwise.register_game_obj(self, name + str(get_instance_id()))
 	Wwise.set_3d_position(self, get_parent().transform.translated_local(position))
+	if autoplay:
+		play()
+
+func _exit_tree():
+	stop()
 
 func play():
 	if id != 0:

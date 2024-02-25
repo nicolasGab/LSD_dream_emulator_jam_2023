@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b65s3mv04kw5g"]
+[gd_scene load_steps=11 format=3 uid="uid://b65s3mv04kw5g"]
 
 [ext_resource type="Script" path="res://scripts/game_state.gd" id="1_8la5e"]
 [ext_resource type="Script" path="res://scripts/dream_information.gd" id="2_8vdvq"]
+[ext_resource type="PackedScene" uid="uid://dpi268h6v4rbf" path="res://scenes/dreams/dites_moi_ce_que_vous_voyez.tscn" id="2_y8ta7"]
 [ext_resource type="Script" path="res://scripts/eventbus.gd" id="3_85q4w"]
+[ext_resource type="PackedScene" uid="uid://dbq0h7gphhu7t" path="res://scenes/dreams/labyrinthe_foraine.tscn" id="3_jvqx8"]
+[ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="4_saehu"]
+[ext_resource type="PackedScene" uid="uid://ca30k5shbw4qt" path="res://scenes/dreams/salle_projections.tscn" id="5_p2c4m"]
+[ext_resource type="PackedScene" uid="uid://c111fr1gmtnoi" path="res://scenes/intro_laverie.tscn" id="6_p1khm"]
+[ext_resource type="PackedScene" uid="uid://blrtbowdng4ps" path="res://scenes/dreams/le_monde_d_en_bas_3.tscn" id="7_4sxeq"]
+[ext_resource type="PackedScene" uid="uid://o20h81fespv7" path="res://scenes/dreams/debug_dream.tscn" id="8_x86t2"]
 
 [node name="GameState" type="Node" node_paths=PackedStringArray("dream_information", "eventbus")]
 script = ExtResource("1_8la5e")
 dream_information = NodePath("DreamInformation")
 eventbus = NodePath("Eventbus")
+dreams = Array[PackedScene]([ExtResource("2_y8ta7"), ExtResource("3_jvqx8"), ExtResource("4_saehu"), ExtResource("5_p2c4m"), ExtResource("6_p1khm"), ExtResource("7_4sxeq")])
+final_scene = ExtResource("8_x86t2")
 
 [node name="DreamInformation" type="Node" parent="."]
 script = ExtResource("2_8vdvq")

@@ -16,7 +16,11 @@ namespace AK
         static const AkUniqueID CHARACTER_FOOTSTEPS = 2775932802U;
         static const AkUniqueID HOME_SCENE = 2156135365U;
         static const AkUniqueID HOME_SCENE_STOP = 2449302600U;
+        static const AkUniqueID HUM_AMBIANCE = 2642169228U;
+        static const AkUniqueID LIGHT_WIND = 1995930400U;
         static const AkUniqueID MUSIC_FX_EMPTY_1 = 2143432977U;
+        static const AkUniqueID MUSIQUE_DARK_AMBIANCE = 1986776188U;
+        static const AkUniqueID MUSIQUE_LAVERIE = 2023466137U;
         static const AkUniqueID NONE = 748895195U;
         static const AkUniqueID PITCH_DOWN_DRUGS = 2886619884U;
         static const AkUniqueID PLUIE_INONDATION_FAIBLE = 3528569874U;
@@ -46,6 +50,22 @@ namespace AK
         static const AkUniqueID VIDEO_RETOURNE = 4278859807U;
         static const AkUniqueID VIDEO_VU_DE_LOIN = 851036845U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace ROOM
+        {
+            static const AkUniqueID GROUP = 2077253480U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace STATE
+        } // namespace ROOM
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -86,6 +106,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID ROOM = 2077253480U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
