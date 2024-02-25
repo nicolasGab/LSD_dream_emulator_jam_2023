@@ -81,14 +81,14 @@ mesh_valley = NodePath("../Meshes/InvisibleMeshDoNotDelete2")
 player = NodePath("../Player")
 
 [node name="Player" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76566e-05, 7.7707, -0.12032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76566e-05, 4.2962, -27.8318)
 
 [node name="Montgolfiere" type="MeshInstance3D" parent="Meshes" index="0"]
-transform = Transform3D(17.995, 0, 0, 0, -7.86586e-07, -17.995, 0, 17.995, -7.86586e-07, 0.15089, 17.4073, -172.209)
+transform = Transform3D(5.715, 0, 0, 0, -2.49811e-07, -5.715, 0, 5.715, -2.49811e-07, 0.15089, 5.59398, -297.188)
 mesh = SubResource("PlaneMesh_sjnvp")
 
 [node name="MongolfiereGround" type="MeshInstance3D" parent="Meshes" index="1"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.144, 4.1633e-12, -36.258)
+transform = Transform3D(20, 0, 0, 0, 20.275, 0, 0, 0, 20, 0.144, 4.1633e-12, -36.258)
 mesh = SubResource("ArrayMesh_ljk1s")
 skeleton = NodePath("../..")
 
