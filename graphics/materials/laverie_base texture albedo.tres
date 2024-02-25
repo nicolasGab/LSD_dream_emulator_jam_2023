@@ -10,8 +10,7 @@
 albedo_texture = ExtResource("1_ox00f")
 roughness_texture = ExtResource("2")
 roughness_texture_channel = 1
-emission_enabled = true
-emission_energy_multiplier = 0.0
+emission_energy_multiplier = 12.4
 emission_texture = ExtResource("5")
 normal_enabled = true
 normal_scale = 0.75
