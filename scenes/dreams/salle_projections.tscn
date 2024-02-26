@@ -348,7 +348,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_1" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_1/SubViewport" index="0"]
 offset_right = 1920.0
@@ -359,7 +359,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_1" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000276311, -1.70136e-19, -2.36565e-25, 1.70136e-19, 0.000276311, -1.70136e-19, 2.36565e-25, 1.70136e-19, 0.000276311, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(1.27915e-05, -7.87627e-21, -1.09515e-26, 7.87627e-21, 1.27915e-05, -7.87627e-21, 1.09515e-26, 7.87627e-21, 1.27915e-05, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_jai_vu_tes_amidales"
 
 [node name="Screen_12" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="1" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -373,7 +374,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_12" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_12/SubViewport" index="0"]
 offset_right = 1920.0
@@ -384,7 +385,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_12" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000384336, -2.36651e-19, -3.2905e-25, 2.36651e-19, 0.000384336, -2.36651e-19, 3.2905e-25, 2.36651e-19, 0.000384336, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.000135657, -8.35293e-20, -1.16143e-25, 8.35293e-20, 0.000135657, -8.35293e-20, 1.16143e-25, 8.35293e-20, 0.000135657, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_jai_vu_tes_amidales"
 
 [node name="Screen_11" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -398,7 +400,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_11" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_11/SubViewport" index="0"]
 offset_right = 1920.0
@@ -409,7 +411,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_11" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000271616, -1.67245e-19, -2.32544e-25, 1.67245e-19, 0.000271616, -1.67245e-19, 2.32544e-25, 1.67245e-19, 0.000271616, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(9.58707e-05, -5.90313e-20, -8.20799e-26, 5.90313e-20, 9.58707e-05, -5.90313e-20, 8.20799e-26, 5.90313e-20, 9.58707e-05, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_jai_vu_tes_amidales"
 
 [node name="Screen_4" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="3" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -423,7 +426,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_4" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 320)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_4/SubViewport" index="0"]
 offset_right = 1920.0
@@ -434,7 +437,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_4" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.00185647, -1.26221e-18, -1.58942e-24, 1.1431e-18, 0.00204991, -1.1431e-18, 1.58942e-24, 1.26221e-18, 0.00185647, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.0197085, -1.55478e-17, -1.68735e-23, 1.21353e-17, 0.0252506, -1.21353e-17, 1.68735e-23, 1.55477e-17, 0.0197085, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_infinite_ducks_zoom"
 
 [node name="Screen_2" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="4" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -448,7 +452,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_2" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 320)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_2/SubViewport" index="0"]
 offset_right = 1920.0
@@ -459,7 +463,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_2" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.00334499, -2.39055e-18, -2.86382e-24, 2.05964e-18, 0.0038824, -2.05965e-18, 2.86382e-24, 2.39055e-18, 0.00334499, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.0355108, -2.94464e-17, -3.04026e-23, 2.18654e-17, 0.0478229, -2.18654e-17, 3.04026e-23, 2.94464e-17, 0.0355108, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_jai_vu_tes_amidales"
 
 [node name="Screen_8" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="5" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -473,7 +478,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_8" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 320)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_8/SubViewport" index="0"]
 offset_right = 1920.0
@@ -484,7 +489,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_8" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.00602701, -4.52756e-18, -5.16004e-24, 3.71108e-18, 0.00735303, -3.71107e-18, 5.16004e-24, 4.52755e-18, 0.00602701, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.0639835, -5.57702e-17, -5.47793e-23, 3.93974e-17, 0.0905739, -3.9397e-17, 5.47793e-23, 5.57697e-17, 0.0639835, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_jai_vu_tes_amidales"
 
 [node name="Cimèse_02" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="6"]
@@ -518,7 +524,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_10" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_10/SubViewport" index="0"]
 offset_right = 1920.0
@@ -529,7 +535,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_10" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000578622, -3.56281e-19, -4.95389e-25, 3.56281e-19, 0.000578622, -3.56281e-19, 4.95389e-25, 3.56281e-19, 0.000578622, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(0.00106886, -6.58142e-19, -9.1511e-25, 6.58142e-19, 0.00106886, -6.58142e-19, 9.1511e-25, 6.58142e-19, 0.00106886, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_retourne"
 
 [node name="Screen_9" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="9" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -543,7 +550,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_9" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_9/SubViewport" index="0"]
 offset_right = 1920.0
@@ -554,7 +561,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_9" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000104239, -6.41844e-20, -8.92444e-26, 6.41844e-20, 0.000104239, -6.41844e-20, 8.92444e-26, 6.41844e-20, 0.000104239, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(2.25833e-05, -1.39055e-20, -1.93347e-26, 1.39055e-20, 2.25833e-05, -1.39055e-20, 1.93347e-26, 1.39055e-20, 2.25833e-05, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_ca_sent_le_kebab"
 
 [node name="Screen_3" type="MeshInstance3D" parent="Objects/Salle_foraire_1" index="10" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -568,7 +576,7 @@ video_player = NodePath("../../Salle_foraire_2/Screen_5/SubViewport/VideoStreamP
 audio_player = NodePath("../../Salle_foraire_2/Screen_5/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_1/Screen_3" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 320)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_1/Screen_3/SubViewport" index="0"]
 offset_right = 1920.0
@@ -579,7 +587,8 @@ autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_1/Screen_3" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.0308548, -1.89985e-17, -2.64164e-23, 1.89985e-17, 0.0308548, -1.89985e-17, 2.64164e-23, 1.89985e-17, 0.0308548, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(73.1372, -4.50335e-14, -6.26167e-20, 4.50335e-14, 73.1372, -4.50335e-14, 6.26167e-20, 4.50335e-14, 73.1372, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_infinite_ducks"
 
 [node name="Salle_foraire_2" type="Node3D" parent="Objects" index="1"]
@@ -595,7 +604,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_5" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_2/Screen_5/SubViewport" index="0"]
 offset_right = 1920.0
@@ -605,7 +614,8 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_5" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.000769526, -4.73828e-19, -6.58833e-25, 4.73828e-19, 0.000769526, -4.73828e-19, 6.58833e-25, 4.73828e-19, 0.000769526, 0, 9.53674e-07, 1.44547)
+transform = Transform3D(3.56244e-05, -2.19354e-20, -3.05e-26, 2.19354e-20, 3.56244e-05, -2.19354e-20, 3.05e-26, 2.19354e-20, 3.56244e-05, 0, 9.53674e-07, 1.44547)
+autoplay = true
 sound = "video_empty_1"
 
 [node name="Screen_6" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="1" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -619,7 +629,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_6" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_2/Screen_6/SubViewport" index="0"]
 offset_right = 40.0
@@ -629,7 +639,8 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_6" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.0287902, 0, 0, 0, 0.0287902, 0, 0, 0, 0.0287902, 0, 0, 0)
+transform = Transform3D(0.00629392, 0, 0, 0, 0.00629392, 0, 0, 0, 0.00629392, 0, 0, 0)
+autoplay = true
 sound = "video_empty_2"
 
 [node name="Screen_7" type="MeshInstance3D" parent="Objects/Salle_foraire_2" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -643,7 +654,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_foraire_2/Screen_7" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_foraire_2/Screen_7/SubViewport" index="0"]
 offset_right = 40.0
@@ -653,7 +664,8 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_foraire_2/Screen_7" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.128904, 0, 0, 0, 0.128904, 0, 0, 0, 0.128904, 0, 0, 0)
+transform = Transform3D(0.0535737, 0, 0, 0, 0.0535737, 0, 0, 0, 0.0535737, 0, 0, 0)
+autoplay = true
 sound = "video_empty_3"
 
 [node name="Area3D" type="Area3D" parent="Objects/Salle_foraire_2" index="3"]
@@ -676,7 +688,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_15" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_15/SubViewport" index="0"]
 offset_right = 1920.0
@@ -686,7 +698,8 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_15" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(25.107, 0, 0, 0, 4264.85, 0, 0, 0, 1.02845, 0, 0, 0)
+transform = Transform3D(99.9325, 0, 2.11758e-22, 0, 153312, -2.85763e-22, 0, -3.89535e-18, 1.04089, 0, 0, 0)
+autoplay = true
 sound = "video_drap_1"
 
 [node name="Screen_16" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="1" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -700,17 +713,19 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_16" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_16/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("7_jaumn")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_16" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(25.107, 0, 0, 0, 4264.85, 0, 0, 0, 1.02845, 0, 0, 0)
+transform = Transform3D(99.9325, 0, 0, 0, 153312, 0, 0, 0, 1.04089, 0, 0, 0)
+autoplay = true
 sound = "video_drap_contexte"
 
 [node name="Screen_17" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -724,17 +739,19 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_17" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_17/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("7_76two")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_17" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(25.107, 0, 0, 0, 4264.85, 0, 0, 0, 1.02845, 0, 0, 0)
+transform = Transform3D(99.9325, 0, 0, 0, 153312, 0, 0, 0, 1.04089, 0, 0, 0)
+autoplay = true
 sound = "video_drap_fleur"
 
 [node name="Screen_18" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="3" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -748,7 +765,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_18" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_18/SubViewport" index="0"]
 offset_right = 40.0
@@ -758,7 +775,8 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_18" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.0446763, 0, 0, 0, 9559.92, 0, 0, 0, 0.00893527, 0, 0, 0)
+transform = Transform3D(0.0117907, 0, 0, 0, 485693, 0, 0, 0, 0.00118307, 0, 0, 0)
+autoplay = true
 sound = "video_drap_beau"
 
 [node name="Screen_19" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="4" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -771,17 +789,19 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_19" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 360)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_19/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("9_jvnak")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_19" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(10896.3, 0, 0, 0, 40090.5, 0, 0, 0, 313.207, 0, 0, 0)
+transform = Transform3D(585521, 0, 0, 0, 3.76508e+06, 0, 0, 0, 3676.82, 0, 0, 0)
+autoplay = true
 sound = "video_kaleidoscope_1"
 
 [node name="Screen_20" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="5" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -795,17 +815,19 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_20" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 320)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_20/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("11_6sfhl")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_20" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(10896.3, 0, 0, 0, 40090.5, 0, 0, 0, 313.207, 0, 0, 0)
+transform = Transform3D(585521, 0, 0, 0, 3.76508e+06, 0, 0, 0, 3676.82, 0, 0, 0)
+autoplay = true
 sound = "video_kaleidoscope_2"
 
 [node name="Screen_21" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres/Screen_20" index="2" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -819,17 +841,19 @@ video_player = NodePath("../../Screen_18/SubViewport/VideoStreamPlayer")
 audio_player = NodePath("../../Screen_18/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_20/Screen_21" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_20/Screen_21/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("13_fxsvr")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_20/Screen_21" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.00433147, 0, 0, 0, 21812.3, 0, 0, 0, 0.00280496, 0, 0, 0)
+transform = Transform3D(6.71743e-05, 0, 0, 0, 535829, 0, 0, 0, 0.000179517, 0, 0, 0)
+autoplay = true
 sound = "video_pierres_intro"
 
 [node name="Screen_22" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="6" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -843,17 +867,19 @@ video_player = NodePath("../Screen_18/SubViewport/VideoStreamPlayer")
 audio_player = NodePath("../Screen_18/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_22" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_22/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("14_gf1y3")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_22" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.0130421, 0, 0, 0, 5.19629e+06, 0, 0, 0, 0.00596772, 0, 0, 0)
+transform = Transform3D(0.00799867, 0, 0, 0, 9.46982e+10, 0, 0, 0, 0.00468512, 0, 0, 0)
+autoplay = true
 sound = "video_pierres_beau"
 
 [node name="Screen_23" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="7" node_paths=PackedStringArray("area", "video_player", "audio_player")]
@@ -867,17 +893,19 @@ video_player = NodePath("../Screen_18/SubViewport/VideoStreamPlayer")
 audio_player = NodePath("../Screen_18/SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_Champs_Libres/Screen_23" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_Champs_Libres/Screen_23/SubViewport" index="0"]
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("13_5qi8x")
 volume_db = -80.0
+autoplay = true
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_Champs_Libres/Screen_23" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(0.0225, 0, 0, 0, 1.42052e+07, 0, 0, 0, 0.000718413, 0, 0, 0)
+transform = Transform3D(0.130202, 0, 0, 0, 1.28447e+11, 0, 0, 0, 0.000107432, 0, 0, 0)
+autoplay = true
 sound = "video_pierres_jeu"
 
 [node name="Cimèse_01" type="MeshInstance3D" parent="Objects/Salle_Champs_Libres" index="8"]
@@ -893,7 +921,7 @@ shape = SubResource("ConcavePolygonShape3D_dyp2f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.42778, 0, -20.9777)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Salle_Champs_Libres/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25796, 4.07054, -0.879185)
+transform = Transform3D(0.999964, -0.00846475, 0, 0.00846475, 0.999964, 0, 0, 0, 1, 3.25796, 4.07054, -0.879185)
 shape = SubResource("BoxShape3D_5ynes")
 
 [node name="Salle_tresor" type="Node3D" parent="Objects" index="3"]
@@ -908,7 +936,7 @@ video_player = NodePath("SubViewport/VideoStreamPlayer")
 audio_player = NodePath("SoundEmitter")
 
 [node name="SubViewport" type="SubViewport" parent="Objects/Salle_tresor/Screen_13" index="0"]
-size = Vector2i(1920, 1080)
+size = Vector2i(720, 480)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Objects/Salle_tresor/Screen_13/SubViewport" index="0"]
 offset_right = 40.0
@@ -918,7 +946,7 @@ volume_db = -80.0
 loop = true
 
 [node name="SoundEmitter" parent="Objects/Salle_tresor/Screen_13" index="1" instance=ExtResource("3_d4x2a")]
-transform = Transform3D(3634.68, 1.53882e-10, -5.54023e-18, -1.53882e-10, 3634.68, -3.42677e-12, 5.54023e-18, 3.42677e-12, 3634.68, -9.53674e-07, 7.75251, -2.38419e-07)
+transform = Transform3D(122006, 5.16539e-09, -1.8597e-16, -5.16539e-09, 122006, -1.15027e-10, 1.8597e-16, 1.15027e-10, 122006, -9.53674e-07, 7.75251, -2.38419e-07)
 sound = "video_bretz"
 
 [node name="Area3D" type="Area3D" parent="Objects/Salle_tresor" index="1"]
@@ -949,30 +977,37 @@ shape = SubResource("ConcavePolygonShape3D_ms7dx")
 
 [node name="OmniLight_salle_Champs_Libres" type="OmniLight3D" parent="Lights" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.34096, 17.294, -21.9448)
+layers = 3
 light_color = Color(0.376471, 0.658824, 0.737255, 1)
 light_energy = 1.453
+light_cull_mask = 4293918721
+shadow_enabled = true
 omni_range = 15.863
 
 [node name="OmniLight_salle_Champs_Libres_screens" type="OmniLight3D" parent="Lights" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4749, 5.99578, -22.8369)
+visible = false
 layers = 8
 light_energy = 16.0
-light_cull_mask = 4294966280
+light_cull_mask = 4293918728
 omni_range = 43.999
 omni_attenuation = 1.10957
 
 [node name="OmniLight_salle_Champs_Libres_screens2" type="OmniLight3D" parent="Lights" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.765489, 6.06073, -21.6041)
+visible = false
 layers = 8
 light_energy = 16.0
-light_cull_mask = 4294966280
+light_cull_mask = 4293918728
 omni_range = 43.999
 omni_attenuation = 1.10957
 
 [node name="OmniLight_salle_foraine_1" type="OmniLight3D" parent="Lights" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7461, 12.04, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7461, 11.376, 0)
+layers = 8
 light_color = Color(0.819608, 0.2, 0, 1)
 light_energy = 0.396
+light_cull_mask = 4294966273
 omni_range = 52.581
 omni_attenuation = 1.18921
 
@@ -980,33 +1015,35 @@ omni_attenuation = 1.18921
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8214, 3.64817, 0)
 layers = 8
 light_energy = 16.0
-light_cull_mask = 4294966280
+light_cull_mask = 4293918728
 omni_range = 43.999
 
 [node name="OmniLight_salle_foraine_2_screens" type="OmniLight3D" parent="Lights" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7668, 3.64817, 0)
 layers = 8
 light_energy = 16.0
-light_cull_mask = 4294966280
+light_cull_mask = 4293918728
 omni_range = 43.999
 
 [node name="OmniLight_salle_foraine_2" type="OmniLight3D" parent="Lights" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3784, 8.65367, 0)
 light_color = Color(0.643137, 0.2, 0.172549, 1)
 light_energy = 0.547
+light_cull_mask = 4294966273
 omni_range = 11.591
 
 [node name="OmniLight_machine_a_laver_main" type="OmniLight3D" parent="Lights" index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5666, 54.1324, -20.8411)
 light_energy = 8.698
 light_indirect_energy = 0.0
+light_cull_mask = 4294966275
 shadow_enabled = true
 omni_range = 177.504
 omni_attenuation = 0.48297
 
 [node name="OmniLight_machine_a_laver_spot01" type="OmniLight3D" parent="Lights" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4137, 1.0141, -19.1659)
-layers = 2
+layers = 3
 light_color = Color(0.772549, 0.866667, 0.929412, 1)
 light_energy = 3.069
 light_indirect_energy = 0.0
