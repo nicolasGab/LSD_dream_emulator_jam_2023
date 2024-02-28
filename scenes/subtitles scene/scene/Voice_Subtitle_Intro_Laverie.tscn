@@ -169,7 +169,7 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_jeh0e"]
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_q66gq"]
 
 [node name="NarratorLaverie" type="Node2D"]
 script = SubResource("GDScript_l2alw")
@@ -186,10 +186,10 @@ autoplay = true
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.890196, 1, 1, 0)
-offset_left = 1.0
-offset_top = 826.0
-offset_right = 1923.0
-offset_bottom = 1079.0
+offset_left = 162.0
+offset_top = 669.0
+offset_right = 1443.0
+offset_bottom = 846.0
 theme_override_fonts/font = ExtResource("3_vubmr")
 theme_override_font_sizes/font_size = 71
 horizontal_alignment = 1
@@ -203,5 +203,5 @@ autoplay = "Narration Laverie"
 script = SubResource("GDScript_wca0g")
 
 [node name="Narrator_Laverie" type="AudioStreamPlayer" parent="Label"]
-stream = SubResource("AudioStreamPolyphonic_jeh0e")
+stream = SubResource("AudioStreamPolyphonic_q66gq")
 volume_db = -10.0
