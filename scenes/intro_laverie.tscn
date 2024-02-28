@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c111fr1gmtnoi"]
+[gd_scene load_steps=58 format=3 uid="uid://c111fr1gmtnoi"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_fstbk"]
 [ext_resource type="PackedScene" uid="uid://bl5qse7pgp66p" path="res://scenes/player.tscn" id="2_3eho8"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://btq1h674accix" path="res://graphics/textures/neon_texture.png" id="13_fyvas"]
 [ext_resource type="Texture2D" uid="uid://b56iusasl7qap" path="res://graphics/textures/mongolfiere_base_texture_albedo.png" id="21_06cdn"]
 [ext_resource type="Texture2D" uid="uid://bj3dmi41o78p8" path="res://graphics/textures/mongolfiere_base_texture_normalMM.png" id="22_lc1eb"]
+[ext_resource type="ArrayMesh" uid="uid://t4a73mloy8d1" path="res://graphics/meshes/FauxPlafond.obj" id="24_ghoup"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycssx"]
 size = Vector3(3.4765, 1.33264, 4.55566)
@@ -284,7 +285,7 @@ shape = SubResource("WorldBoundaryShape3D_oflx4")
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="neon1" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.582526, 1.77265, -1.49912)
+transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.582526, 1.77455, -1.49912)
 layers = 64
 light_color = Color(0.172549, 0.317647, 0.215686, 1)
 light_energy = 7.045
@@ -297,19 +298,21 @@ omni_attenuation = 0.420448
 script = ExtResource("7_iybpw")
 
 [node name="neon2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.608558, 1.70843, 1.63364)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.608558, 1.66276, 1.63364)
 light_color = Color(0.352941, 0.431373, 0.2, 1)
 light_energy = 2.487
 light_cull_mask = 4294966273
+shadow_enabled = true
 omni_range = 4.385
 omni_attenuation = 0.287177
 
 [node name="light_mongolfiere" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.933497, 0.599657, -0.92572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.855498, 0.599657, -0.92572)
 light_color = Color(0.631373, 0.631373, 0.615686, 1)
 light_energy = 0.697
-omni_range = 0.675
-omni_attenuation = 0.757859
+shadow_enabled = true
+omni_range = 4.106
+omni_attenuation = 1.86607
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -340,18 +343,18 @@ transform = Transform3D(1, -2.74468e-22, 2.01626e-23, 6.10286e-23, 1, 2.37122e-0
 shape = SubResource("SphereShape3D_vnvqk")
 
 [node name="Ventilo" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
+transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.73376, 0.00673467)
 mesh = SubResource("ArrayMesh_7u237")
 skeleton = NodePath("../..")
 script = ExtResource("10_8o034")
 
 [node name="Neon" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.93084, -1.48893)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
 [node name="Neon2" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, 1.65008)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.83666, 1.65008)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
@@ -399,6 +402,11 @@ transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 
 layers = 65
 mesh = SubResource("PlaneMesh_ur2c8")
 skeleton = NodePath("../Sponge")
+
+[node name="FauxPlafond" type="MeshInstance3D" parent="Props_container"]
+transform = Transform3D(-0.710765, 6.11959e-08, 0, -6.2137e-08, -0.7, 0, 0, 0, 0.789903, 0.460485, 1.84485, 0.309672)
+mesh = ExtResource("24_ghoup")
+skeleton = NodePath("../..")
 
 [node name="peinture mongolfiere" type="MeshInstance3D" parent="Props_container"]
 transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)

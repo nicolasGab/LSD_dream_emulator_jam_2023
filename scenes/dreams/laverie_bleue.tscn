@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dsrd3x4r0f7w5"]
+[gd_scene load_steps=59 format=3 uid="uid://dsrd3x4r0f7w5"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_0nki6"]
 [ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="2_r433b"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="23_1wdms"]
 [ext_resource type="Texture2D" uid="uid://b56iusasl7qap" path="res://graphics/textures/mongolfiere_base_texture_albedo.png" id="24_ntuso"]
 [ext_resource type="Texture2D" uid="uid://bj3dmi41o78p8" path="res://graphics/textures/mongolfiere_base_texture_normalMM.png" id="25_4cgo3"]
+[ext_resource type="ArrayMesh" uid="uid://t4a73mloy8d1" path="res://graphics/meshes/FauxPlafond.obj" id="26_jg7wq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycssx"]
 size = Vector3(3.4765, 1.33264, 4.55566)
@@ -302,9 +303,10 @@ skeleton = NodePath("../..")
 shape = SubResource("WorldBoundaryShape3D_oflx4")
 
 [node name="Lights" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0852005, 0)
 
 [node name="neon1" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.582526, 1.77265, -1.49912)
+transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.568403, 1.81858, -1.12464)
 layers = 64
 light_color = Color(0.101961, 0.207843, 0.670588, 1)
 light_energy = 6.196
@@ -341,18 +343,18 @@ mesh = SubResource("ArrayMesh_5lhdv")
 skeleton = NodePath("../..")
 
 [node name="Ventilo" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
+transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.71542, 0.00673467)
 mesh = SubResource("ArrayMesh_7u237")
 skeleton = NodePath("../..")
 script = ExtResource("17_5je4h")
 
 [node name="Neon" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.585039, 1.84306, -1.11445)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
 [node name="Neon2" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, 1.65008)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.79713, 1.65008)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
@@ -400,6 +402,11 @@ transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 
 layers = 65
 mesh = SubResource("PlaneMesh_qyhrg")
 skeleton = NodePath("../Sponge")
+
+[node name="FauxPlafond" type="MeshInstance3D" parent="Props_container"]
+transform = Transform3D(-0.7, 1.05697e-07, 0, -1.05697e-07, -0.7, 0, 0, 0, 0.7, 0.45233, 1.80646, -0.110769)
+mesh = ExtResource("26_jg7wq")
+skeleton = NodePath("../..")
 
 [node name="peinture mongolfiere" type="MeshInstance3D" parent="Props_container"]
 transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://rcco8k2kem6r"]
+[gd_scene load_steps=39 format=3 uid="uid://rcco8k2kem6r"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_ljcd6"]
 [ext_resource type="Script" path="res://scripts/home_laverrie_logic.gd" id="2_bnovo"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="14_dpd53"]
 [ext_resource type="Script" path="res://scripts/audio/player_audio.gd" id="15_b1g88"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="15_my8te"]
+[ext_resource type="ArrayMesh" uid="uid://t4a73mloy8d1" path="res://graphics/meshes/FauxPlafond.obj" id="16_26wcr"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
 size = Vector2(100, 100)
@@ -218,7 +219,7 @@ shape = SubResource("WorldBoundaryShape3D_oflx4")
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.582526, 1.6859, -1.58949)
+transform = Transform3D(1, 0, 0, 0, -0.817376, 0.576104, 0, -0.576104, -0.817376, 0.582526, 1.70711, -1.58949)
 light_color = Color(0.572549, 0.807843, 0.572549, 1)
 light_energy = 1.742
 light_indirect_energy = 0.0
@@ -229,7 +230,7 @@ omni_attenuation = 0.392292
 script = ExtResource("5_kk5yk")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.510261, 1.77262, 1.63364)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.510261, 1.70379, 1.63364)
 light_color = Color(0.678431, 0.843137, 0.556863, 1)
 light_energy = 2.134
 light_cull_mask = 4294967293
@@ -257,18 +258,18 @@ mesh = SubResource("ArrayMesh_5lhdv")
 skeleton = NodePath("../..")
 
 [node name="Ventilo" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
+transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.67822, 0.00673467)
 mesh = SubResource("ArrayMesh_7u237")
 skeleton = NodePath("../..")
 script = ExtResource("8_eisu1")
 
 [node name="Neon" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.90354, -1.48893)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
 [node name="Neon2" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, 1.65008)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.8135, 1.65008)
 mesh = SubResource("ArrayMesh_nd2un")
 skeleton = NodePath("../..")
 
@@ -310,6 +311,11 @@ skeleton = NodePath("../WashingMachineSimple_01")
 transform = Transform3D(0.9666, 0, -0.25629, 0, 1, 0, 0.25629, 0, 0.9666, -0.665561, 0.0881413, 0.740769)
 mesh = SubResource("PlaneMesh_74vvq")
 skeleton = NodePath("../Sponge")
+
+[node name="FauxPlafond" type="MeshInstance3D" parent="Props_container"]
+transform = Transform3D(-0.711376, 6.11959e-08, 0, -6.21904e-08, -0.7, 0, 0, 0, 0.779783, 0.457826, 1.79854, 0.36285)
+mesh = ExtResource("16_26wcr")
+skeleton = NodePath("../..")
 
 [node name="floor_flaque2" type="MeshInstance3D" parent="Props_container"]
 transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 2.18734, 0.0881413, -1.24273)
