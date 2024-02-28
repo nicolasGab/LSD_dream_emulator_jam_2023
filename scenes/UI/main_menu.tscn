@@ -1,7 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba7c1y3mt7n8"]
+[gd_scene load_steps=6 format=3 uid="uid://ba7c1y3mt7n8"]
 
 [ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_6j6s6"]
 [ext_resource type="PackedScene" uid="uid://c111fr1gmtnoi" path="res://scenes/intro_laverie.tscn" id="2_w1wdt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px53h"]
+bg_color = Color(0.12549, 0.145098, 0.133333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14902, 0.12549, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3n3c"]
+bg_color = Color(0.184314, 0.215686, 0.176471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14902, 0.12549, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkabs"]
+bg_color = Color(0.317647, 0.27451, 0.313726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14902, 0.12549, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

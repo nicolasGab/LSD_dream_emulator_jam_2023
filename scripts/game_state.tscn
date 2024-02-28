@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b65s3mv04kw5g"]
+[gd_scene load_steps=11 format=3 uid="uid://b65s3mv04kw5g"]
 
 [ext_resource type="Script" path="res://scripts/game_state.gd" id="1_8la5e"]
 [ext_resource type="Script" path="res://scripts/dream_information.gd" id="2_8vdvq"]
@@ -8,12 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="4_saehu"]
 [ext_resource type="PackedScene" uid="uid://ca30k5shbw4qt" path="res://scenes/dreams/salle_projections.tscn" id="5_p2c4m"]
 [ext_resource type="PackedScene" uid="uid://blrtbowdng4ps" path="res://scenes/dreams/le_monde_d_en_bas_3.tscn" id="7_4sxeq"]
+[ext_resource type="PackedScene" uid="uid://cc57awlyp82ch" path="res://scenes/dreams/laverie_sombre.tscn" id="7_pbwpv"]
+[ext_resource type="PackedScene" uid="uid://dsrd3x4r0f7w5" path="res://scenes/dreams/laverie_bleue.tscn" id="8_d267n"]
 
 [node name="GameState" type="Node" node_paths=PackedStringArray("dream_information", "eventbus")]
 script = ExtResource("1_8la5e")
 dream_information = NodePath("DreamInformation")
 eventbus = NodePath("Eventbus")
-dreams = Array[PackedScene]([ExtResource("2_y8ta7"), ExtResource("3_jvqx8"), ExtResource("4_saehu"), ExtResource("5_p2c4m"), ExtResource("7_4sxeq")])
+dreams = Array[PackedScene]([ExtResource("2_y8ta7"), ExtResource("3_jvqx8"), ExtResource("4_saehu"), ExtResource("5_p2c4m"), ExtResource("7_4sxeq"), ExtResource("7_pbwpv"), ExtResource("8_d267n")])
 
 [node name="DreamInformation" type="Node" parent="."]
 script = ExtResource("2_8vdvq")
