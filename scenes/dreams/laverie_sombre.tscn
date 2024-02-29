@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cc57awlyp82ch"]
+[gd_scene load_steps=52 format=3 uid="uid://cc57awlyp82ch"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_stl7m"]
 [ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="2_at7lr"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://scripts/flickering_light.gd" id="9_b282f"]
 [ext_resource type="PackedScene" uid="uid://b18unrsrjotqr" path="res://scenes/UI/pause_menu.tscn" id="10_mkcf4"]
 [ext_resource type="Environment" uid="uid://d0bqjflyjos6v" path="res://configs/pitch_black_environment.tres" id="11_fuhsp"]
-[ext_resource type="PackedScene" uid="uid://dh40jiraqct0l" path="res://scenes/subtitles scene/scene/Voice_Subtitle_Intro_Laverie.tscn" id="12_7r80b"]
 [ext_resource type="Texture2D" uid="uid://denrlbilg13rx" path="res://graphics/textures/banc_texture.png" id="13_1gm22"]
 [ext_resource type="Texture2D" uid="uid://bgsa5m6w3ck5t" path="res://graphics/textures/ventilo_texture.png" id="16_nhbya"]
 [ext_resource type="Script" path="res://scripts/ventilo.gd" id="17_txm1r"]
@@ -27,15 +26,6 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycssx"]
 size = Vector3(3.4765, 1.33264, 4.55566)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
-size = Vector2(100, 100)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_olrmm"]
-material = ExtResource("8_r68n2")
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_oflx4"]
-plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eknqq"]
 albedo_texture = ExtResource("13_1gm22")
@@ -224,6 +214,15 @@ normal_texture = ExtResource("25_2fix5")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dgssl"]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_udrn8"]
+size = Vector2(100, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_olrmm"]
+material = ExtResource("8_r68n2")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_oflx4"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
+
 [node name="IntroLaverie" type="Node3D"]
 script = ExtResource("1_stl7m")
 next_scene = ExtResource("2_at7lr")
@@ -250,6 +249,84 @@ sfx_type = "all"
 sound = "hum_ambiance"
 
 [node name="Meshes" type="Node3D" parent="."]
+
+[node name="Props_container" type="Node" parent="Meshes"]
+
+[node name="Banc" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(-1.045, 0, -1.06219e-07, 0, 1.215, 0, 9.13568e-08, 0, -1.215, 0.751221, 0, 2.07073)
+mesh = SubResource("ArrayMesh_5lhdv")
+skeleton = NodePath("../../..")
+
+[node name="Ventilo" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
+mesh = SubResource("ArrayMesh_7u237")
+skeleton = NodePath("../../..")
+script = ExtResource("17_txm1r")
+
+[node name="Neon" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)
+mesh = SubResource("ArrayMesh_nd2un")
+skeleton = NodePath("../../..")
+
+[node name="Neon2" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, 1.65008)
+mesh = SubResource("ArrayMesh_nd2un")
+skeleton = NodePath("../../..")
+
+[node name="Sponge" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(0.539976, 0, 0.84168, 0, 1, 0, -0.84168, 0, 0.539976, -0.969512, 1.06055, -0.331086)
+mesh = SubResource("ArrayMesh_f3fst")
+skeleton = NodePath("../../..")
+
+[node name="flaque_sponge" type="MeshInstance3D" parent="Meshes/Props_container/Sponge"]
+transform = Transform3D(0.992078, 0, 0.125628, 0, 1, 0, -0.125628, 0, 0.992078, -0.00464493, 0, -0.00457346)
+mesh = SubResource("PlaneMesh_mn8h6")
+
+[node name="WashingMachineDouble" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(1.195, 0, 0, 0, 1.195, 0, 0, 0, 1.195, -1.35031, 0.0797808, 1.21652)
+mesh = SubResource("ArrayMesh_bj2tk")
+skeleton = NodePath("../../..")
+
+[node name="WashingMachineSimple_01" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33479, 0.0758814, 0.622241)
+mesh = SubResource("ArrayMesh_x3gqx")
+skeleton = NodePath("../../..")
+
+[node name="WashingMachineSimple_02" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30642, 0.0789187, -0.000750481)
+mesh = SubResource("ArrayMesh_b8y4c")
+skeleton = NodePath("../..")
+
+[node name="WashingMachineSimple_03" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32038, 0.0720999, -0.618768)
+mesh = SubResource("ArrayMesh_jlxpl")
+skeleton = NodePath("../..")
+
+[node name="WashingMachineSimple_04" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3181, 0.0711467, -1.23358)
+mesh = SubResource("ArrayMesh_5lmvx")
+skeleton = NodePath("../WashingMachineSimple_01")
+
+[node name="floor_flaque" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(0.9666, 0, -0.25629, 0, 1, 0, 0.25629, 0, 0.9666, -0.665561, 0.0881413, 0.740769)
+mesh = SubResource("PlaneMesh_74vvq")
+skeleton = NodePath("../Sponge")
+
+[node name="floor_flaque2" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 1.80078, 0.085155, -1.08951)
+layers = 65
+mesh = SubResource("PlaneMesh_ur2c8")
+skeleton = NodePath("../Sponge")
+
+[node name="MeshPreviewLisa" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(3.60908e-08, -0.825661, -0.870795, -1.2, -5.24537e-08, 2.13163e-15, -3.80637e-08, 0.870795, -0.825661, 2.14091, 0.955763, 2.03034)
+mesh = ExtResource("24_gm6gm")
+skeleton = NodePath("../../..")
+
+[node name="peinture mongolfiere" type="MeshInstance3D" parent="Meshes/Props_container"]
+transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)
+material_override = SubResource("StandardMaterial3D_ju4vw")
+mesh = SubResource("PlaneMesh_dgssl")
 
 [node name="WorldFloor" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0697419, 0)
@@ -296,86 +373,6 @@ omni_attenuation = 2.54913
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("11_fuhsp")
-
-[node name="Voice_Subtitle" parent="." instance=ExtResource("12_7r80b")]
-
-[node name="Props_container" type="Node" parent="."]
-
-[node name="Banc" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-1.045, 0, -1.06219e-07, 0, 1.215, 0, 9.13568e-08, 0, -1.215, 0.751221, 0, 2.07073)
-mesh = SubResource("ArrayMesh_5lhdv")
-skeleton = NodePath("../..")
-
-[node name="Ventilo" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0.293339, 1.82241, 0.00673467)
-mesh = SubResource("ArrayMesh_7u237")
-skeleton = NodePath("../..")
-script = ExtResource("17_txm1r")
-
-[node name="Neon" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, -1.48893)
-mesh = SubResource("ArrayMesh_nd2un")
-skeleton = NodePath("../..")
-
-[node name="Neon2" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.599162, 1.88233, 1.65008)
-mesh = SubResource("ArrayMesh_nd2un")
-skeleton = NodePath("../..")
-
-[node name="Sponge" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.539976, 0, 0.84168, 0, 1, 0, -0.84168, 0, 0.539976, -0.969512, 1.06055, -0.331086)
-mesh = SubResource("ArrayMesh_f3fst")
-skeleton = NodePath("../..")
-
-[node name="flaque_sponge" type="MeshInstance3D" parent="Props_container/Sponge"]
-transform = Transform3D(0.992078, 0, 0.125628, 0, 1, 0, -0.125628, 0, 0.992078, -0.00464493, 0, -0.00457346)
-mesh = SubResource("PlaneMesh_mn8h6")
-
-[node name="WashingMachineDouble" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(1.195, 0, 0, 0, 1.195, 0, 0, 0, 1.195, -1.35031, 0.0797808, 1.21652)
-mesh = SubResource("ArrayMesh_bj2tk")
-skeleton = NodePath("../..")
-
-[node name="WashingMachineSimple_01" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33479, 0.0758814, 0.622241)
-mesh = SubResource("ArrayMesh_x3gqx")
-skeleton = NodePath("../..")
-
-[node name="WashingMachineSimple_02" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30642, 0.0789187, -0.000750481)
-mesh = SubResource("ArrayMesh_b8y4c")
-skeleton = NodePath("../../Meshes")
-
-[node name="WashingMachineSimple_03" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32038, 0.0720999, -0.618768)
-mesh = SubResource("ArrayMesh_jlxpl")
-skeleton = NodePath("../../Meshes")
-
-[node name="WashingMachineSimple_04" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3181, 0.0711467, -1.23358)
-mesh = SubResource("ArrayMesh_5lmvx")
-skeleton = NodePath("../WashingMachineSimple_01")
-
-[node name="floor_flaque" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(0.9666, 0, -0.25629, 0, 1, 0, 0.25629, 0, 0.9666, -0.665561, 0.0881413, 0.740769)
-mesh = SubResource("PlaneMesh_74vvq")
-skeleton = NodePath("../Sponge")
-
-[node name="floor_flaque2" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 1.80078, 0.085155, -1.08951)
-layers = 65
-mesh = SubResource("PlaneMesh_ur2c8")
-skeleton = NodePath("../Sponge")
-
-[node name="MeshPreviewLisa" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(3.60908e-08, -0.825661, -0.870795, -1.2, -5.24537e-08, 2.13163e-15, -3.80637e-08, 0.870795, -0.825661, 2.14091, 0.955763, 2.03034)
-mesh = ExtResource("24_gm6gm")
-skeleton = NodePath("../..")
-
-[node name="peinture mongolfiere" type="MeshInstance3D" parent="Props_container"]
-transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)
-material_override = SubResource("StandardMaterial3D_ju4vw")
-mesh = SubResource("PlaneMesh_dgssl")
 
 [connection signal="body_entered" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_exited"]
