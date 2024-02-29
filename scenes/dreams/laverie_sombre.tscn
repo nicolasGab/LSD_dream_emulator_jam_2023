@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cc57awlyp82ch"]
+[gd_scene load_steps=53 format=3 uid="uid://cc57awlyp82ch"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_stl7m"]
 [ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="2_at7lr"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bxqw6fuefl336" path="res://graphics/textures/WashingMachine_double_texture.png" id="21_h6mh7"]
 [ext_resource type="Texture2D" uid="uid://byq0s3hw7kp1n" path="res://graphics/textures/WashingMachine_simple_texture01.png" id="22_d4yob"]
 [ext_resource type="Texture2D" uid="uid://qtyg4trx1w2c" path="res://graphics/textures/WashingMachine_simple_texture02.png" id="23_25241"]
+[ext_resource type="ArrayMesh" uid="uid://cgmo0qnehktqd" path="res://graphics/meshes/mesh_preview_lisa.obj" id="24_gm6gm"]
 [ext_resource type="Texture2D" uid="uid://b56iusasl7qap" path="res://graphics/textures/mongolfiere_base_texture_albedo.png" id="24_s2ob8"]
 [ext_resource type="Texture2D" uid="uid://bj3dmi41o78p8" path="res://graphics/textures/mongolfiere_base_texture_normalMM.png" id="25_2fix5"]
 
@@ -365,6 +366,11 @@ transform = Transform3D(-0.520995, 0, -0.85356, 0, 1, 0, 0.85356, 0, -0.520995, 
 layers = 65
 mesh = SubResource("PlaneMesh_ur2c8")
 skeleton = NodePath("../Sponge")
+
+[node name="MeshPreviewLisa" type="MeshInstance3D" parent="Props_container"]
+transform = Transform3D(3.60908e-08, -0.825661, -0.870795, -1.2, -5.24537e-08, 2.13163e-15, -3.80637e-08, 0.870795, -0.825661, 2.14091, 0.955763, 2.03034)
+mesh = ExtResource("24_gm6gm")
+skeleton = NodePath("../..")
 
 [node name="peinture mongolfiere" type="MeshInstance3D" parent="Props_container"]
 transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)

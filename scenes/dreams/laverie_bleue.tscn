@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dsrd3x4r0f7w5"]
+[gd_scene load_steps=65 format=3 uid="uid://dsrd3x4r0f7w5"]
 
 [ext_resource type="Script" path="res://scenes/dream_container.gd" id="1_0nki6"]
 [ext_resource type="PackedScene" uid="uid://uulbk4hm7307" path="res://scenes/dreams/le_monde_d_en_bas_2.tscn" id="2_r433b"]
@@ -28,6 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://b56iusasl7qap" path="res://graphics/textures/mongolfiere_base_texture_albedo.png" id="24_ntuso"]
 [ext_resource type="Texture2D" uid="uid://bj3dmi41o78p8" path="res://graphics/textures/mongolfiere_base_texture_normalMM.png" id="25_4cgo3"]
 [ext_resource type="ArrayMesh" uid="uid://t4a73mloy8d1" path="res://graphics/meshes/FauxPlafond.obj" id="26_jg7wq"]
+[ext_resource type="ArrayMesh" uid="uid://cirg57kf0jt4" path="res://graphics/meshes/mesh_preview_yann.obj" id="29_vqf8c"]
+[ext_resource type="ArrayMesh" uid="uid://bpe3rxs5klptm" path="res://graphics/meshes/mesh_preview.obj" id="30_7iw76"]
+[ext_resource type="ArrayMesh" uid="uid://cqbnckhwnvvsp" path="res://graphics/meshes/mesh_preview_paul.obj" id="31_7op2v"]
+[ext_resource type="ArrayMesh" uid="uid://c6f2bcrh7cv0e" path="res://graphics/meshes/mesh_preview_rachel.obj" id="32_lj0qu"]
+[ext_resource type="ArrayMesh" uid="uid://ikknujtxfq4s" path="res://graphics/meshes/mesh_preview_alex.obj" id="33_sb4o3"]
+[ext_resource type="ArrayMesh" uid="uid://cgmo0qnehktqd" path="res://graphics/meshes/mesh_preview_lisa.obj" id="34_7i1el"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycssx"]
 size = Vector3(3.4765, 1.33264, 4.55566)
@@ -412,6 +418,35 @@ skeleton = NodePath("../..")
 transform = Transform3D(-1.02722e-08, 0.235, -1.02722e-08, 0, -1.02722e-08, -0.235, -0.235, -1.02722e-08, 4.49011e-16, -1.12905, 0.570525, -0.904439)
 material_override = SubResource("StandardMaterial3D_ju4vw")
 mesh = SubResource("PlaneMesh_dgssl")
+
+[node name="MeshPreviewYann" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.17783e-08, 1.18455, -0.19194, -1.2, -5.24537e-08, 1.55449e-17, -8.38997e-09, 0.19194, 1.18455, 0.823595, 1.07878, -5.47339)
+mesh = ExtResource("29_vqf8c")
+
+[node name="MeshPreview" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0362587, 0, 1.18923, 0, 1.17657, 0, -1.21099, 0, -0.0356071, -1.04094, 0.815688, 1.41716)
+mesh = ExtResource("30_7iw76")
+
+[node name="MeshPreviewPaul" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.16647e-08, 1.18195, 0.207346, -1.2, -5.24537e-08, 4.40463e-22, 9.0634e-09, -0.207346, 1.18195, -0.00243312, 0.623489, -5.3253)
+mesh = ExtResource("31_7op2v")
+
+[node name="MeshPreview2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.21587, 0, -0.775547, 0, 1.38432, 0, 0.774254, 0, 1.21499, 2.85836, 1.03985, -4.8493)
+mesh = ExtResource("30_7iw76")
+skeleton = NodePath("../MeshPreview")
+
+[node name="MeshPreviewRachel" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.07252e-08, 0.931685, 0.363267, -1, -4.37114e-08, 0, 1.58789e-08, -0.363267, 0.931685, -1.40435, 0.859844, -5.00807)
+mesh = ExtResource("32_lj0qu")
+
+[node name="MeshPreviewAlex" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.19304e-08, 0.959255, -0.282542, -1, -4.37114e-08, 0, -1.23503e-08, 0.282542, 0.959255, 1.64525, 0.759278, -5.32345)
+mesh = ExtResource("33_sb4o3")
+
+[node name="MeshPreviewLisa" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.34969e-08, 0.995094, 0.0989377, -1, -4.37114e-08, 0, 4.3247e-09, -0.0989377, 0.995094, -0.826915, 0.677783, -5.24005)
+mesh = ExtResource("34_7i1el")
 
 [connection signal="body_entered" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Objects/Area3D" to="Objects/Area3D" method="_on_body_exited"]

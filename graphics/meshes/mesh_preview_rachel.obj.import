@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6f2bcrh7cv0e"
+path="res://.godot/imported/mesh_preview_rachel.obj-ac4704cd725b88b5150f792373343963.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mesh_preview_rachel.obj-ac4704cd725b88b5150f792373343963.mesh"]
+
+source_file="res://graphics/meshes/mesh_preview_rachel.obj"
+dest_files=["res://.godot/imported/mesh_preview_rachel.obj-ac4704cd725b88b5150f792373343963.mesh", "res://.godot/imported/mesh_preview_rachel.obj-ac4704cd725b88b5150f792373343963.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
